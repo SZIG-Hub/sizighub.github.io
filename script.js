@@ -886,7 +886,7 @@ var data = {
 }
 
 if (screen.width <= 1600) {
-  document.location = "mobile.html";
+  document.location = "./mobile/mobile.html";
 }
 
 const days = Object.keys(data);

@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: 'Anton';
-  src: local('../Anton-Regular.ttf') format("truetype");
+  src: local('Anton-Regular.ttf') format("truetype");
 }
 
 :root {
