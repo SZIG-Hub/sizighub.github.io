@@ -64,7 +64,7 @@ button:hover .hover-effect {
   position: relative;
   z-index: 1;
   display: block;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 300;
   height: 50%;
   padding: 4%;
@@ -75,7 +75,7 @@ button:hover .hover-effect {
   z-index: 1;
   display: block;
   text-align: left;
-  font-size: 1rem;
+  font-size: 0.6rem;
   font-weight: 300;
   padding-left: 4%;
   padding-top: 4%;
@@ -87,7 +87,7 @@ button:hover .hover-effect {
   z-index: 1;
   display: block;
   text-align: right;
-  font-size: 1rem;
+  font-size: 0.6rem;
   font-weight: 300;
   padding-bottom: 4%;
   padding-right: 4%;
