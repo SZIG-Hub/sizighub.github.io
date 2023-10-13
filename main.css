@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "DINNextLTPro-Bold";
+  src: url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.eot");
+  src: url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.svg#DINNextLTPro-Bold")format("svg");
+}
+
+@font-face {
+  font-family: 'Anton';
+  src: local('Anton-Regular.ttf') format("truetype");
+}
+
+:root {
+  --v-red: #6C3483;
+  --v-white: #ece8e1;
+  --v-black: #0f1923;
+  --v-outline: rgba(236, 232, 225, .5);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 10px;
+  margin: 0;
+  color: var(--v-white);
+  background-color: var(--v-black);
+  text-rendering: optimizeLegibility;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  background-color: var(--v-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+td {
+  width: 205px;
+  height: 105px;
+  padding: 2px;
+}
+
+.short {
+  height: 50px;
+}
+
+.holder {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: min-content;
+  height: min-content;
+  background-image: url('background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Anton';
+  font-size: 5rem;
+  color: var(--v-black);
+}
+
+.days {
+  width: 200px;
+  height: 100px;
+  background-color: var(--v-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'DINNextLTPro-Bold';
+  font-size: 30px;
+  text-align: center;
+}
+
+.hours {
+  width: 200px;
+  height: 50px;
+  background-color: var(--v-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.top {
+  font-family: 'DINNextLTPro-Bold';
+  font-size: 20px;
+  text-align: center;
+}
+
+.bottom {
+  font-family: 'DINNextLTPro-Bold';
+  font-size: 10px;
+  text-align: center;
+}
+
+.name-field {
+  font-family: 'DINNextLTPro-Bold';
+  font-size: 20px;
+  text-align: center;
+}

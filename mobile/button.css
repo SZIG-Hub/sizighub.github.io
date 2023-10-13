@@ -1,0 +1,177 @@
+button {
+  font-family: 'DINNextLTPro-Bold';
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.4rem;
+  cursor: not-allowed;
+  text-transform: uppercase;
+  color: var(--v-white);
+  border: 0;
+  background-color: transparent;
+}
+
+button:hover {
+  color: var(--v-white);
+}
+
+button::before, button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(50% - 0.25rem);
+  border: 1px solid var(--v-outline);
+  background-color: transparent;
+}
+
+button::before {
+  top: 0;
+  border-bottom: 0;
+}
+
+button::after {
+  bottom: 0;
+  border-top: 0;
+}
+
+.hover-effect {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -5%;
+  width: 110%;
+  height: 100%;
+  content: '';
+  transition: transform .3s ease-out;
+  transform: translateX(-100%) skew(-10deg);
+  background-color: var(--v-red);
+}
+
+button:hover .hover-effect {
+  transform: translateX(0) skew(-10deg);
+}
+
+.label {
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  height: 100%;
+}
+
+.label-text {
+  position: relative;
+  z-index: 1;
+  display: block;
+  font-size: 2rem;
+  font-weight: 300;
+  height: 50%;
+  padding: 4%;
+}
+
+.detail-teacher {
+  position: relative;
+  z-index: 1;
+  display: block;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-left: 4%;
+  padding-top: 4%;
+  height: 25%;
+}
+
+.detail-room {
+  position: relative;
+  z-index: 1;
+  display: block;
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-bottom: 4%;
+  padding-right: 4%;
+  height: 25%;
+}
+
+#exam {
+  cursor: pointer;
+}
+
+#exam img.icon {
+  padding: 1px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding: 2px;
+  transition: display .3s ease-out;
+  z-index: 2;
+}
+
+#exam img.icon-hover {
+  display: none;
+  transition: display .3s ease-out;
+}
+
+button:hover #exam.icon {
+  display: none;
+  transition: display .3s ease-out;
+}
+
+button:hover #exam img.icon-hover {
+  padding: 1px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding: 2px;
+  z-index: 2;
+  transition: display .3s ease-out;
+}
+
+.label:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+}
+
+.primary .label::before {
+  background-color: var(--v-white);
+}
+
+.primary {
+  color: var(--v-black);
+}
+
+.outline {
+  color: var(--v-white);
+}
+
+button:hover .label-text::after{
+  color: var(--v-black);
+}
+
+.outline .label::before, .outline .label::after {
+  border: 1px solid var(--v-outline);
+}
+
+.outline+.red {
+  color: var(--v-red);
+}
+
+.outline+.red:hover {
+  color: var(--v-white);
+}
+
+.outline+.red .label::before, .outline+.red .label::after {
+  border-color: var(--v-red);
+}
