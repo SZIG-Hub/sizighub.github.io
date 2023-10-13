@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>Órarend</title>
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="button.css">
@@ -13,569 +13,576 @@
   <div id="container">
     <div class="holder">
       <span class="title">Órarend 10/D</span>
-      <table>
-        <tr>
-          <td class="short">
-          </td>
-          <td class="short">
-            <div class="hours">
-              <span class="top">1. óra</span>
-              <span class="bottom">7:30 - 8:15</span>
-            </div>
-          </td>
-          <td class="short">
-            <div class="hours">
-              <span class="top">2. óra</span>
-              <span class="bottom">8:30 - 9:15</span>
-            </div>
-          </td>
-          <td class="short">
-            <div class="hours">
-              <span class="top">3. óra</span>
-              <span class="bottom">9:30 - 10:15</span>
-            </div>
-          </td>
-          <td class="short">
-            <div class="hours">
-              <span class="top">4. óra</span>
-              <span class="bottom">10:30 - 11:15</span>
-            </div>
-          </td>
-          <td class="short">
-            <div class="hours">
-              <span class="top">5. óra</span>
-              <span class="bottom">11:30 - 12:15</span>
-            </div>
-          </td>
-          <td class="short">
-            <div class="hours">
-              <span class="top">6. óra</span>
-              <span class="bottom">12:35 - 13:20</span>
-            </div>
-          </td>
-          <td class="short">
-            <div class="hours">
-              <span class="top">7. óra</span>
-              <span class="bottom">13:40 - 14:25</span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="days">Hétfő</div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="a1"></span>
-                  <span class="label-text" id="a1"></span>
-                  <span class="detail-room" id="a1"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+      <div class="table-container">
+        <div class="scrollable">
+          <table>
+            <tr>
+              <td class="short">
+                <div class="hours">
+                  <span class="name-field" id="name-field"></span>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="a2"></span>
-                  <span class="label-text" id="a2"></span>
-                  <span class="detail-room" id="a2"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td class="short">
+                <div class="hours">
+                  <span class="top">1. óra</span>
+                  <span class="bottom">7:30 - 8:15</span>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="a3"></span>
-                  <span class="label-text" id="a3"></span>
-                  <span class="detail-room" id="a3"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td class="short">
+                <div class="hours">
+                  <span class="top">2. óra</span>
+                  <span class="bottom">8:30 - 9:15</span>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="a4"></span>
-                  <span class="label-text" id="a4"></span>
-                  <span class="detail-room" id="a4"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td class="short">
+                <div class="hours">
+                  <span class="top">3. óra</span>
+                  <span class="bottom">9:30 - 10:15</span>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="a5"></span>
-                  <span class="label-text" id="a5"></span>
-                  <span class="detail-room" id="a5"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td class="short">
+                <div class="hours">
+                  <span class="top">4. óra</span>
+                  <span class="bottom">10:30 - 11:15</span>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="a6"></span>
-                  <span class="label-text" id="a6"></span>
-                  <span class="detail-room" id="a6"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td class="short">
+                <div class="hours">
+                  <span class="top">5. óra</span>
+                  <span class="bottom">11:30 - 12:15</span>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="a7"></span>
-                  <span class="label-text" id="a7"></span>
-                  <span class="detail-room" id="a7"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td class="short">
+                <div class="hours">
+                  <span class="top">6. óra</span>
+                  <span class="bottom">12:35 - 13:20</span>
                 </div>
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="days">Kedd</div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="b1"></span>
-                  <span class="label-text" id="b1"></span>
-                  <span class="detail-room" id="b1"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td class="short" class="right">
+                <div class="hours">
+                  <span class="top">7. óra</span>
+                  <span class="bottom">13:40 - 14:25</span>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="b2"></span>
-                  <span class="label-text" id="b2"></span>
-                  <span class="detail-room" id="b2"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="days">Hétfő</div>
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="a1"></span>
+                      <span class="label-text" id="a1"></span>
+                      <span class="detail-room" id="a1"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="b3"></span>
-                  <span class="label-text" id="b3"></span>
-                  <span class="detail-room" id="b3"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="a2"></span>
+                      <span class="label-text" id="a2"></span>
+                      <span class="detail-room" id="a2"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="b4"></span>
-                  <span class="label-text" id="b4"></span>
-                  <span class="detail-room" id="b4"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="a3"></span>
+                      <span class="label-text" id="a3"></span>
+                      <span class="detail-room" id="a3"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="b5"></span>
-                  <span class="label-text" id="b5"></span>
-                  <span class="detail-room" id="b5"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="a4"></span>
+                      <span class="label-text" id="a4"></span>
+                      <span class="detail-room" id="a4"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="b6"></span>
-                  <span class="label-text" id="b6"></span>
-                  <span class="detail-room" id="b6"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="a5"></span>
+                      <span class="label-text" id="a5"></span>
+                      <span class="detail-room" id="a5"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="b7"></span>
-                  <span class="label-text" id="b7"></span>
-                  <span class="detail-room" id="b7"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="a6"></span>
+                      <span class="label-text" id="a6"></span>
+                      <span class="detail-room" id="a6"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="days">Szerda</div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="c1"></span>
-                  <span class="label-text" id="c1"></span>
-                  <span class="detail-room" id="c1"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td class="right">
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="a7"></span>
+                      <span class="label-text" id="a7"></span>
+                      <span class="detail-room" id="a7"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="c2"></span>
-                  <span class="label-text" id="c2"></span>
-                  <span class="detail-room" id="c2"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="days">Kedd</div>
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="b1"></span>
+                      <span class="label-text" id="b1"></span>
+                      <span class="detail-room" id="b1"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="c3"></span>
-                  <span class="label-text" id="c3"></span>
-                  <span class="detail-room" id="c3"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="b2"></span>
+                      <span class="label-text" id="b2"></span>
+                      <span class="detail-room" id="b2"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="c4"></span>
-                  <span class="label-text" id="c4"></span>
-                  <span class="detail-room" id="c4"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="b3"></span>
+                      <span class="label-text" id="b3"></span>
+                      <span class="detail-room" id="b3"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="c5"></span>
-                  <span class="label-text" id="c5"></span>
-                  <span class="detail-room" id="c5"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="b4"></span>
+                      <span class="label-text" id="b4"></span>
+                      <span class="detail-room" id="b4"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="c6"></span>
-                  <span class="label-text" id="c6"></span>
-                  <span class="detail-room" id="c6"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="b5"></span>
+                      <span class="label-text" id="b5"></span>
+                      <span class="detail-room" id="b5"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="c7"></span>
-                  <span class="label-text" id="c7"></span>
-                  <span class="detail-room" id="c7"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="b6"></span>
+                      <span class="label-text" id="b6"></span>
+                      <span class="detail-room" id="b6"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="days">Csütörtök</div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="d1"></span>
-                  <span class="label-text" id="d1"></span>
-                  <span class="detail-room" id="d1"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td class="right">
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="b7"></span>
+                      <span class="label-text" id="b7"></span>
+                      <span class="detail-room" id="b7"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="d2"></span>
-                  <span class="label-text" id="d2"></span>
-                  <span class="detail-room" id="d2"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="days">Szerda</div>
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="c1"></span>
+                      <span class="label-text" id="c1"></span>
+                      <span class="detail-room" id="c1"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="d3"></span>
-                  <span class="label-text" id="d3"></span>
-                  <span class="detail-room" id="d3"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="c2"></span>
+                      <span class="label-text" id="c2"></span>
+                      <span class="detail-room" id="c2"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="d4"></span>
-                  <span class="label-text" id="d4"></span>
-                  <span class="detail-room" id="d4"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="c3"></span>
+                      <span class="label-text" id="c3"></span>
+                      <span class="detail-room" id="c3"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="d5"></span>
-                  <span class="label-text" id="d5"></span>
-                  <span class="detail-room" id="d5"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="c4"></span>
+                      <span class="label-text" id="c4"></span>
+                      <span class="detail-room" id="c4"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="d6"></span>
-                  <span class="label-text" id="d6"></span>
-                  <span class="detail-room" id="d6"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="c5"></span>
+                      <span class="label-text" id="c5"></span>
+                      <span class="detail-room" id="c5"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="d7"></span>
-                  <span class="label-text" id="d7"></span>
-                  <span class="detail-room" id="d7"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="c6"></span>
+                      <span class="label-text" id="c6"></span>
+                      <span class="detail-room" id="c6"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="days">Péntek</div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="e1"></span>
-                  <span class="label-text" id="e1"></span>
-                  <span class="detail-room" id="e1"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td class="right">
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="c7"></span>
+                      <span class="label-text" id="c7"></span>
+                      <span class="detail-room" id="c7"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="e2"></span>
-                  <span class="label-text" id="e2"></span>
-                  <span class="detail-room" id="e2"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="days">Csütörtök</div>
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="d1"></span>
+                      <span class="label-text" id="d1"></span>
+                      <span class="detail-room" id="d1"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="e3"></span>
-                  <span class="label-text" id="e3"></span>
-                  <span class="detail-room" id="e3"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="d2"></span>
+                      <span class="label-text" id="d2"></span>
+                      <span class="detail-room" id="d2"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="e4"></span>
-                  <span class="label-text" id="e4"></span>
-                  <span class="detail-room" id="e4"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="d3"></span>
+                      <span class="label-text" id="d3"></span>
+                      <span class="detail-room" id="d3"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="e5"></span>
-                  <span class="label-text" id="e5"></span>
-                  <span class="detail-room" id="e5"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="d4"></span>
+                      <span class="label-text" id="d4"></span>
+                      <span class="detail-room" id="d4"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="e6"></span>
-                  <span class="label-text" id="e6"></span>
-                  <span class="detail-room" id="e6"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="d5"></span>
+                      <span class="label-text" id="d5"></span>
+                      <span class="detail-room" id="d5"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-          <td>
-            <div class="box">
-              <button class="outline red" type="button">
-                <div class="label">
-                  <span class="hover-effect"></span>
-                  <span class="detail-teacher" id="e7"></span>
-                  <span class="label-text" id="e7"></span>
-                  <span class="detail-room" id="e7"></span>
-                  <img src="icon.png" alt="Dolgozat Lesz!" class="icon">
-                  <img src="icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="d6"></span>
+                      <span class="label-text" id="d6"></span>
+                      <span class="detail-room" id="d6"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </td>
-        </tr>
-      </table>
+              </td>
+              <td class="right">
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="d7"></span>
+                      <span class="label-text" id="d7"></span>
+                      <span class="detail-room" id="d7"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="days">Péntek</div>
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="e1"></span>
+                      <span class="label-text" id="e1"></span>
+                      <span class="detail-room" id="e1"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
+                </div>
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="e2"></span>
+                      <span class="label-text" id="e2"></span>
+                      <span class="detail-room" id="e2"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
+                </div>
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="e3"></span>
+                      <span class="label-text" id="e3"></span>
+                      <span class="detail-room" id="e3"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
+                </div>
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="e4"></span>
+                      <span class="label-text" id="e4"></span>
+                      <span class="detail-room" id="e4"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
+                </div>
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="e5"></span>
+                      <span class="label-text" id="e5"></span>
+                      <span class="detail-room" id="e5"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
+                </div>
+              </td>
+              <td>
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="e6"></span>
+                      <span class="label-text" id="e6"></span>
+                      <span class="detail-room" id="e6"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
+                </div>
+              </td>
+              <td class="right">
+                <div class="box">
+                  <button class="outline red" type="button">
+                    <div class="label">
+                      <span class="hover-effect"></span>
+                      <span class="detail-teacher" id="e7"></span>
+                      <span class="label-text" id="e7"></span>
+                      <span class="detail-room" id="e7"></span>
+                      <img src="./assets/icon.png" alt="Dolgozat Lesz!" class="icon">
+                      <img src="./assets/icon-hover.png" alt="Dolgozat Lesz!" class="icon-hover">
+                    </div>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 

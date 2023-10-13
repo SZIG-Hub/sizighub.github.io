@@ -885,10 +885,6 @@ var data = {
   }
 }
 
-if (screen.width <= 1600) {
-  document.location = "./mobile/index.html";
-}
-
 const days = Object.keys(data);
 
 days.forEach(day => {
