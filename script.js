@@ -1,891 +1,21 @@
-var data = {
-  "Monday": {
-    "a1": {
-      "subjects": {
-        "multiple": true,
-        "type": 2,
-        "1": {
-          "subject": "Német",
-          "teacher": "Dörögdi József",
-          "monogram": "DJ",
-          "room": "Zrínyi",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Német",
-          "teacher": "Bartháné Nagy Katalin",
-          "monogram": "NK",
-          "room": "Balzac",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "3": {
-          "subject": "Olasz",
-          "teacher": "Ruszina Mónika",
-          "monogram": "RM",
-          "room": "Dante",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "4": {
-          "subject": "Francia",
-          "teacher": "Vimlátiné Kálmán Judit",
-          "monogram": "VJ",
-          "room": "Moliére",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "a2": {
-      "subjects": {
-        "multiple": true,
-        "type": 0,
-        "1": {
-          "subject": "Fizika",
-          "teacher": "Szatmáry Zsolt",
-          "monogram": "SZ",
-          "room": "Galilei",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Matek",
-          "teacher": "Seregély Ildikó",
-          "monogram": "SE",
-          "room": "Eötvös",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "a3": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Kémia",
-          "teacher": "Sumi Ildikó Katalin",
-          "monogram": "SI",
-          "room": "Herman",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "a4": {
-      "subjects": {
-        "multiple": true,
-        "type": 0,
-        "1": {
-          "subject": "Matek",
-          "teacher": "Halek Tamás",
-          "monogram": "HT",
-          "room": "KémLab",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Infó",
-          "teacher": "Kornis Ferenc",
-          "monogram": "KF",
-          "room": "Bolyai",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "a5": {
-      "subjects": {
-        "multiple": true,
-        "type": 0,
-        "1": {
-          "subject": "Matek",
-          "teacher": "Halek Tamás",
-          "monogram": "HT",
-          "room": "KémLab",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Fizika",
-          "teacher": "Szatmáry Zsolt",
-          "monogram": "SZ",
-          "room": "Galilei",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "a6": {
-      "subjects": {
-        "multiple": true,
-        "type": 3,
-        "1": {
-          "subject": "Fizikás Mat.",
-          "teacher": "Magyar Zsolt",
-          "monogram": "MZ",
-          "room": "FizLab",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Kémiás Mat.",
-          "teacher": "Miklós Zoltán",
-          "monogram": "MI",
-          "room": "Herman",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "3": {
-          "subject": "Verseny Mat.",
-          "teacher": "Juhász István",
-          "monogram": "JI",
-          "room": "Erdős",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "4": {
-          "subject": "Gyakorló Mat.",
-          "teacher": "Dankowsky Anna Zóra",
-          "monogram": "DZ",
-          "room": "Kossuth",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "a7": {
-      "subjects": {
-        "multiple": true,
-        "type": 4,
-        "1": {
-          "subject": "Tesi",
-          "teacher": "Boros Gábor",
-          "monogram": "BG",
-          "room": "Nagy Torna",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Tesi",
-          "teacher": "Barkócziné Antók Zsófia",
-          "monogram": "AZ",
-          "room": "Kis Torna",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    }
-  },
-  "Tuesday": {
-    "b1": {
-      "subjects": {
-        "multiple": true,
-        "type": 0,
-        "1": {
-          "subject": "Matek",
-          "teacher": "Halek Tamás",
-          "monogram": "HT",
-          "room": "Galilei",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Nyelvtan",
-          "teacher": "Libárdi Péter",
-          "monogram": "LP",
-          "room": "Babits",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "b2": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Irodalom",
-          "teacher": "Libárdi Péter",
-          "monogram": "LP",
-          "room": "Babits",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "b3": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Történelem",
-          "teacher": "Kósa Zsolt",
-          "monogram": "KZ",
-          "room": "Ady",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "b4": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Biológia",
-          "teacher": "Szabó András",
-          "monogram": "SA",
-          "room": "Herman",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "b5": {
-      "subjects": {
-        "multiple": true,
-        "type": 0,
-        "1": {
-          "subject": "Nyelvtan",
-          "teacher": "Libárdi Péter",
-          "monogram": "LP",
-          "room": "Babits",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Matek",
-          "teacher": "Seregély Ildikó",
-          "monogram": "SE",
-          "room": "Kossouth",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "b6": {
-      "subjects": {
-        "multiple": true,
-        "type": 4,
-        "1": {
-          "subject": "Tesi",
-          "teacher": "Boros Gábor",
-          "monogram": "BG",
-          "room": "Nagy Torna",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Tesi",
-          "teacher": "Barkócziné Antók Zsófia",
-          "monogram": "AZ",
-          "room": "Kis Torna",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "b7": {
-      "subjects": {
-        "multiple": true,
-        "type": 1,
-        "1": {
-          "subject": "Angol",
-          "teacher": "Hős Csilla",
-          "monogram": "HC",
-          "room": "Balzac",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Angol",
-          "teacher": "Babus Zoltán",
-          "monogram": "BZ",
-          "room": "Csontváry",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "3": {
-          "subject": "Angol",
-          "teacher": "Berke Ildikó",
-          "monogram": "BI",
-          "room": "Churchill",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "4": {
-          "subject": "Angol",
-          "teacher": "Horváthné Gődény Judit",
-          "monogram": "HG",
-          "room": "Puskin",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    }
-  },
-  "Wednesday": {
-    "c1": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Irodalom",
-          "teacher": "Libárdi Péter",
-          "monogram": "LP",
-          "room": "Babits",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "c2": {
-      "subjects": {
-        "multiple": true,
-        "type": 1,
-        "1": {
-          "subject": "Angol",
-          "teacher": "Hős Csilla",
-          "monogram": "HC",
-          "room": "Dante",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Angol",
-          "teacher": "Babus Zoltán",
-          "monogram": "BZ",
-          "room": "Heine",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "3": {
-          "subject": "Angol",
-          "teacher": "Berke Ildikó",
-          "monogram": "BI",
-          "room": "Churchill",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "4": {
-          "subject": "Angol",
-          "teacher": "Horváthné Gődény Judit",
-          "monogram": "HG",
-          "room": "Puskin",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "c3": {
-      "subjects": {
-        "multiple": true,
-        "type": 0,
-        "1": {
-          "subject": "Infó",
-          "teacher": "Kornis Ferenc",
-          "monogram": "KF",
-          "room": "Bolyai",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Matek",
-          "teacher": "Seregély Ildikó",
-          "monogram": "SE",
-          "room": "Petőfi",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "c4": {
-      "subjects": {
-        "multiple": true,
-        "type": 0,
-        "1": {
-          "subject": "Kémia",
-          "teacher": "Sumi Ildikó Katalin",
-          "monogram": "SI",
-          "room": "KémLab",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Infó",
-          "teacher": "Kornis Ferenc",
-          "monogram": "KF",
-          "room": "Bolyai",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "c5": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Fizika",
-          "teacher": "Szatmáry Zsolt",
-          "monogram": "SZ",
-          "room": "Galilei",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "c6": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Földrajz",
-          "teacher": "Kósa Zsolt",
-          "monogram": "KZ",
-          "room": "Ady",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "c7": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Rajz",
-          "teacher": "Tugyi Tímea",
-          "monogram": "TT",
-          "room": "Csontváry",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    }
-  },
-  "Thursday": {
-    "d1": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Ének",
-          "teacher": "Inokai Máté",
-          "monogram": "IM",
-          "room": "Weiner",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "d2": {
-      "subjects": {
-        "multiple": true,
-        "type": 0,
-        "1": {
-          "subject": "Infó",
-          "teacher": "Kornis Ferenc",
-          "monogram": "KF",
-          "room": "Bolyai",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Kémia",
-          "teacher": "Sumi Ildikó Katalin",
-          "monogram": "SI",
-          "room": "Weiner",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "d3": {
-      "subjects": {
-        "multiple": true,
-        "type": 2,
-        "1": {
-          "subject": "Német",
-          "teacher": "Dörögdi József",
-          "monogram": "DJ",
-          "room": "Konorót",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Német",
-          "teacher": "Bartháné Nagy Katalin",
-          "monogram": "NK",
-          "room": "Balzac",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "3": {
-          "subject": "Olasz",
-          "teacher": "Ruszina Mónika",
-          "monogram": "RM",
-          "room": "Dante",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "4": {
-          "subject": "Francia",
-          "teacher": "Vimlátiné Kálmán Judit",
-          "monogram": "VJ",
-          "room": "Moliére",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "d4": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Történelem",
-          "teacher": "Kósa Zsolt",
-          "monogram": "KZ",
-          "room": "Ady",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "d5": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Biológia",
-          "teacher": "Szabó András",
-          "monogram": "SA",
-          "room": "Herman",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "d6": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Úszás",
-          "teacher": "Barkócziné Antók Zsófia",
-          "monogram": "AZ",
-          "room": "BVSC",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "d7": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Úszás",
-          "teacher": "Barkócziné Antók Zsófia",
-          "monogram": "AZ",
-          "room": "BVSC",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    }
-  },
-  "Friday": {
-    "e1": {
-      "subjects": {
-        "multiple": true,
-        "type": 4,
-        "1": {
-          "subject": "Tesi",
-          "teacher": "Szvetnyik Krisztina",
-          "monogram": "SK",
-          "room": "Nagy Torna",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Tesi",
-          "teacher": "Barkócziné Antók Zsófia",
-          "monogram": "AZ",
-          "room": "Kis Torna",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "e2": {
-      "subjects": {
-        "multiple": true,
-        "type": 2,
-        "1": {
-          "subject": "Német",
-          "teacher": "Dörögdi József",
-          "monogram": "DJ",
-          "room": "Mozart",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Német",
-          "teacher": "Bartháné Nagy Katalin",
-          "monogram": "NK",
-          "room": "Balzac",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "3": {
-          "subject": "Olasz",
-          "teacher": "Ruszina Mónika",
-          "monogram": "RM",
-          "room": "Dante",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "4": {
-          "subject": "Francia",
-          "teacher": "Vimlátiné Kálmán Judit",
-          "monogram": "VJ",
-          "room": "Moliére",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "e3": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Fizika",
-          "teacher": "Szatmáry Zsolt",
-          "monogram": "SZ",
-          "room": "Galilei",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "e4": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Biológia",
-          "teacher": "Szabó András",
-          "monogram": "SA",
-          "room": "Irinyi",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "e5": {
-      "subjects": {
-        "multiple": true,
-        "type": 0,
-        "1": {
-          "subject": "Matek",
-          "teacher": "Halek Tamás",
-          "monogram": "HT",
-          "room": "Ady",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Matek",
-          "teacher": "Seregély Ildikó",
-          "monogram": "SE",
-          "room": "KémLab",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "e6": {
-      "subjects": {
-        "multiple": true,
-        "type": 1,
-        "1": {
-          "subject": "Angol",
-          "teacher": "Hős Csilla",
-          "monogram": "HC",
-          "room": "Dante",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "2": {
-          "subject": "Angol",
-          "teacher": "Babus Zoltán",
-          "monogram": "BZ",
-          "room": "Heine",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "3": {
-          "subject": "Angol",
-          "teacher": "Berke Ildikó",
-          "monogram": "BI",
-          "room": "Churchill",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        },
-        "4": {
-          "subject": "Angol",
-          "teacher": "Horváthné Gődény Judit",
-          "monogram": "HG",
-          "room": "Puskin",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    },
-    "e7": {
-      "subjects": {
-        "multiple": false,
-        "1": {
-          "subject": "Irodalom",
-          "teacher": "Libárdi Péter",
-          "monogram": "LP",
-          "room": "Babits",
-          "exam": {
-            "exist": false,
-            "type": "none"
-          }
-        }
-      }
-    }
-  }
-}
+import json from './data.json' assert {type: 'json'};
+import exams from './exams.json' assert {type: 'json'};
+import users from './users.json' assert {type: 'json'};
 
-const days = Object.keys(data);
+var userConfig = users['@horvathadam']
+
+document.querySelector(`span.username`).textContent = userConfig.name
+document.querySelector(`img.profilePicture`).src = userConfig.profilepicture
+
+var days = Object.keys(json)
+var examDays = Object.keys(exams)
+
+var curr = new Date((new Date).setDate((new Date).getDate() - (new Date).getDay() + 7));
+var examMonday = new Date(curr.setDate(curr.getDate() - curr.getDay() + 1));
+var examTuesday = new Date(curr.setDate(curr.getDate() - curr.getDay() + 2));
+var examWednesday = new Date(curr.setDate(curr.getDate() - curr.getDay() + 3));
+var examThursday = new Date(curr.setDate(curr.getDate() - curr.getDay() + 4));
+var examFriday = new Date(curr.setDate(curr.getDate() - curr.getDay() + 5));
 
 days.forEach(day => {
   if (day === "Monday") { monday(day) }
@@ -900,31 +30,75 @@ days.forEach(day => {
 function monday(day) {
   for (let col = 1; col <= 7; col++) {
     const cellId = "a" + col.toString();
-    const cellData = data[day][cellId]
+    const cellData = json[day][cellId]
 
     if (cellData.subjects.multiple === true) {
       if (cellData.subjects.type === 0) {
-        
+        let i = userConfig.type0
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
       }
-      if (cellData.subjects.type === 1) {
-        
+      else if (cellData.subjects.type === 1) {
+        let i = userConfig.type1
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
       }
-      if (cellData.subjects.type === 2) {
-        
+      else if (cellData.subjects.type === 2) {
+        let i = userConfig.type2
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
       }
-      if (cellData.subjects.type === 3) {
-        
+      else if (cellData.subjects.type === 3) {
+        let i = userConfig.type3
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
       }
-      if (cellData.subjects.type === 4) {
-        
+      else if (cellData.subjects.type === 4) {
+        let i = userConfig.type4
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
       }
+    } else {
+
+      document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[1].monogram;
+      document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[1].subject;
+      document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[1].room;
+
     }
 
-    // Populate the divs with data
+    examDays.forEach(examDay => {
+      if (examDay === examMonday.toDateString()) {
+        for (let e = 1; e <= 7; e++) {
+          const examData = exams[examDay][e]
+          if (examData) {
+            var examClass = `a${e}`
+            var examSubject = examData.subject
+            examIcon(examClass, examSubject)
+          }
+        }
+      }
+    })
 
-    document.querySelector(`span#${cellId}.detail-teacher`).textContent = cellData.subjects[1].monogram;
-    document.querySelector(`span#${cellId}.label-text`).textContent = cellData.subjects[1].subject;
-    document.querySelector(`span#${cellId}.detail-room`).textContent = cellData.subjects[1].room;
+    function examIcon(examClass, examSubject) {
+      if (examClass && examSubject) {
+        if (cellData.subjects[examSubject]) {
+          if (document.querySelector(`span#${examClass}.teacher`).textContent === cellData.subjects[examSubject].monogram) {
+            document.querySelector(`img#${examClass}.image`).style.display = "block"
+            document.querySelector(`img#${examClass}.hoverImage`).style.display = "block"
+          }
+        }
+      }
+    }
   }
 }
 
@@ -933,12 +107,75 @@ function monday(day) {
 function tuesday(day) {
   for (let col = 1; col <= 7; col++) {
     const cellId = "b" + col.toString();
-    const cellData = data[day][cellId]
+    const cellData = json[day][cellId]
 
-    // Populate the divs with data
-    document.querySelector(`span#${cellId}.detail-teacher`).textContent = cellData.subjects[1].monogram;
-    document.querySelector(`span#${cellId}.label-text`).textContent = cellData.subjects[1].subject;
-    document.querySelector(`span#${cellId}.detail-room`).textContent = cellData.subjects[1].room;
+    if (cellData.subjects.multiple === true) {
+      if (cellData.subjects.type === 0) {
+        let i = userConfig.type0
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 1) {
+        let i = userConfig.type1
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 2) {
+        let i = userConfig.type2
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 3) {
+        let i = userConfig.type3
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 4) {
+        let i = userConfig.type4
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+    } else {
+
+      document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[1].monogram;
+      document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[1].subject;
+      document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[1].room;
+
+    }
+
+    examDays.forEach(examDay => {
+      if (examDay === examTuesday.toDateString()) {
+        for (let e = 1; e <= 7; e++) {
+          const examData = exams[examDay][e]
+          if (examData) {
+            var examClass = `b${e}`
+            var examSubject = examData.subject
+            examIcon(examClass, examSubject)
+          }
+        }
+      }
+    })
+
+    function examIcon(examClass, examSubject) {
+      if (examClass && examSubject) {
+        if (cellData.subjects[examSubject]) {
+          if (document.querySelector(`span#${examClass}.teacher`).textContent === cellData.subjects[examSubject].monogram) {
+            document.querySelector(`img#${examClass}.image`).style.display = "block"
+            document.querySelector(`img#${examClass}.hoverImage`).style.display = "block"
+          }
+        }
+      }
+    }
   }
 }
 
@@ -947,12 +184,75 @@ function tuesday(day) {
 function wednesday(day) {
   for (let col = 1; col <= 7; col++) {
     const cellId = "c" + col.toString();
-    const cellData = data[day][cellId]
+    const cellData = json[day][cellId]
 
-    // Populate the divs with data
-    document.querySelector(`span#${cellId}.detail-teacher`).textContent = cellData.subjects[1].monogram;
-    document.querySelector(`span#${cellId}.label-text`).textContent = cellData.subjects[1].subject;
-    document.querySelector(`span#${cellId}.detail-room`).textContent = cellData.subjects[1].room;
+    if (cellData.subjects.multiple === true) {
+      if (cellData.subjects.type === 0) {
+        let i = userConfig.type0
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 1) {
+        let i = userConfig.type1
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 2) {
+        let i = userConfig.type2
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 3) {
+        let i = userConfig.type3
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 4) {
+        let i = userConfig.type4
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+    } else {
+
+      document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[1].monogram;
+      document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[1].subject;
+      document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[1].room;
+
+    }
+
+    examDays.forEach(examDay => {
+      if (examDay === examWednesday.toDateString()) {
+        for (let e = 1; e <= 7; e++) {
+        const examData = exams[examDay][e]
+        if (examData) {
+          var examClass = `c${e}`
+          var examSubject = examData.subject
+          examIcon(examClass, examSubject)
+        }
+      }
+    }
+  })
+
+    function examIcon(examClass, examSubject) {
+      if (examClass && examSubject) {
+        if (cellData.subjects[examSubject]) {
+          if (document.querySelector(`span#${examClass}.teacher`).textContent === cellData.subjects[examSubject].monogram) {
+            document.querySelector(`img#${examClass}.image`).style.display = "block"
+            document.querySelector(`img#${examClass}.hoverImage`).style.display = "block"
+          }
+        }
+      }
+    }
   }
 }
 
@@ -961,12 +261,75 @@ function wednesday(day) {
 function thursday(day) {
   for (let col = 1; col <= 7; col++) {
     const cellId = "d" + col.toString();
-    const cellData = data[day][cellId]
+    const cellData = json[day][cellId]
 
-    // Populate the divs with data
-    document.querySelector(`span#${cellId}.detail-teacher`).textContent = cellData.subjects[1].monogram;
-    document.querySelector(`span#${cellId}.label-text`).textContent = cellData.subjects[1].subject;
-    document.querySelector(`span#${cellId}.detail-room`).textContent = cellData.subjects[1].room;
+    if (cellData.subjects.multiple === true) {
+      if (cellData.subjects.type === 0) {
+        let i = userConfig.type0
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 1) {
+        let i = userConfig.type1
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 2) {
+        let i = userConfig.type2
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 3) {
+        let i = userConfig.type3
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 4) {
+        let i = userConfig.type4
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+    } else {
+
+      document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[1].monogram;
+      document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[1].subject;
+      document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[1].room;
+
+    }
+
+    examDays.forEach(examDay => {
+      if (examDay === examThursday.toDateString()) {
+        for (let e = 1; e <= 7; e++) {
+          const examData = exams[examDay][e]
+          if (examData) {
+            var examClass = `d${e}`
+            var examSubject = examData.subject
+            examIcon(examClass, examSubject)
+          }
+        }
+      }
+    })
+
+    function examIcon(examClass, examSubject) {
+      if (examClass && examSubject) {
+        if (cellData.subjects[examSubject]) {
+          if (document.querySelector(`span#${examClass}.teacher`).textContent === cellData.subjects[examSubject].monogram) {
+            document.querySelector(`img#${examClass}.image`).style.display = "block"
+            document.querySelector(`img#${examClass}.hoverImage`).style.display = "block"
+          }
+        }
+      }
+    }
   }
 }
 
@@ -975,11 +338,74 @@ function thursday(day) {
 function friday(day) {
   for (let col = 1; col <= 7; col++) {
     const cellId = "e" + col.toString();
-    const cellData = data[day][cellId]
+    const cellData = json[day][cellId]
 
-    // Populate the divs with data
-    document.querySelector(`span#${cellId}.detail-teacher`).textContent = cellData.subjects[1].monogram;
-    document.querySelector(`span#${cellId}.label-text`).textContent = cellData.subjects[1].subject;
-    document.querySelector(`span#${cellId}.detail-room`).textContent = cellData.subjects[1].room;
+    if (cellData.subjects.multiple === true) {
+      if (cellData.subjects.type === 0) {
+        let i = userConfig.type0
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 1) {
+        let i = userConfig.type1
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 2) {
+        let i = userConfig.type2
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 3) {
+        let i = userConfig.type3
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+      else if (cellData.subjects.type === 4) {
+        let i = userConfig.type4
+
+        document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[i].monogram;
+        document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[i].subject;
+        document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[i].room;
+      }
+    } else {
+
+      document.querySelector(`span#${cellId}.teacher`).textContent = cellData.subjects[1].monogram;
+      document.querySelector(`span#${cellId}.subject`).textContent = cellData.subjects[1].subject;
+      document.querySelector(`span#${cellId}.classroom`).textContent = cellData.subjects[1].room;
+
+    }
+
+    examDays.forEach(examDay => {
+      if (examDay === examFriday.toDateString()) {
+        for (let e = 1; e <= 7; e++) {
+          const examData = exams[examDay][e]
+          if (examData) {
+            var examClass = `e${e}`
+            var examSubject = examData.subject
+            examIcon(examClass, examSubject)
+          }
+        }
+      }
+    })
+
+    function examIcon(examClass, examSubject) {
+      if (examClass && examSubject) {
+        if (cellData.subjects[examSubject]) {
+          if (document.querySelector(`span#${examClass}.teacher`).textContent === cellData.subjects[examSubject].monogram) {
+            document.querySelector(`img#${examClass}.image`).style.display = "block"
+            document.querySelector(`img#${examClass}.hoverImage`).style.display = "block"
+          }
+        }
+      }
+    }
   }
 }

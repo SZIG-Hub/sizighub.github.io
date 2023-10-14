@@ -1,11 +1,11 @@
 button {
-  font-family: 'DINNextLTPro-Bold';
+  font-family: 'Alatsi', sans-serif;
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
   padding: 0.7rem;
-  cursor: not-allowed;
+  cursor: pointer;
   text-transform: uppercase;
   color: var(--v-white);
   border: 0;
@@ -36,7 +36,7 @@ button::after {
   border-top: 0;
 }
 
-.hover-effect {
+.hoverEffect {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -49,9 +49,48 @@ button::after {
   background-color: var(--v-red);
 }
 
-button:hover .hover-effect {
+button:hover .hoverEffect {
   transform: translateX(0) skew(-10deg);
 }
+
+img.image {
+  padding: 1px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  padding: 2px;
+  transition: z-index 0.1s ease-in;
+  z-index: 2;
+}
+
+button:hover .image {
+  display: none;
+  z-index: -1;
+  transition: z-index 0.1s ease-out;
+}
+
+img.hoverImage {
+  display: none;
+  z-index: -1;
+  transition: z-index 0.1s ease-out;
+}
+
+button:hover img.hoverImage {
+  padding: 1px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  padding: 2px;
+  transition: z-index 0.1s ease-in;
+  z-index: 2;
+}
+
 
 .label {
   overflow: hidden;
@@ -60,7 +99,7 @@ button:hover .hover-effect {
   height: 100%;
 }
 
-.label-text {
+.subject {
   position: relative;
   z-index: 1;
   display: block;
@@ -70,7 +109,7 @@ button:hover .hover-effect {
   padding: 4%;
 }
 
-.detail-teacher {
+.teacher {
   position: relative;
   z-index: 1;
   display: block;
@@ -82,7 +121,7 @@ button:hover .hover-effect {
   height: 25%;
 }
 
-.detail-room {
+.classroom {
   position: relative;
   z-index: 1;
   display: block;
@@ -92,46 +131,6 @@ button:hover .hover-effect {
   padding-bottom: 4%;
   padding-right: 4%;
   height: 25%;
-}
-
-#exam {
-  cursor: pointer;
-}
-
-#exam img.icon {
-  padding: 1px;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: block;
-  padding: 2px;
-  transition: display .3s ease-out;
-  z-index: 2;
-}
-
-#exam img.icon-hover {
-  display: none;
-  transition: display .3s ease-out;
-}
-
-button:hover #exam.icon {
-  display: none;
-  transition: display .3s ease-out;
-}
-
-button:hover #exam img.icon-hover {
-  padding: 1px;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: block;
-  padding: 2px;
-  z-index: 2;
-  transition: display .3s ease-out;
 }
 
 .label:before {
