@@ -1,7 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Anton&display=swap');
 
+@font-face {
+  font-family: "DINNextLTPro-Bold";
+  src: url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.eot");
+  src: url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.svg#DINNextLTPro-Bold")format("svg");
+}
+
 :root {
-  --v-red: #6C3483;
+  --v-color: #6C3483;
+  --v-lighter: #7A3D99;
   --v-white: #ece8e1;
   --v-black: #0f1923;
   --v-outline: rgba(236, 232, 225, .5);
@@ -22,132 +33,65 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-
-
-.block {
+#container {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  position: relative;
-  max-width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-
-table {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  padding-bottom: 10px;
+  max-height: 100vh;
 }
 
 .box {
-  width: 200px;
-  height: 100px;
-  background-color: var(--v-black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+  width: calc(100vw - 100px);
+  height: 150px;
+  position: relative;
+  display: inline-block;
 }
 
-td {
-  width: calc(100% / 8);
-  height: 105px;
-  padding: 2px;
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
 }
 
-.left {
-  padding-left: 0px;
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  z-index: 2;
+  width: 100%;
+  transition: opacity 1s ease-out;
+  opacity: 0;
 }
 
-.right {
-  padding-right: 0px;
-}
-
-.short {
-  height: 50px;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  width: min-content;
-  height: min-content;
-  background-image: url('./assets/background.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 30px;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.title {
-  text-align: center;
-  margin-bottom: 30px;
-  font-family: 'Anton', sans-serif;
-  font-size: 5rem;
-  color: var(--v-black);
-}
-
-.side {
-  width: 200px;
-  height: 100px;
-  background-color: var(--v-red);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  font-family: 'Alatsi', sans-serif;
-  font-size: 30px;
-  text-align: center;
-}
-
-.header {
-  width: 200px;
-  height: 50px;
-  background-color: var(--v-red);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.number {
-  font-family: 'Alatsi', sans-serif;
-  font-size: 20px;
-  text-align: center;
-}
-
-.time {
-  font-family: 'Alatsi', sans-serif;
-  font-size: 10px;
-  text-align: center;
-}
-
-.username {
-  font-family: 'Alatsi', sans-serif;
-  font-size: 20px;
-  text-align: center;
+/* Links inside the dropdown */
+.dropdown-content a {
+  font-family: 'DINNextLTPro-Bold';
+  font-size: 1.7rem;
+  color: var(--v-white);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  margin: 15px;
 }
 
 .scrollable {
-  overflow-x: auto;
+  overflow-y: auto;
   white-space: nowrap;
-  max-width: 100%;
+  max-height: 20vh;
   margin-left: 10px;
   margin-right: 10px;
+  padding-right: 20px;
 }
 
 .tableContainer {
   position: relative;
   overflow: hidden;
-  max-width: 100vw;
-  /* Adjust this value as needed */
+  max-height: 30vw;
 }
 
 /* width */
@@ -160,31 +104,222 @@ td {
   background-color: var(--v-black);
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--v-red); 
+  background: var(--v-color);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--v-red); 
+  background: var(--v-color);
 }
 
-.profile {
-  width: 200px;
-  height: 50px;
-  background-color: var(--v-red);
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--v-black);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--v-color);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--v-color);
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: transparent;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  display: block;
+}
+
+.drop-container {
+  background-color: var(--v-color);
+  padding-right: 100px;
+}
+
+.text-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 30px;
+  z-index: 2;
+}
+
+.title {
+  font-family: 'Anton', sans-serif;
+  font-size: 80px;
+  margin: 15px;
+  border-bottom: var(--v-color) solid 2px;
+  color: var(--v-white);
+  text-transform: uppercase;
+}
+
+.description {
+  font-family: 'Alatsi', sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.dark {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  background-color: var(--v-black);
+}
+
+.dark::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: 1;
+  bottom: 0;
+  transform-origin: left bottom;
+  transform: skewY(3deg);
+}
+
+.white {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--v-white);
+  padding-top: 15vh;
+  padding-bottom: 5vh;
+}
+
+.white::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: 0;
+  bottom: 0;
+  transform-origin: left bottom;
+  transform: skewY(3deg);
+}
+
+.top-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(./assets/szighub-banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 85vw;
+  height: 70vh;
+  padding: 40px;
+  margin: 20px;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.bottom-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(./assets/szighub-banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 85vw;
+  height: 70vh;
+  padding: 40px;
+  margin: 20px;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.small-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+  z-index: 1;
+}
+
+.smallTitle {
+  font-family: 'Anton', sans-serif;
+  font-size: 40px;
+  margin: 7px;
+  border-bottom: var(--v-color) solid 2px;
+  color: var(--v-white);
+  text-transform: uppercase;
+}
+
+.smallDescription {
+  font-family: 'Alatsi', sans-serif;
+  font-weight: lighter;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 7px;
+}
+
+.footer {
+  z-index: -1;
+  height: 275px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 15vh;
+  padding-bottom: 5vh;
+  color: var(--v-white);
+}
+
+.footerText{
+  font-family: 'Alatsi', sans-serif;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.footerBox {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
 }
 
-.profilePicture {
-  width: 24px;
-  height: 24px;
-  margin-right: 7px;
-  border-radius: 50%;
+.clear {
+  font-family: 'Alatsi', sans-serif;
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+.blurry {
+  font-family: 'Alatsi', sans-serif;
+  font-size: 10px;
+  margin-right: 5px;
+  text-decoration: line-through solid 5px;
 }

@@ -4,600 +4,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Órarend</title>
+  <title>SZIGHUB | Home</title>
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="button.css">
 </head>
 
 <body>
-  <div class="block">
-    <div class="container">
-      <span class="title">Órarend 10/d</span>
-      <div class="tableContainer">
-        <div class="scrollable">
-          <table>
-            <tr>
-              <td class="short">
-                <div class="profile" class="left">
-                  <img class="profilePicture">
-                  <span class="username"></span>
-                </div>
-              </td>
-              <td class="short">
-                <div class="header">
-                  <span class="number">1. Óra</span>
-                  <span class="time">7:30 - 8:15</span>
-                </div>
-              </td>
-              <td class="short">
-                <div class="header">
-                  <span class="number">2. Óra</span>
-                  <span class="time">8:30 - 9:15</span>
-                </div>
-              </td>
-              <td class="short">
-                <div class="header">
-                  <span class="number">3. Óra</span>
-                  <span class="time">9:30 - 10:15</span>
-                </div>
-              </td>
-              <td class="short">
-                <div class="header">
-                  <span class="number">4. Óra</span>
-                  <span class="time">10:30 - 11:15</span>
-                </div>
-              </td>
-              <td class="short">
-                <div class="header">
-                  <span class="number">5. Óra</span>
-                  <span class="time">11:30 - 12:15</span>
-                </div>
-              </td>
-              <td class="short">
-                <div class="header">
-                  <span class="number">6. Óra</span>
-                  <span class="time">12:35 - 13:20</span>
-                </div>
-              </td>
-              <td class="short">
-                <div class="header" class="right">
-                  <span class="number">7. Óra</span>
-                  <span class="time">13:40 - 14:25</span>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="side" class="left">
-                  <span class="day">Hétfő</span>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="a1"></span>
-                      <span class="subject" id="a1"></span>
-                      <span class="classroom" id="a1"></span>
-                      <img class="hoverImage" id="a1" src="./assets/icon-hover.png">
-                      <img class="image" id="a1" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="a2"></span>
-                      <span class="subject" id="a2"></span>
-                      <span class="classroom" id="a2"></span>
-                      <img class="hoverImage" id="a2" src="./assets/icon-hover.png">
-                      <img class="image" id="a2" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="a3"></span>
-                      <span class="subject" id="a3"></span>
-                      <span class="classroom" id="a3"></span>
-                      <img class="hoverImage" id="a3" src="./assets/icon-hover.png">
-                      <img class="image" id="a3" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="a4"></span>
-                      <span class="subject" id="a4"></span>
-                      <span class="classroom" id="a4"></span>
-                      <img class="hoverImage" id="a4" src="./assets/icon-hover.png">
-                      <img class="image" id="a4" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="a5"></span>
-                      <span class="subject" id="a5"></span>
-                      <span class="classroom" id="a5"></span>
-                      <img class="hoverImage" id="a5" src="./assets/icon-hover.png">
-                      <img class="image" id="a5" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="a6"></span>
-                      <span class="subject" id="a6"></span>
-                      <span class="classroom" id="a6"></span>
-                      <img class="hoverImage" id="a6" src="./assets/icon-hover.png">
-                      <img class="image" id="a6" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box" class="right">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="a7"></span>
-                      <span class="subject" id="a7"></span>
-                      <span class="classroom" id="a7"></span>
-                      <img class="hoverImage" id="a7" src="./assets/icon-hover.png">
-                      <img class="image" id="a7" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="side" class="left">
-                  <span class="day">Kedd</span>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="b1"></span>
-                      <span class="subject" id="b1"></span>
-                      <span class="classroom" id="b1"></span>
-                      <img class="hoverImage" id="b1" src="./assets/icon-hover.png">
-                      <img class="image" id="b1" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="b2"></span>
-                      <span class="subject" id="b2"></span>
-                      <span class="classroom" id="b2"></span>
-                      <img class="hoverImage" id="b2" src="./assets/icon-hover.png">
-                      <img class="image" id="b2" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="b3"></span>
-                      <span class="subject" id="b3"></span>
-                      <span class="classroom" id="b3"></span>
-                      <img class="hoverImage" id="b3" src="./assets/icon-hover.png">
-                      <img class="image" id="b3" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="b4"></span>
-                      <span class="subject" id="b4"></span>
-                      <span class="classroom" id="b4"></span>
-                      <img class="hoverImage" id="b4" src="./assets/icon-hover.png">
-                      <img class="image" id="b4" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="b5"></span>
-                      <span class="subject" id="b5"></span>
-                      <span class="classroom" id="b5"></span>
-                      <img class="hoverImage" id="b5" src="./assets/icon-hover.png">
-                      <img class="image" id="b5" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="b6"></span>
-                      <span class="subject" id="b6"></span>
-                      <span class="classroom" id="b6"></span>
-                      <img class="hoverImage" id="b6" src="./assets/icon-hover.png">
-                      <img class="image" id="b6" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box" class="right">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="b7"></span>
-                      <span class="subject" id="b7"></span>
-                      <span class="classroom" id="b7"></span>
-                      <img class="hoverImage" id="b7" src="./assets/icon-hover.png">
-                      <img class="image" id="b7" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="side" class="left">
-                  <span class="day">Szerda</span>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="c1"></span>
-                      <span class="subject" id="c1"></span>
-                      <span class="classroom" id="c1"></span>
-                      <img class="hoverImage" id="c1" src="./assets/icon-hover.png">
-                      <img class="image" id="c1" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="c2"></span>
-                      <span class="subject" id="c2"></span>
-                      <span class="classroom" id="c2"></span>
-                      <img class="hoverImage" id="c2" src="./assets/icon-hover.png">
-                      <img class="image" id="c2" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="c3"></span>
-                      <span class="subject" id="c3"></span>
-                      <span class="classroom" id="c3"></span>
-                      <img class="hoverImage" id="c3" src="./assets/icon-hover.png">
-                      <img class="image" id="c3" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="c4"></span>
-                      <span class="subject" id="c4"></span>
-                      <span class="classroom" id="c4"></span>
-                      <img class="hoverImage" id="c4" src="./assets/icon-hover.png">
-                      <img class="image" id="c4" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="c5"></span>
-                      <span class="subject" id="c5"></span>
-                      <span class="classroom" id="c5"></span>
-                      <img class="hoverImage" id="c5" src="./assets/icon-hover.png">
-                      <img class="image" id="c5" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="c6"></span>
-                      <span class="subject" id="c6"></span>
-                      <span class="classroom" id="c6"></span>
-                      <img class="hoverImage" id="c6" src="./assets/icon-hover.png">
-                      <img class="image" id="c6" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box" class="right">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="c7"></span>
-                      <span class="subject" id="c7"></span>
-                      <span class="classroom" id="c7"></span>
-                      <img class="hoverImage" id="c7" src="./assets/icon-hover.png">
-                      <img class="image" id="c7" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="side" class="left">
-                  <span class="day">Csütörtök</span>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="d1"></span>
-                      <span class="subject" id="d1"></span>
-                      <span class="classroom" id="d1"></span>
-                      <img class="hoverImage" id="d1" src="./assets/icon-hover.png">
-                      <img class="image" id="d1" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="d2"></span>
-                      <span class="subject" id="d2"></span>
-                      <span class="classroom" id="d2"></span>
-                      <img class="hoverImage" id="d2" src="./assets/icon-hover.png">
-                      <img class="image" id="d2" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="d3"></span>
-                      <span class="subject" id="d3"></span>
-                      <span class="classroom" id="d3"></span>
-                      <img class="hoverImage" id="d3" src="./assets/icon-hover.png">
-                      <img class="image" id="d3" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="d4"></span>
-                      <span class="subject" id="d4"></span>
-                      <span class="classroom" id="d4"></span>
-                      <img class="hoverImage" id="d4" src="./assets/icon-hover.png">
-                      <img class="image" id="d4" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="d5"></span>
-                      <span class="subject" id="d5"></span>
-                      <span class="classroom" id="d5"></span>
-                      <img class="hoverImage" id="d5" src="./assets/icon-hover.png">
-                      <img class="image" id="d5" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="d6"></span>
-                      <span class="subject" id="d6"></span>
-                      <span class="classroom" id="d6"></span>
-                      <img class="hoverImage" id="d6" src="./assets/icon-hover.png">
-                      <img class="image" id="d6" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box" class="right">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="d7"></span>
-                      <span class="subject" id="d7"></span>
-                      <span class="classroom" id="d7"></span>
-                      <img class="hoverImage" id="d7" src="./assets/icon-hover.png">
-                      <img class="image" id="d7" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="side" class="left">
-                  <span class="day">Péntek</span>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="e1"></span>
-                      <span class="subject" id="e1"></span>
-                      <span class="classroom" id="e1"></span>
-                      <img class="hoverImage" id="e1" src="./assets/icon-hover.png">
-                      <img class="image" id="e1" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="e2"></span>
-                      <span class="subject" id="e2"></span>
-                      <span class="classroom" id="e2"></span>
-                      <img class="hoverImage" id="e2" src="./assets/icon-hover.png">
-                      <img class="image" id="e2" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="e3"></span>
-                      <span class="subject" id="e3"></span>
-                      <span class="classroom" id="e3"></span>
-                      <img class="hoverImage" id="e3" src="./assets/icon-hover.png">
-                      <img class="image" id="e3" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="e4"></span>
-                      <span class="subject" id="e4"></span>
-                      <span class="classroom" id="e4"></span>
-                      <img class="hoverImage" id="e4" src="./assets/icon-hover.png">
-                      <img class="image" id="e4" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="e5"></span>
-                      <span class="subject" id="e5"></span>
-                      <span class="classroom" id="e5"></span>
-                      <img class="hoverImage" id="e5" src="./assets/icon-hover.png">
-                      <img class="image" id="e5" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="e6"></span>
-                      <span class="subject" id="e6"></span>
-                      <span class="classroom" id="e6"></span>
-                      <img class="hoverImage" id="e6" src="./assets/icon-hover.png">
-                      <img class="image" id="e6" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <div class="box" class="right">
-                  <button class="outline red" type="button">
-                    <div class="label">
-                      <span class="hoverEffect"></span>
-                      <span class="teacher" id="e7"></span>
-                      <span class="subject" id="e7"></span>
-                      <span class="classroom" id="e7"></span>
-                      <img class="hoverImage" id="e7" src="./assets/icon-hover.png">
-                      <img class="image" id="e7" src="./assets/icon.png">
-                    </div>
-                  </button>
-                </div>
-              </td>
-            </tr>
-          </table>
+  <div id="container" class="dark">
+    <div class="text-block">
+      <span class="title">SZIGHUB</span>
+      <span class="description">Nézd meg az órarendedet és értesülj a várható dolgozatokról</span>
+    </div>
+    <div class="dropdown">
+      <div class="box">
+        <button class="outline" type="button">
+          <div class="label">
+            <span class="hover-effect"></span>
+            <span class="label-text">Válaszd ki a nevedet</span>
+          </div>
+        </button>
+        <div class="dropdown-content">
+          <div class="tableContainer">
+            <div class="scrollable">
+              <div class="drop-container">
+                <a href="./@baditzborbala">Batitz Borbála</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@battyanyiszabolcs">Battyányi Szabolcs</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@bobacharthur">Bobach Arthur</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@chenwenda">Chen Wenda</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@demeterviktor">Demeter Viktor</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@farkasebestyen">Farkas Sebestyén</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@fejesaron">Fejes Áron</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@ferenczibalint">Ferenczi Bálint</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@hidegdaniel">Hideg Dániel</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@horvathadam">Horváth Ádám</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@kanakaridutia">Kanakaridu Tia</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@keresztesidaniel">Keresztesi Dániel</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@kissmira">Kiss Mira</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@kovacsgyozo">Kovács Győző</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@kozmagnes">Kozma Ágnes</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@kozmabence">Kozma Bence</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@lazarovitsfelix">Lazarovits Félix</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@lianqi">Li An Qi</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@madaralex">Madar Alex</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@malomsokimark">Malomsoki Márk</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@nagyzsombor">Nagy Zsombor</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@nemestakacsvendel">Nemes-Takács Vendel</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@oroszadam">Orosz Ádám</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@palankaiboglarka">Palánkai Boglárka</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@pribelilaura">Pribeli Laura</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@pukknora">Pukk Nóra</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@raczaron">Rácz Áron</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@rakonczairoland">Rakonczai Roland</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@sajtosandras">Sajtos András</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@steinkitti">Stein Kitti</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@szanyifericsaba">Szanyi-Feri Csaba</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@szauterors">Szauter Örs</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@tardilena">Tardi Léna</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@tranminhtri">Tran Minh Tri</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@vityiannamaria">Vityi Annamária</a>
+              </div>
+              <div class="drop-container">
+                <a href="./@zsifkovagnes">Zsifkov Ágnes</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="white">
+    <div class="top-box">
+      <div class="small-text">
+        <span class="smallTitle">Dolgozatok</span>
+        <span class="smallDescription">Nézd meg milyen dolgozatokról tudunk a közeljövőben</span>
+      </div>
+      <button class="outline" id="small" type="button" onclick="location.href='./dolgozatok'">
+        <div class="label">
+          <span class="hover-effect"></span>
+          <span class="label-text">Mutasd</span>
+        </div>
+      </button>
+    </div>
+    <div class="bottom-box">
+      <div class="small-text">
+        <span class="smallTitle">Hetesek</span>
+        <span class="smallDescription">Tekintsd meg kik lesznek a hetesek ezen a héten</span>
+      </div>
+      <button class="outline" id="small" type="button" onclick="location.href='./hetesek'">
+        <div class="label">
+          <span class="hover-effect"></span>
+          <span class="label-text">Mutasd</span>
+        </div>
+      </button>
+    </div>
+  </div>
+  <footer>
+    <div class="footer">
+      <span class="footerText">2023 SZIGHUB</span>
+      <div class="footerBox">
+        <span class="blurry">Created by: Horváth Ádám</span>
+        <span class="clear">Szent István Gimnzium  //  1146 Budapest, Ajtósi Dürer sor 15.</span>
+      </div>
+    </div>
+  </footer>
 </body>
-
-<script type="module" src="./script.js"></script>
 
 </html>

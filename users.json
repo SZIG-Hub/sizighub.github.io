@@ -1,4 +1,13 @@
 {
+  "@baditzborbala": {
+    "name": "Baditz Borbála",
+    "profilepicture": "https://scontent.fbud7-3.fna.fbcdn.net/v/t39.30808-1/346070553_961793158184488_4546231542925161186_n.jpg?stp=dst-jpg_p100x100&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=PgvwNUog5u8AX-yrldc&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-3.fna&oh=00_AfDdIZ-9h6sS-lL1crXEqWYj5X4fbpN1F-qbDw5VKq-HGA&oe=652F1066",
+    "type0": 2,
+    "type1": 0,
+    "type2": 0,
+    "type3": 0,
+    "type4": 2
+  },
   "@battyanyiszabolcs": {
     "name": "Battyányi Szabolcs",
     "profilepicture": "https://scontent.fbud7-3.fna.fbcdn.net/v/t39.30808-1/364001515_772439391324767_5657099165873826960_n.jpg?stp=dst-jpg_p100x100&_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=2fONE3ZHBa4AX-JX89K&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-3.fna&oh=00_AfDMMKekqm258DfRLXe6lEA3hq7Mwolui9kNCyCPFfAKvQ&oe=65301105",
@@ -6,6 +15,69 @@
     "type1": 4,
     "type2": 3,
     "type3": 4,
+    "type4": 1
+  },
+  "@bobacharthur": {
+    "name": "Bobach Arthur",
+    "profilepicture": "https://scontent.fbud7-4.fna.fbcdn.net/v/t39.30808-1/278363944_509495644015334_3319070238218917860_n.jpg?stp=dst-jpg_p100x100&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=coaQj8lmyqsAX_lc9G0&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-4.fna&oh=00_AfBbE4-EVxPDIcSOtodSV0jzJVN09YREfWisl6w80No8tA&oe=652FAC97",
+    "type0": 2,
+    "type1": 0,
+    "type2": 2,
+    "type3": 0,
+    "type4": 1
+  },
+  "@chenwenda": {
+    "name": "Chen Wenda",
+    "profilepicture": "https://scontent.fbud7-3.fna.fbcdn.net/v/t39.30808-1/306267616_751845139214075_2123968808603289094_n.jpg?stp=dst-jpg_p100x100&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ZInL0skIuEsAX95icVW&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-3.fna&oh=00_AfBIYnkVCYzPvNc982deGDY1h6OQZ6W4bWrJE0aWivNTwQ&oe=652F2418",
+    "type0": 2,
+    "type1": 3,
+    "type2": 1,
+    "type3": 3,
+    "type4": 1
+  },
+  "@demeterviktor": {
+    "name": "Demeter Viktor",
+    "profilepicture": "https://scontent.fbud7-4.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=dst-png_p100x100&_nc_cat=1&ccb=1-7&_nc_sid=2b6aad&_nc_ohc=PXdsVcksYukAX-wmIUS&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-4.fna&oh=00_AfBDY7gI5VE2c3cCagZuyrDpCKUGi_xG03f3KYeLziIjSA&oe=655200B8",
+    "type0": 2,
+    "type1": 3,
+    "type2": 3,
+    "type3": 1,
+    "type4": 1
+  },
+  "@farkasebestyen": {
+    "name": "Farkas Sebestyén",
+    "profilepicture": "https://scontent.fbud7-3.fna.fbcdn.net/v/t39.30808-1/316284175_695460732058906_6390793832969344089_n.jpg?stp=dst-jpg_p100x100&_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=x6Ba_mN9nacAX9bpDzG&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-3.fna&oh=00_AfBxhMJ8oTDSs7J-89okwcjv0jfKnq0G7kQOU-LW1jkA-A&oe=652EBB6E",
+    "type0": 2,
+    "type1": 3,
+    "type2": 1,
+    "type3": 0,
+    "type4": 1
+  },
+  "@fejesaron": {
+    "name": "Fejes Áron",
+    "profilepicture": "https://scontent.fbud7-3.fna.fbcdn.net/v/t39.30808-1/386061307_1281039589961153_115301991057268114_n.jpg?stp=dst-jpg_p100x100&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=_MZx2mn6Wf8AX9UyNZZ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-3.fna&oh=00_AfBKuYeUMI0UXqsN2nMk08zBztmZU5NLkb9ppMLLebS1lw&oe=652FD5BD",
+    "type0": 2,
+    "type1": 3,
+    "type2": 4,
+    "type3": 0,
+    "type4": 1
+  },
+  "@ferenczibalint": {
+    "name": "Ferenczi Bálint",
+    "profilepicture": "https://scontent.fbud7-3.fna.fbcdn.net/v/t39.30808-1/340756602_269932368699161_8844856094455845394_n.jpg?stp=dst-jpg_p100x100&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Ae13tXIOIrQAX_lBHeF&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-3.fna&oh=00_AfDpVyYvguKSo-fS1vCkEzPvV0JwEFZ7Qk9waJFqVpE2FQ&oe=652FC1B3",
+    "type0": 2,
+    "type1": 3,
+    "type2": 1,
+    "type3": 1,
+    "type4": 1
+  },
+  "@hidegdaniel": {
+    "name": "Hideg Dániel",
+    "profilepicture": "https://scontent.fbud7-3.fna.fbcdn.net/v/t39.30808-1/300568975_420578176719151_4805594404135853641_n.jpg?stp=dst-jpg_p100x100&_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=nQfXVk63UWAAX8VrMXa&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-3.fna&oh=00_AfClBvY8wW95GRt2YaOWeqQpahtgMoMAQFmvd97BdtSI1g&oe=652EE39D",
+    "type0": 2,
+    "type1": 3,
+    "type2": 1,
+    "type3": 0,
     "type4": 1
   },
   "@horvathadam": {
@@ -16,5 +88,95 @@
     "type2": 1,
     "type3": 1,
     "type4": 1
+  },
+  "@kanakaridutia": {
+    "name": "Kanakaridu Tia",
+    "profilepicture": "https://scontent.fbud7-4.fna.fbcdn.net/v/t39.30808-1/364768222_666688002147576_4705820797795359324_n.jpg?stp=dst-jpg_p100x100&_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=mATTdRYb2AsAX-KnreR&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-4.fna&oh=00_AfCtlYeOGPKcBuUexI5ZV-nvPuEQP1Bq_tcVIPl-ihnrkA&oe=65305DE7",
+    "type0": 2,
+    "type1": 0,
+    "type2": 0,
+    "type3": 0,
+    "type4": 2
+  },
+  "@kissmira": {
+    "name": "Kiss Mira",
+    "profilepicture": "https://scontent.fbud7-3.fna.fbcdn.net/v/t39.30808-1/329119596_748900573506634_8775245491248635125_n.jpg?stp=dst-jpg_p100x100&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=pvVOHH0829sAX_4wZm7&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-3.fna&oh=00_AfDdsfhQIT480Xr3gd-fyXm265MF7G5niyFoA66EOaoOoA&oe=652F9B21",
+    "type0": 2,
+    "type1": 3,
+    "type2": 0,
+    "type3": 0,
+    "type4": 2
+  },
+  "@keresztesidaniel": {
+    "name": "Keresztesi Dániel",
+    "profilepicture": "https://scontent.fbud7-4.fna.fbcdn.net/v/t39.30808-1/292448373_566928621631254_1121887914113275693_n.jpg?stp=dst-jpg_p100x100&_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=f76Ipymg8-8AX_ICRjB&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-4.fna&oh=00_AfCltBs8Kccf1NtRa9y_0PG-h_FKfzMx78CStIMm59_OUQ&oe=652F4844",
+    "type0": 2,
+    "type1": 0,
+    "type2": 1,
+    "type3": 0,
+    "type4": 1
+  },
+  "@kovacsgyozo": {
+    "name": "Kovács Győző",
+    "profilepicture": "https://scontent.fbud7-3.fna.fbcdn.net/v/t39.30808-1/300968431_393848299525862_7613996383137465418_n.jpg?stp=dst-jpg_p100x100&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=EGkB0hYMbC8AX9menHq&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-3.fna&oh=00_AfDt89R0UyetHbbe64AAye-4gDySo-yFqWNyCtCd5wuuYQ&oe=652FD11A",
+    "type0": 2,
+    "type1": 4,
+    "type2": 1,
+    "type3": 0,
+    "type4": 1
+  },
+  "@kozmagnes": {
+    "name": "Kozma Ágnes",
+    "profilepicture": "https://scontent.fbud7-4.fna.fbcdn.net/v/t39.30808-1/379743359_1577857069415647_7755014017155741212_n.jpg?stp=dst-jpg_p100x100&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=GM2pSS1y4pYAX_NhVE_&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-4.fna&oh=00_AfCQgjUi1io7S5qEPA2GbVObaPITDK-IkfmGhMi481Y_DQ&oe=652F3D89",
+    "type0": 2,
+    "type1": 0,
+    "type2": 0,
+    "type3": 0,
+    "type4": 2
+  },
+  "@kozmabence": {
+    "name": "Kozma Bence",
+    "profilepicture": "https://scontent.fbud7-4.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=dst-png_p100x100&_nc_cat=1&ccb=1-7&_nc_sid=627f2a&_nc_ohc=PXdsVcksYukAX-wmIUS&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-4.fna&oh=00_AfBDY7gI5VE2c3cCagZuyrDpCKUGi_xG03f3KYeLziIjSA&oe=655200B8",
+    "type0": 2,
+    "type1": 3,
+    "type2": 2,
+    "type3": 1,
+    "type4": 1
+  },
+  "@lazarovitsfelix": {
+    "name": "Lazarovits Félix",
+    "profilepicture": "https://scontent.fbud7-4.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=dst-png_p100x100&_nc_cat=1&ccb=1-7&_nc_sid=2b6aad&_nc_ohc=PXdsVcksYukAX-wmIUS&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-4.fna&oh=00_AfBDY7gI5VE2c3cCagZuyrDpCKUGi_xG03f3KYeLziIjSA&oe=655200B8",
+    "type0": 2,
+    "type1": 0,
+    "type2": 0,
+    "type3": 0,
+    "type4": 1
+  },
+  "@lianqi": {
+    "name": "Li An Qi",
+    "profilepicture": "https://scontent.fbud7-3.fna.fbcdn.net/v/t39.30808-1/354559846_570511171828172_5584633625133010602_n.jpg?stp=dst-jpg_p100x100&_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=B0fkzemXPfMAX_Emkbp&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-3.fna&oh=00_AfCOFY79nTOXdTHbhKMtgTg1-gX7JxAEdnDqIvU-cpct5Q&oe=652F6D4F",
+    "type0": 2,
+    "type1": 0,
+    "type2": 0,
+    "type3": 0,
+    "type4": 2
+  },
+  "@madaralex": {
+    "name": "Madar Alex",
+    "profilepicture": "https://scontent.fbud7-4.fna.fbcdn.net/v/t1.6435-1/96853268_1045398005855946_3479948606784405504_n.jpg?stp=dst-jpg_p100x100&_nc_cat=106&ccb=1-7&_nc_sid=2b6aad&_nc_ohc=aDvOn3tG8mQAX_zjgHL&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fbud7-4.fna&oh=00_AfAmslYIDqYcIpb7oXYGFW4SBZQDExXd1ZwtzDlP6ji8pQ&oe=6551DAB2",
+    "type0": 2,
+    "type1": 0,
+    "type2": 0,
+    "type3": 0,
+    "type4": 1
+  },
+  "@sample": {
+    "name": "Sapmple",
+    "profilepicture": "",
+    "type0": 0,
+    "type1": 0,
+    "type2": 0,
+    "type3": 0,
+    "type4": 0
   }
 }
