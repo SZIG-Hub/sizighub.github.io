@@ -2,7 +2,7 @@ import json from '../data.json' assert {type: 'json'};
 import exams from '../exams.json' assert {type: 'json'};
 import users from '../users.json' assert {type: 'json'};
 
-var userConfig = users['@hidegdaniel']
+var userConfig = users['@nagyzsombor']
 
 document.querySelector(`span.username`).textContent = userConfig.name
 document.querySelector(`title`).textContent = userConfig.name + " | " + "Órarend"

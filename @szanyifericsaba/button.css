@@ -1,27 +1,15 @@
 button {
-  font-family: 'DINNextLTPro-Bold';
+  font-family: 'Alatsi', sans-serif;
   position: relative;
   display: block;
   width: 100%;
-  height: 70%;
+  height: 100%;
   padding: 0.7rem;
   cursor: pointer;
   text-transform: uppercase;
   color: var(--v-white);
   border: 0;
   background-color: transparent;
-  margin-bottom: 20px;
-}
-
-button#small {
-  min-height: 7.5vh;
-  height: 35%;
-  width: 70%;
-  margin-bottom: 0;
-}
-
-button#small .label-text {
-  font-size: 150%;
 }
 
 button:hover {
@@ -48,7 +36,7 @@ button::after {
   border-top: 0;
 }
 
-.hover-effect {
+.hoverEffect {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -58,32 +46,91 @@ button::after {
   content: '';
   transition: transform .3s ease-out;
   transform: translateX(-100%) skew(-10deg);
-  background-color: var(--v-color);
+  background-color: var(--v-red);
 }
 
-button:hover .hover-effect {
+button:hover .hoverEffect {
   transform: translateX(0) skew(-10deg);
 }
+
+img.image {
+  padding: 1px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  padding: 2px;
+  transition: z-index 0.1s ease-in;
+  z-index: 2;
+}
+
+button:hover .image {
+  display: none;
+  z-index: -1;
+  transition: z-index 0.1s ease-out;
+}
+
+img.hoverImage {
+  display: none;
+  z-index: -1;
+  transition: z-index 0.1s ease-out;
+}
+
+button:hover img.hoverImage {
+  padding: 1px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  padding: 2px;
+  transition: z-index 0.1s ease-in;
+  z-index: 2;
+}
+
 
 .label {
   overflow: hidden;
   position: relative;
   margin: 0;
   height: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.label-text {
+.subject {
   position: relative;
   z-index: 1;
   display: block;
-  font-size: 2.7rem;
-  font-weight: 400;
-  margin-top: auto;
-  margin-bottom: auto;
+  font-size: 2rem;
+  font-weight: 300;
+  height: 50%;
+  padding: 4%;
+}
+
+.teacher {
+  position: relative;
+  z-index: 1;
+  display: block;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-left: 4%;
+  padding-top: 4%;
+  height: 25%;
+}
+
+.classroom {
+  position: relative;
+  z-index: 1;
+  display: block;
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-bottom: 4%;
+  padding-right: 4%;
+  height: 25%;
 }
 
 .label:before {
@@ -104,12 +151,12 @@ button:hover .hover-effect {
   color: var(--v-black);
 }
 
-button:hover .label-text::after {
-  background-color: var(--v-white);
-}
-
 .outline {
   color: var(--v-white);
+}
+
+button:hover .label-text::after{
+  color: var(--v-black);
 }
 
 .outline .label::before, .outline .label::after {
@@ -117,7 +164,7 @@ button:hover .label-text::after {
 }
 
 .outline+.red {
-  color: var(--v-color);
+  color: var(--v-red);
 }
 
 .outline+.red:hover {
@@ -125,5 +172,5 @@ button:hover .label-text::after {
 }
 
 .outline+.red .label::before, .outline+.red .label::after {
-  border-color: var(--v-color);
+  border-color: var(--v-red);
 }
