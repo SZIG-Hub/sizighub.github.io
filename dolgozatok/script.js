@@ -13,6 +13,20 @@ var examWednesday = new Date(curr.setDate(curr.getDate() - curr.getDay() + 3));
 var examThursday = new Date(curr.setDate(curr.getDate() - curr.getDay() + 4));
 var examFriday = new Date(curr.setDate(curr.getDate() - curr.getDay() + 5));
 
+var curr1 = new Date((new Date).setDate((new Date).getDate() - (new Date).getDay() + 7));
+var examMonday1 = new Date(curr1.setDate(curr1.getDate() - curr1.getDay() + 1));
+var examTuesday1 = new Date(curr1.setDate(curr1.getDate() - curr1.getDay() + 2));
+var examWednesday1 = new Date(curr1.setDate(curr1.getDate() - curr1.getDay() + 3));
+var examThursday1 = new Date(curr1.setDate(curr1.getDate() - curr1.getDay() + 4));
+var examFriday1 = new Date(curr1.setDate(curr1.getDate() - curr1.getDay() + 5));
+
+var curr2 = new Date((new Date).setDate((new Date).getDate() - (new Date).getDay() + 14));
+var examMonday2 = new Date(curr2.setDate(curr2.getDate() - curr2.getDay() + 1));
+var examTuesday2 = new Date(curr2.setDate(curr2.getDate() - curr2.getDay() + 2));
+var examWednesday2 = new Date(curr2.setDate(curr2.getDate() - curr2.getDay() + 3));
+var examThursday2 = new Date(curr2.setDate(curr2.getDate() - curr2.getDay() + 4));
+var examFriday2 = new Date(curr2.setDate(curr2.getDate() - curr2.getDay() + 5));
+
 days.forEach(day => {
   if (day === "Monday") { monday(day) }
   if (day === "Tuesday") { tuesday(day) }
@@ -24,7 +38,7 @@ days.forEach(day => {
 function monday(day) {
 
   examDays.forEach(examDay => {
-    if (examDay === examMonday.toDateString()) {
+    if (examDay === examMonday.toDateString() || examDay === examMonday1.toDateString() || examDay === examMonday2.toDateString()) {
       for (let e = 1; e <= 7; e++) {
         var examData = data[examDay][e]
         if (examData) {
@@ -40,6 +54,77 @@ function monday(day) {
 
           const rowData = data[examDay][e]
 
+          var dateArray = examDay.toString().split(" ")
+          var dayText = dateArray[0]
+          var monthText = dateArray[1]
+          var dateText = dateArray[2]
+          var yearText = dateArray[3]
+
+          switch (dayText) {
+            case "Mon":
+              dayText = "Hétfő"
+              break;
+            case "Tue":
+              dayText = "Kedd"
+              break;
+            case "Wed":
+              dayText = "Szerda"
+              break;
+            case "Thu":
+              dayText = "Csütörtök"
+              break;
+            case "Fri":
+              dayText = "Péntek"
+              break;
+            case "Sat":
+              dayText = "Szombat"
+              break;
+            case "Sun":
+              dayText = "Vasárnap"
+              break;
+          }
+
+          switch (monthText) {
+            case "Jan":
+              monthText = "Jan"
+              break;
+            case "Feb":
+              monthText = "Feb"
+              break;
+            case "Mar":
+              monthText = "Már"
+              break;
+            case "Apr":
+              monthText = "Ápr"
+              break;
+            case "May":
+              monthText = "Máj"
+              break;
+            case "Jun":
+              monthText = "Jún"
+              break;
+            case "Jul":
+              monthText = "Júl"
+              break;
+            case "Aug":
+              monthText = "Aug"
+              break;
+            case "Sep":
+              monthText = "Sze"
+              break;
+            case "Oct":
+              monthText = "Okt"
+              break;
+            case "Nov":
+              monthText = "Nov"
+              break;
+            case "Dec":
+              monthText = "Dec"
+              break;
+          }
+
+          var newDate = `${dayText}, ${monthText} ${dateText} ${yearText}`
+
 
           const eventDiv = document.createElement('div');
           eventDiv.className = 'event';
@@ -49,7 +134,7 @@ function monday(day) {
 
           const dateSpan = document.createElement('span');
           dateSpan.className = 'date';
-          dateSpan.textContent = examDay;
+          dateSpan.textContent = newDate;
 
           const timeSpan = document.createElement('span');
           timeSpan.className = 'time';
@@ -85,7 +170,7 @@ function monday(day) {
 function tuesday(day) {
 
   examDays.forEach(examDay => {
-    if (examDay === examTuesday.toDateString()) {
+    if (examDay === examTuesday.toDateString() || examDay === examTuesday1.toDateString() || examDay === examTuesday2.toDateString()) {
       for (let e = 1; e <= 7; e++) {
         var examData = data[examDay][e]
         if (examData) {
@@ -101,6 +186,77 @@ function tuesday(day) {
 
           const rowData = data[examDay][e]
 
+          var dateArray = examDay.toString().split(" ")
+          var dayText = dateArray[0]
+          var monthText = dateArray[1]
+          var dateText = dateArray[2]
+          var yearText = dateArray[3]
+
+          switch (dayText) {
+            case "Mon":
+              dayText = "Hétfő"
+              break;
+            case "Tue":
+              dayText = "Kedd"
+              break;
+            case "Wed":
+              dayText = "Szerda"
+              break;
+            case "Thu":
+              dayText = "Csütörtök"
+              break;
+            case "Fri":
+              dayText = "Péntek"
+              break;
+            case "Sat":
+              dayText = "Szombat"
+              break;
+            case "Sun":
+              dayText = "Vasárnap"
+              break;
+          }
+
+          switch (monthText) {
+            case "Jan":
+              monthText = "Jan"
+              break;
+            case "Feb":
+              monthText = "Feb"
+              break;
+            case "Mar":
+              monthText = "Már"
+              break;
+            case "Apr":
+              monthText = "Ápr"
+              break;
+            case "May":
+              monthText = "Máj"
+              break;
+            case "Jun":
+              monthText = "Jún"
+              break;
+            case "Jul":
+              monthText = "Júl"
+              break;
+            case "Aug":
+              monthText = "Aug"
+              break;
+            case "Sep":
+              monthText = "Sze"
+              break;
+            case "Oct":
+              monthText = "Okt"
+              break;
+            case "Nov":
+              monthText = "Nov"
+              break;
+            case "Dec":
+              monthText = "Dec"
+              break;
+          }
+
+          var newDate = `${dayText}, ${monthText} ${dateText} ${yearText}`
+
 
           const eventDiv = document.createElement('div');
           eventDiv.className = 'event';
@@ -110,7 +266,7 @@ function tuesday(day) {
 
           const dateSpan = document.createElement('span');
           dateSpan.className = 'date';
-          dateSpan.textContent = examDay;
+          dateSpan.textContent = newDate;
 
           const timeSpan = document.createElement('span');
           timeSpan.className = 'time';
@@ -146,7 +302,7 @@ function tuesday(day) {
 function wednesday(day) {
 
   examDays.forEach(examDay => {
-    if (examDay === examWednesday.toDateString()) {
+    if (examDay === examWednesday.toDateString() || examDay === examWednesday1.toDateString() || examDay === examWednesday2.toDateString()) {
       for (let e = 1; e <= 7; e++) {
         var examData = data[examDay][e]
         if (examData) {
@@ -162,6 +318,77 @@ function wednesday(day) {
 
           const rowData = data[examDay][e]
 
+          var dateArray = examDay.toString().split(" ")
+          var dayText = dateArray[0]
+          var monthText = dateArray[1]
+          var dateText = dateArray[2]
+          var yearText = dateArray[3]
+
+          switch (dayText) {
+            case "Mon":
+              dayText = "Hétfő"
+              break;
+            case "Tue":
+              dayText = "Kedd"
+              break;
+            case "Wed":
+              dayText = "Szerda"
+              break;
+            case "Thu":
+              dayText = "Csütörtök"
+              break;
+            case "Fri":
+              dayText = "Péntek"
+              break;
+            case "Sat":
+              dayText = "Szombat"
+              break;
+            case "Sun":
+              dayText = "Vasárnap"
+              break;
+          }
+
+          switch (monthText) {
+            case "Jan":
+              monthText = "Jan"
+              break;
+            case "Feb":
+              monthText = "Feb"
+              break;
+            case "Mar":
+              monthText = "Már"
+              break;
+            case "Apr":
+              monthText = "Ápr"
+              break;
+            case "May":
+              monthText = "Máj"
+              break;
+            case "Jun":
+              monthText = "Jún"
+              break;
+            case "Jul":
+              monthText = "Júl"
+              break;
+            case "Aug":
+              monthText = "Aug"
+              break;
+            case "Sep":
+              monthText = "Sze"
+              break;
+            case "Oct":
+              monthText = "Okt"
+              break;
+            case "Nov":
+              monthText = "Nov"
+              break;
+            case "Dec":
+              monthText = "Dec"
+              break;
+          }
+
+          var newDate = `${dayText}, ${monthText} ${dateText} ${yearText}`
+
 
           const eventDiv = document.createElement('div');
           eventDiv.className = 'event';
@@ -171,7 +398,7 @@ function wednesday(day) {
 
           const dateSpan = document.createElement('span');
           dateSpan.className = 'date';
-          dateSpan.textContent = examDay;
+          dateSpan.textContent = newDate;
 
           const timeSpan = document.createElement('span');
           timeSpan.className = 'time';
@@ -206,7 +433,7 @@ function wednesday(day) {
 function thursday(day) {
 
   examDays.forEach(examDay => {
-    if (examDay === examThursday.toDateString()) {
+    if (examDay === examThursday.toDateString() || examDay === examThursday1.toDateString() || examDay === examThursday2.toDateString()) {
       for (let e = 1; e <= 7; e++) {
         var examData = data[examDay][e]
         if (examData) {
@@ -222,6 +449,77 @@ function thursday(day) {
 
           const rowData = data[examDay][e]
 
+          var dateArray = examDay.toString().split(" ")
+          var dayText = dateArray[0]
+          var monthText = dateArray[1]
+          var dateText = dateArray[2]
+          var yearText = dateArray[3]
+
+          switch (dayText) {
+            case "Mon":
+              dayText = "Hétfő"
+              break;
+            case "Tue":
+              dayText = "Kedd"
+              break;
+            case "Wed":
+              dayText = "Szerda"
+              break;
+            case "Thu":
+              dayText = "Csütörtök"
+              break;
+            case "Fri":
+              dayText = "Péntek"
+              break;
+            case "Sat":
+              dayText = "Szombat"
+              break;
+            case "Sun":
+              dayText = "Vasárnap"
+              break;
+          }
+
+          switch (monthText) {
+            case "Jan":
+              monthText = "Jan"
+              break;
+            case "Feb":
+              monthText = "Feb"
+              break;
+            case "Mar":
+              monthText = "Már"
+              break;
+            case "Apr":
+              monthText = "Ápr"
+              break;
+            case "May":
+              monthText = "Máj"
+              break;
+            case "Jun":
+              monthText = "Jún"
+              break;
+            case "Jul":
+              monthText = "Júl"
+              break;
+            case "Aug":
+              monthText = "Aug"
+              break;
+            case "Sep":
+              monthText = "Sze"
+              break;
+            case "Oct":
+              monthText = "Okt"
+              break;
+            case "Nov":
+              monthText = "Nov"
+              break;
+            case "Dec":
+              monthText = "Dec"
+              break;
+          }
+
+          var newDate = `${dayText}, ${monthText} ${dateText} ${yearText}`
+
 
           const eventDiv = document.createElement('div');
           eventDiv.className = 'event';
@@ -231,7 +529,7 @@ function thursday(day) {
 
           const dateSpan = document.createElement('span');
           dateSpan.className = 'date';
-          dateSpan.textContent = examDay;
+          dateSpan.textContent = newDate;
 
           const timeSpan = document.createElement('span');
           timeSpan.className = 'time';
@@ -267,7 +565,7 @@ function thursday(day) {
 function friday(day) {
 
   examDays.forEach(examDay => {
-    if (examDay === examFriday.toDateString()) {
+    if (examDay === examFriday.toDateString() || examDay === examFriday1.toDateString() || examDay === examFriday2.toDateString()) {
       for (let e = 1; e <= 7; e++) {
         var examData = data[examDay][e]
         if (examData) {
@@ -283,6 +581,77 @@ function friday(day) {
 
           const rowData = data[examDay][e]
 
+          var dateArray = examDay.toString().split(" ")
+          var dayText = dateArray[0]
+          var monthText = dateArray[1]
+          var dateText = dateArray[2]
+          var yearText = dateArray[3]
+
+          switch (dayText) {
+            case "Mon":
+              dayText = "Hétfő"
+              break;
+            case "Tue":
+              dayText = "Kedd"
+              break;
+            case "Wed":
+              dayText = "Szerda"
+              break;
+            case "Thu":
+              dayText = "Csütörtök"
+              break;
+            case "Fri":
+              dayText = "Péntek"
+              break;
+            case "Sat":
+              dayText = "Szombat"
+              break;
+            case "Sun":
+              dayText = "Vasárnap"
+              break;
+          }
+
+          switch (monthText) {
+            case "Jan":
+              monthText = "Jan"
+              break;
+            case "Feb":
+              monthText = "Feb"
+              break;
+            case "Mar":
+              monthText = "Már"
+              break;
+            case "Apr":
+              monthText = "Ápr"
+              break;
+            case "May":
+              monthText = "Máj"
+              break;
+            case "Jun":
+              monthText = "Jún"
+              break;
+            case "Jul":
+              monthText = "Júl"
+              break;
+            case "Aug":
+              monthText = "Aug"
+              break;
+            case "Sep":
+              monthText = "Sze"
+              break;
+            case "Oct":
+              monthText = "Okt"
+              break;
+            case "Nov":
+              monthText = "Nov"
+              break;
+            case "Dec":
+              monthText = "Dec"
+              break;
+          }
+
+          var newDate = `${dayText}, ${monthText} ${dateText} ${yearText}`
+
 
           const eventDiv = document.createElement('div');
           eventDiv.className = 'event';
@@ -292,7 +661,7 @@ function friday(day) {
 
           const dateSpan = document.createElement('span');
           dateSpan.className = 'date';
-          dateSpan.textContent = examDay;
+          dateSpan.textContent = newDate;
 
           const timeSpan = document.createElement('span');
           timeSpan.className = 'time';

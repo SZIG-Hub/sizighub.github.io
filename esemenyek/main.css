@@ -23,6 +23,61 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+#div-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.block {
+  background-color: var(--v-white);
+  color: var(--v-black);
+  margin: 20px;
+  max-width: 80vw;
+  min-width: 80vw;
+  padding: 20px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.eventName {
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 5rem;
+  color: var(--v-black);
+  border-bottom: var(--v-red) 2px solid;
+}
+
+.eventDate {
+  color: var(--v-red);
+  font-family: 'Alatsi', sans-serif;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.eventPlace {
+  color: var(--v-red);
+  font-family: 'Alatsi', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.eventDetail {
+  color: var(--v-black);
+  font-family: 'Alatsi', sans-serif;
+  font-size: 2rem;
+  margin: 1px;
+  padding-left: 15px;
+  margin-bottom: 2px;
+}
+
 .text-block {
   display: flex;
   align-items: center;
@@ -47,6 +102,10 @@ body {
   font-weight: lighter;
   font-size: 20px;
   margin: 10px;
+}
+
+.eventLink {
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {
@@ -92,87 +151,7 @@ body {
   background: var(--v-red);
 }
 
-.container {
-  padding-top: 50px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.block {
-  background-color: var(--v-white);
-  color: var(--v-black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 80vw;
-  padding: 35px;
-  margin-bottom: 50px;
-}
-
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.box {
-  background-color: var(--v-black);
-  color: var(--v-white);
-  min-width: 35vw;
-  margin: 5px;
-  height: 50px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.box0 {
-  background-color: var(--v-black);
-  color: var(--v-white);
-  min-width: 35vw;
-  margin: 5px;
-  height: 50px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.box1 {
-  background-color: var(--v-black);
-  color: var(--v-white);
-  width: calc(70vw + 10px);
-  margin: 5px;
-  height: 50px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.name1 {
-  font-family: 'Alatsi', sans-serif;
-  font-weight: lighter;
-  font-size: 12.5px;
-}
-
-.name2 {
-  font-family: 'Alatsi', sans-serif;
-  font-weight: lighter;
-  font-size: 12.5px;
-}
-
-.name3 {
-  font-family: 'Alatsi', sans-serif;
-  font-weight: lighter;
-  font-size: 12.5px;
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: transparent;
 }

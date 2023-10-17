@@ -10,7 +10,7 @@ document.querySelector(`img.profilePicture`).src = userConfig.profilepicture
 var days = Object.keys(json)
 var examDays = Object.keys(exams)
 
-var curr = new Date((new Date).setDate((new Date).getDate() - (new Date).getDay() + 7));
+var curr = new Date((new Date).setDate((new Date).getDate() - (new Date).getDay()));
 var examMonday = new Date(curr.setDate(curr.getDate() - curr.getDay() + 1));
 var examTuesday = new Date(curr.setDate(curr.getDate() - curr.getDay() + 2));
 var examWednesday = new Date(curr.setDate(curr.getDate() - curr.getDay() + 3));

@@ -14,7 +14,7 @@
   --v-color: #6C3483;
   --v-lighter: #7A3D99;
   --v-white: #ece8e1;
-  --v-black: #0f1923;
+  --v-black: #0F0B21;
   --v-outline: rgba(236, 232, 225, .5);
 }
 
@@ -82,7 +82,7 @@ body {
 .scrollable {
   overflow-y: auto;
   white-space: nowrap;
-  max-height: 20vh;
+  max-height: 16vh;
   margin-left: 10px;
   margin-right: 10px;
   padding-right: 20px;
@@ -151,7 +151,6 @@ body {
 
 .drop-container {
   background-color: var(--v-color);
-  padding-right: 100px;
 }
 
 .text-block {
@@ -207,9 +206,9 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 130vh;
   background-color: var(--v-white);
-  padding-top: 15vh;
+  padding-top: 10vh;
   padding-bottom: 5vh;
 }
 
@@ -226,6 +225,23 @@ body {
 }
 
 .top-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(./assets/szighub-banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 85vw;
+  height: 70vh;
+  padding: 40px;
+  margin: 20px;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.middle-box {
   display: flex;
   align-items: center;
   justify-content: center;
