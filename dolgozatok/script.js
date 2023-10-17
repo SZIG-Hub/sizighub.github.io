@@ -136,6 +136,15 @@ function monday(day) {
           dateSpan.className = 'date';
           dateSpan.textContent = newDate;
 
+          const linkRow = document.createElement('a')
+          linkRow.className = 'link'
+          if (rowData.link) {
+            console.log(rowData)
+            linkRow.href = rowData.link
+          } else {
+            linkRow.href = "./"
+          }
+
           const timeSpan = document.createElement('span');
           timeSpan.className = 'time';
           timeSpan.textContent = `${e}. óra`;
@@ -152,7 +161,8 @@ function monday(day) {
           classSpan.className = 'subject';
           classSpan.textContent = subjectName.toString();
 
-          eventDiv.appendChild(classSpan);
+          eventDiv.appendChild(linkRow);
+          linkRow.appendChild(classSpan)
           spanContainer.appendChild(dateSpan);
           spanContainer.appendChild(teacherSpan);
           spanContainer.appendChild(timeSpan);
@@ -268,6 +278,15 @@ function tuesday(day) {
           dateSpan.className = 'date';
           dateSpan.textContent = newDate;
 
+          const linkRow = document.createElement('a')
+          linkRow.className = 'link'
+          if (rowData.link) {
+            console.log(rowData)
+            linkRow.href = rowData.link
+          } else {
+            linkRow.href = "./"
+          }
+
           const timeSpan = document.createElement('span');
           timeSpan.className = 'time';
           timeSpan.textContent = `${e}. óra`;
@@ -284,7 +303,8 @@ function tuesday(day) {
           classSpan.className = 'subject';
           classSpan.textContent = subjectName.toString();
 
-          eventDiv.appendChild(classSpan);
+          eventDiv.appendChild(linkRow);
+          linkRow.appendChild(classSpan)
           spanContainer.appendChild(dateSpan);
           spanContainer.appendChild(teacherSpan);
           spanContainer.appendChild(timeSpan);
@@ -400,6 +420,15 @@ function wednesday(day) {
           dateSpan.className = 'date';
           dateSpan.textContent = newDate;
 
+          const linkRow = document.createElement('a')
+          linkRow.className = 'link'
+          if (rowData.link) {
+            console.log(rowData)
+            linkRow.href = rowData.link
+          } else {
+            linkRow.href = "./"
+          }
+
           const timeSpan = document.createElement('span');
           timeSpan.className = 'time';
           timeSpan.textContent = `${e}. óra`;
@@ -416,7 +445,8 @@ function wednesday(day) {
           classSpan.className = 'subject';
           classSpan.textContent = subjectName.toString();
 
-          eventDiv.appendChild(classSpan);
+          eventDiv.appendChild(linkRow);
+          linkRow.appendChild(classSpan)
           spanContainer.appendChild(dateSpan);
           spanContainer.appendChild(teacherSpan);
           spanContainer.appendChild(timeSpan);
@@ -531,6 +561,15 @@ function thursday(day) {
           dateSpan.className = 'date';
           dateSpan.textContent = newDate;
 
+          const linkRow = document.createElement('a')
+          linkRow.className = 'link'
+          if (rowData.link) {
+            console.log(rowData)
+            linkRow.href = rowData.link
+          } else {
+            linkRow.href = "./"
+          }
+
           const timeSpan = document.createElement('span');
           timeSpan.className = 'time';
           timeSpan.textContent = `${e}. óra`;
@@ -547,7 +586,8 @@ function thursday(day) {
           classSpan.className = 'subject';
           classSpan.textContent = subjectName.toString();
 
-          eventDiv.appendChild(classSpan);
+          eventDiv.appendChild(linkRow);
+          linkRow.appendChild(classSpan)
           spanContainer.appendChild(dateSpan);
           spanContainer.appendChild(teacherSpan);
           spanContainer.appendChild(timeSpan);
@@ -663,6 +703,15 @@ function friday(day) {
           dateSpan.className = 'date';
           dateSpan.textContent = newDate;
 
+          const linkRow = document.createElement('a')
+          linkRow.className = 'link'
+          if (rowData.link) {
+            console.log(rowData)
+            linkRow.href = rowData.link
+          } else {
+            linkRow.href = "./"
+          }
+
           const timeSpan = document.createElement('span');
           timeSpan.className = 'time';
           timeSpan.textContent = `${e}. óra`;
@@ -679,7 +728,8 @@ function friday(day) {
           classSpan.className = 'subject';
           classSpan.textContent = subjectName.toString();
 
-          eventDiv.appendChild(classSpan);
+          eventDiv.appendChild(linkRow);
+          linkRow.appendChild(classSpan)
           spanContainer.appendChild(dateSpan);
           spanContainer.appendChild(teacherSpan);
           spanContainer.appendChild(timeSpan);

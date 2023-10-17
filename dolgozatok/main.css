@@ -160,3 +160,7 @@ body {
 .dropdown-content a:hover {
   background-color: transparent;
 }
+
+.link {
+  text-decoration: none;
+}
