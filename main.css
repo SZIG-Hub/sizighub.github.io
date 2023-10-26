@@ -339,3 +339,14 @@ body {
   margin-right: 5px;
   text-decoration: line-through solid 5px;
 }
+
+.whiteFooter {
+  z-index: -1;
+  height: 275px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--v-black);
+  background-color: var(--v-white);
+}

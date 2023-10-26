@@ -48,6 +48,20 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
         var examThursday2 = new Date(curr2.setDate(curr2.getDate() - curr2.getDay() + 4));
         var examFriday2 = new Date(curr2.setDate(curr2.getDate() - curr2.getDay() + 5));
 
+        var curr3 = new Date((new Date).setDate((new Date).getDate() - (new Date).getDay() + 21));
+        var examMonday3 = new Date(curr3.setDate(curr3.getDate() - curr3.getDay() + 1));
+        var examTuesday3 = new Date(curr3.setDate(curr3.getDate() - curr3.getDay() + 2));
+        var examWednesday3 = new Date(curr3.setDate(curr3.getDate() - curr3.getDay() + 3));
+        var examThursday3 = new Date(curr3.setDate(curr3.getDate() - curr3.getDay() + 4));
+        var examFriday3 = new Date(curr3.setDate(curr3.getDate() - curr3.getDay() + 5));
+
+        var curr4 = new Date((new Date).setDate((new Date).getDate() - (new Date).getDay() + 28));
+        var examMonday4 = new Date(curr4.setDate(curr4.getDate() - curr4.getDay() + 1));
+        var examTuesday4 = new Date(curr4.setDate(curr4.getDate() - curr4.getDay() + 2));
+        var examWednesday4 = new Date(curr4.setDate(curr4.getDate() - curr4.getDay() + 3));
+        var examThursday4 = new Date(curr4.setDate(curr4.getDate() - curr4.getDay() + 4));
+        var examFriday4 = new Date(curr4.setDate(curr4.getDate() - curr4.getDay() + 5));
+
         days.forEach(day => {
           if (day === "Monday") { monday(day) }
           if (day === "Tuesday") { tuesday(day) }
@@ -59,7 +73,7 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
         function monday(day) {
 
           examDays.forEach(examDay => {
-            if (examDay === examMonday.toDateString() || examDay === examMonday1.toDateString() || examDay === examMonday2.toDateString()) {
+            if (examDay === examMonday.toDateString() || examDay === examMonday1.toDateString() || examDay === examMonday2.toDateString() || examDay === examMonday3.toDateString() || examDay === examMonday4.toDateString()) {
               for (let e = 1; e <= 7; e++) {
                 var examData = data.record[examDay][e]
                 if (examData) {
@@ -201,7 +215,7 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
         function tuesday(day) {
 
           examDays.forEach(examDay => {
-            if (examDay === examTuesday.toDateString() || examDay === examTuesday1.toDateString() || examDay === examTuesday2.toDateString()) {
+            if (examDay === examTuesday.toDateString() || examDay === examTuesday1.toDateString() || examDay === examTuesday2.toDateString() || examDay === examTuesday3.toDateString() || examDay === examTuesday4.toDateString()) {
               for (let e = 1; e <= 7; e++) {
                 var examData = data.record[examDay][e]
                 if (examData) {
@@ -343,7 +357,7 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
         function wednesday(day) {
 
           examDays.forEach(examDay => {
-            if (examDay === examWednesday.toDateString() || examDay === examWednesday1.toDateString() || examDay === examWednesday2.toDateString()) {
+            if (examDay === examWednesday.toDateString() || examDay === examWednesday1.toDateString() || examDay === examWednesday2.toDateString() || examDay === examWednesday3.toDateString() || examDay === examWednesday4.toDateString()) {
               for (let e = 1; e <= 7; e++) {
                 var examData = data.record[examDay][e]
                 if (examData) {
@@ -484,7 +498,7 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
         function thursday(day) {
 
           examDays.forEach(examDay => {
-            if (examDay === examThursday.toDateString() || examDay === examThursday1.toDateString() || examDay === examThursday2.toDateString()) {
+            if (examDay === examThursday.toDateString() || examDay === examThursday1.toDateString() || examDay === examThursday2.toDateString() || examDay === examThursday3.toDateString() || examDay === examThursday4.toDateString()) {
               for (let e = 1; e <= 7; e++) {
                 var examData = data.record[examDay][e]
                 if (examData) {
@@ -626,7 +640,7 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
         function friday(day) {
 
           examDays.forEach(examDay => {
-            if (examDay === examFriday.toDateString() || examDay === examFriday1.toDateString() || examDay === examFriday2.toDateString()) {
+            if (examDay === examFriday.toDateString() || examDay === examFriday1.toDateString() || examDay === examFriday2.toDateString() || examDay === examFriday3.toDateString() || examDay === examFriday4.toDateString()) {
               for (let e = 1; e <= 7; e++) {
                 var examData = data.record[examDay][e]
                 if (examData) {
