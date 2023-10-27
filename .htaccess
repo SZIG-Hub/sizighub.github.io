@@ -1,5 +1,3 @@
 RewriteEngine On
 
 RewriteRule ^@(.+)$ /orarend?name=$1 [L,QSA]
-
-ErrorDocument 404 /404.html
