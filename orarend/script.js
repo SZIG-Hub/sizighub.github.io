@@ -51,7 +51,6 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
                         function examIcon(examClass, examSubject) {
                         if (examClass && examSubject) {
                           if (json.record[day][id].subjects[examSubject]) {
-                            console.log(examClass + "/" + examSubject)
 
                             let cell = document.querySelector(`div#${examClass}`)
                             let button = cell.parentElement
