@@ -27,8 +27,8 @@ html, body {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
+  width: 100%;
   position: relative;
-  max-width: 100%;
   height: auto;
   overflow: hidden;
 }
@@ -41,21 +41,41 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 30px;
-  width: 95%;
+  max-width: 92vw;
+  min-width: 92vw;
+  margin-bottom: 20px;
+}
+
+.ticket {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 96.25vw;
+  min-width: 96.25vw;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 40px;
 }
 
 .block {
   position: relative;
   overflow: hidden;
-  max-width: 100vw;
+  max-width: 92vw;
+  min-width: 92vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .scroll {
   overflow-x: auto;
   white-space: nowrap;
   max-width: 100%;
-  margin-left: 15px;
-  margin-right: 15px;
+  min-width: 100%;
 }
 
 td {
@@ -97,8 +117,8 @@ td {
 }
 
 table {
-  width: 100%;
-  max-width: 100%;
+  max-width: 92vw;
+  min-width: 92vw;
   height: auto;
   padding-bottom: 10px;
 }
@@ -185,5 +205,84 @@ table {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--v-color); 
+}
+
+.fullName {
+  display: none;
+}
+
+.event {
+  background-color: var(--v-white);
+  color: var(--v-black);
+  margin: 20px;
+  max-width: 100%;
+  min-width: 95%;
+  padding: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.event .message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.subjectSpan {
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 5rem;
+  color: var(--v-black);
+  border-bottom: var(--v-color) 2px solid;
+}
+
+.dateSpan {
+  color: var(--v-color);
+  font-family: 'Alatsi', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.teacherSpan {
+  color: var(--v-black);
+  font-family: 'Alatsi', sans-serif;
+  font-size: 2rem;
+  margin: 1px;
+  padding-left: 15px;
+}
+
+.timeSpan {
+  color: var(--v-black);
+  font-family: 'Alatsi', sans-serif;
+  font-size: 2rem;
+  margin: 1px;
+  padding-left: 15px;
+}
+
+.typeSpan {
+  color: var(--v-black);
+  font-family: 'Alatsi', sans-serif;
+  font-size: 2rem;
+  margin: 1px;
+  padding-left: 15px;
+}
+
+.message {
+  color: var(--v-black);
+  font-family: 'Alatsi', sans-serif;
+  font-size: 2rem;
+}
+
+.linkSpan {
+  text-decoration: none;
 }
 
