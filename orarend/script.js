@@ -26,6 +26,7 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
             var exams = Object.keys(examinations.record)
 
             var s = 0
+            var q = 0
 
             days.forEach((day) => {
               for (var x = 1; x <= 5; x++) {
@@ -51,7 +52,7 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
 
                       const subject = document.createElement('span');
                       subject.className = 'subject';
-                      if (i < 1) { subject.textContent = "" } else { subject.textContent = json.record[day][id].subjects[i].subject.toString(); }
+                      if (i < 1) { subject.textContent = ""; q = q + 1 } else { subject.textContent = json.record[day][id].subjects[i].subject.toString(); }
 
                       const classroom = document.createElement('span');
                       classroom.className = 'classroom';
@@ -170,8 +171,6 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
               }
             })
 
-            console.log(s)
-
             if (s < 1) {
               const container = document.querySelector(`div.ticket`)
 
@@ -186,6 +185,24 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
               eventDiv.appendChild(message)
             }
 
+            if (q > 0) {
+              const container = document.querySelector(`div.ticket`)
+
+              const eventDiv = document.createElement('div');
+              eventDiv.className = 'alert';
+
+              const image = document.createElement('img');
+              image.className = 'alertImage';
+              image.src = "../assets/icon-hover.png"
+
+              const message = document.createElement('span');
+              message.className = 'alertMessage';
+              message.textContent = `${q / 5} ismertlen órád van. Ennek oka az, hogy nem tudjuk milyen órákon veszel részt ilyenkor. Jelezz vissza nekünk és mi frissítjük az óráidat`
+
+              container.appendChild(eventDiv);
+              eventDiv.appendChild(image)
+              eventDiv.appendChild(message)
+            }
           })
       })
   })

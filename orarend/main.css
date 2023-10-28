@@ -286,3 +286,28 @@ table {
   text-decoration: none;
 }
 
+.alertMessage {
+  color: var(--v-white);
+  font-family: 'Alatsi', sans-serif;
+  font-size: 2rem;
+}
+
+.alert {
+  text-align: justify;
+  text-justify: inter-word;
+  background-color: var(--v-color);
+  margin: 20px;
+  max-width: 100%;
+  min-width: 95%;
+  padding: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.alertImage {
+  width: 2.55rem;
+  height: 2.55rem;
+  margin-right: 5px;
+  float: left;
+}
+
