@@ -10,6 +10,7 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
           .then((response) => response.json())
           .then((examinations) => {
 
+            
             var urlParam = new URLSearchParams(window.location.search)
             var paramUser = urlParam.get('name')
             var user = users.record[`@${paramUser}`]
@@ -36,6 +37,14 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
 
                   exams.forEach((exam) => {
                     if (json.record[day][id]) {
+                      function getMonday(d) {
+                        d = new Date(d);
+                        var value = x,
+                          diff = d.getDate() - d.getDay() + value
+                        return new Date(d.setDate(diff));
+                      }
+
+                      var examDate = getMonday(new Date()).toDateString()
 
                       var i = 1
 
@@ -62,107 +71,161 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
                       cell.appendChild(subject)
                       cell.appendChild(classroom)
 
-                      function getMonday(d) {
-                        d = new Date(d);
-                        var value = x,
-                          diff = d.getDate() - d.getDay() + value
-                        return new Date(d.setDate(diff));
-                      }
+                      if (exam === examDate) {
+                        var userType
+                        if (json.record[day][id].subjects.multiple === true) {
+                          var examGroup = "type" + json.record[day][id].subjects.type
+                          userType = user[examGroup]
+                          if (userType === 0) return
+                        } else { userType = 1 }
 
-                      var examDate = getMonday(new Date()).toDateString()
+                        var examRow = examinations.record[exam][y]
 
-                      if (examDate === exam) {
+                        if (examRow) {
 
-                        const examData = examinations.record[exam][y]
-                        if (examData) {
-                          var a = day
-                          var b = id
-                          var c = examData.subject
+                          s = s + 1
 
-                          if (json.record[a][b].subjects[c]) {
-                            if (json.record[a][b].subjects.multiple) {
-                              var examClass = "type" + json.record[day][id].subjects.type
-                              var userFor = user[examClass]
-                              var examFor = examinations.record[exam][y].subject
+                          var dateArray = exam.toString().split(" ")
+                          var dayText = dateArray[0]
+                          var monthText = dateArray[1]
+                          var dateText = dateArray[2]
+                          var yearText = dateArray[3]
 
-                              if (userFor === examFor) {
-
-                                var data = {
-                                  subject: json.record[a][b].subjects[c].subject,
-                                  teacher: json.record[a][b].subjects[c].teacher,
-                                  link: examinations.record[examDate][y].link,
-                                  date: examDate,
-                                  type: examinations.record[examDate][y].type
-                                }
-
-                                s = s + 1
-
-                                let cell = document.querySelector(`div#${id}`)
-                                let button = cell.parentElement
-                                button.style.cursor = "pointer"
-
-                                const link = document.createElement('a');
-                                link.className = 'examLink'
-                                link.href = examData.link
-                                link.target = "_blank"
-
-                                const image = document.createElement('img');
-                                image.className = 'image';
-                                image.src = "../assets/icon.png"
-
-                                const hover = document.createElement('img');
-                                hover.className = 'hover';
-                                hover.src = "../assets/icon-hover.png"
-
-                                cell.appendChild(image)
-                                cell.appendChild(hover)
-                                button.appendChild(link)
-
-
-                                const container = document.querySelector(`div.ticket`)
-
-                                const eventDiv = document.createElement('div');
-                                eventDiv.className = 'event';
-
-                                const spanContainer = document.createElement('div');
-                                spanContainer.className = 'details';
-
-                                const dateSpan = document.createElement('span');
-                                dateSpan.className = 'dateSpan';
-                                dateSpan.textContent = data.date;
-
-                                const linkRow = document.createElement('a')
-                                linkRow.className = 'linkSpan'
-                                linkRow.href = data.link
-
-                                const timeSpan = document.createElement('span');
-                                timeSpan.className = 'timeSpan';
-                                timeSpan.textContent = `${y}. óra`;
-
-                                const typeSpan = document.createElement('span');
-                                typeSpan.className = 'typeSpan';
-                                typeSpan.textContent = data.type
-
-                                const teacherSpan = document.createElement('span');
-                                teacherSpan.className = 'teacherSpan';
-                                teacherSpan.textContent = data.teacher
-
-                                const classSpan = document.createElement('span');
-                                classSpan.className = 'subjectSpan';
-                                classSpan.textContent = data.subject
-
-                                eventDiv.appendChild(linkRow);
-                                linkRow.appendChild(classSpan)
-                                spanContainer.appendChild(dateSpan);
-                                spanContainer.appendChild(teacherSpan);
-                                spanContainer.appendChild(timeSpan);
-                                spanContainer.appendChild(typeSpan);
-
-                                container.appendChild(eventDiv);
-                                eventDiv.appendChild(spanContainer)
-                              }
-                            }
+                          switch (dayText) {
+                            case "Mon":
+                              dayText = "Hétfő"
+                              break;
+                            case "Tue":
+                              dayText = "Kedd"
+                              break;
+                            case "Wed":
+                              dayText = "Szerda"
+                              break;
+                            case "Thu":
+                              dayText = "Csütörtök"
+                              break;
+                            case "Fri":
+                              dayText = "Péntek"
+                              break;
+                            case "Sat":
+                              dayText = "Szombat"
+                              break;
+                            case "Sun":
+                              dayText = "Vasárnap"
+                              break;
                           }
+
+                          switch (monthText) {
+                            case "Jan":
+                              monthText = "Jan"
+                              break;
+                            case "Feb":
+                              monthText = "Feb"
+                              break;
+                            case "Mar":
+                              monthText = "Már"
+                              break;
+                            case "Apr":
+                              monthText = "Ápr"
+                              break;
+                            case "May":
+                              monthText = "Máj"
+                              break;
+                            case "Jun":
+                              monthText = "Jún"
+                              break;
+                            case "Jul":
+                              monthText = "Júl"
+                              break;
+                            case "Aug":
+                              monthText = "Aug"
+                              break;
+                            case "Sep":
+                              monthText = "Sze"
+                              break;
+                            case "Oct":
+                              monthText = "Okt"
+                              break;
+                            case "Nov":
+                              monthText = "Nov"
+                              break;
+                            case "Dec":
+                              monthText = "Dec"
+                              break;
+                          }
+
+                          var newDate = `${dayText}, ${monthText} ${dateText} ${yearText}`
+
+                          var data = {
+                            subject: json.record[day][id].subjects[userType].subject,
+                            teacher: json.record[day][id].subjects[userType].teacher,
+                            link: examinations.record[exam][y][userType].link,
+                            type: examinations.record[exam][y][userType].type,
+                            date: newDate
+                          }
+
+                          let cell = document.querySelector(`div#${id}`)
+                          let button = cell.parentElement
+                          button.style.cursor = "pointer"
+
+                          const link = document.createElement('a');
+                          link.className = 'examLink'
+                          link.href = data.link
+                          link.target = "_blank"
+
+                          const image = document.createElement('img');
+                          image.className = 'image';
+                          image.src = "../assets/icon.png"
+
+                          const hover = document.createElement('img');
+                          hover.className = 'hover';
+                          hover.src = "../assets/icon-hover.png"
+
+                          cell.appendChild(image)
+                          cell.appendChild(hover)
+                          button.appendChild(link)
+
+                          const container = document.querySelector(`div.ticket`)
+
+                          const eventDiv = document.createElement('div');
+                          eventDiv.className = 'event';
+
+                          const spanContainer = document.createElement('div');
+                          spanContainer.className = 'details';
+
+                          const dateSpan = document.createElement('span');
+                          dateSpan.className = 'dateSpan';
+                          dateSpan.textContent = data.date;
+
+                          const linkRow = document.createElement('a')
+                          linkRow.className = 'linkSpan'
+                          linkRow.href = data.link
+
+                          const timeSpan = document.createElement('span');
+                          timeSpan.className = 'timeSpan';
+                          timeSpan.textContent = `${y}. óra`;
+
+                          const typeSpan = document.createElement('span');
+                          typeSpan.className = 'typeSpan';
+                          typeSpan.textContent = data.type
+
+                          const teacherSpan = document.createElement('span');
+                          teacherSpan.className = 'teacherSpan';
+                          teacherSpan.textContent = data.teacher
+
+                          const classSpan = document.createElement('span');
+                          classSpan.className = 'subjectSpan';
+                          classSpan.textContent = data.subject
+
+                          eventDiv.appendChild(linkRow);
+                          linkRow.appendChild(classSpan)
+                          spanContainer.appendChild(dateSpan);
+                          spanContainer.appendChild(teacherSpan);
+                          spanContainer.appendChild(timeSpan);
+                          spanContainer.appendChild(typeSpan);
+
+                          container.appendChild(eventDiv);
+                          eventDiv.appendChild(spanContainer)
                         }
                       }
                     }
@@ -197,7 +260,7 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
 
               const message = document.createElement('span');
               message.className = 'alertMessage';
-              message.textContent = `${q / 5} ismertlen órád van. Ennek oka az, hogy nem tudjuk milyen órákon veszel részt ilyenkor. Jelezz vissza nekünk és mi frissítjük az óráidat`
+              message.textContent = `${q / 7} ismertlen órád van. Ennek oka az, hogy nem tudjuk milyen órákon veszel részt ilyenkor. Jelezz vissza nekünk és mi frissítjük az óráidat`
 
               container.appendChild(eventDiv);
               eventDiv.appendChild(image)

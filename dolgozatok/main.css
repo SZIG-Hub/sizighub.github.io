@@ -87,6 +87,10 @@ body {
   padding-left: 15px;
 }
 
+.linkSpan {
+  text-decoration: none;
+}
+
 .text-block {
   display: flex;
   align-items: center;
