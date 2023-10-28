@@ -14,6 +14,11 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
             var paramUser = urlParam.get('name')
             var user = users.record[`@${paramUser}`]
 
+            if (!user) {
+              window.location.replace("./no-user");
+              return
+            }
+
             document.querySelector(`title`).textContent = user.name + " | " + "Órarend"
             document.querySelector(`span.profileName`).textContent = user.name
 
