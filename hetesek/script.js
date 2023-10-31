@@ -7,10 +7,10 @@ Date.prototype.getWeek = function () {
 
 var today = new Date()
 var currentWeekNumber = today.getWeek()
-if (today.getWeek() > 36) { currentWeekNumber = (today.getWeek() - 36) }
-if (36 >= today.getWeek() && today.getWeek() > 24) { currentWeekNumber = (today.getWeek() - 24)}
-if (24 >= today.getWeek() && today.getWeek() > 4) { currentWeekNumber = (today.getWeek() - 4)}
-if (today.getWeek() <= 4) {currentWeekNumber = (today.getWeek() + 16)}
+if (today.getWeek() > 36) { currentWeekNumber = (today.getWeek() - 37) }
+if (36 >= today.getWeek() && today.getWeek() > 24) { currentWeekNumber = (today.getWeek() - 25)}
+if (24 >= today.getWeek() && today.getWeek() > 4) { currentWeekNumber = (today.getWeek() - 5)}
+if (today.getWeek() <= 4) {currentWeekNumber = (today.getWeek() + 15)}
 
 if (currentWeekNumber <= 16) {
   document.querySelector(`div#week${currentWeekNumber} .box`).style.backgroundColor = '#6C3483'

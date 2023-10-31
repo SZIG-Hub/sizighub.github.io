@@ -1,30 +1,24 @@
-fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
+fetch('https://api.npoint.io/6101e39b776848c51548')
   .then((response) => response.json())
   .then((json) => {
 
-    fetch('https://api.jsonbin.io/v3/b/65313b7554105e766fc45c72')
+    fetch('https://api.npoint.io/143ce780811e0b13f03a')
       .then((response) => response.json())
       .then((users) => {
 
-        fetch('https://api.jsonbin.io/v3/b/65313b5454105e766fc45c63')
+        fetch('https://api.npoint.io/1965674b4266bb25a804')
           .then((response) => response.json())
           .then((examinations) => {
-
             
             var urlParam = new URLSearchParams(window.location.search)
             var paramUser = urlParam.get('name')
-            var user = users.record[`@${paramUser}`]
-
-            if (!user) {
-              window.location.replace("./no-user");
-              return
-            }
+            var user = users[`@${paramUser.toString()}`]
 
             document.querySelector(`title`).textContent = user.name + " | " + "Órarend"
             document.querySelector(`span.profileName`).textContent = user.name
 
-            var days = Object.keys(json.record)
-            var exams = Object.keys(examinations.record)
+            var days = Object.keys(json)
+            var exams = Object.keys(examinations)
 
             var s = 0
             var q = 0
@@ -36,7 +30,7 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
                   var id = `${z}${y}`
 
                   exams.forEach((exam) => {
-                    if (json.record[day][id]) {
+                    if (json[day][id]) {
                       function getMonday(d) {
                         d = new Date(d);
                         var value = x,
@@ -48,8 +42,8 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
 
                       var i = 1
 
-                      if (json.record[day][id].subjects.multiple) {
-                        var l = "type" + json.record[day][id].subjects.type
+                      if (json[day][id].subjects.multiple) {
+                        var l = "type" + json[day][id].subjects.type
                         i = user[l]
                       }
 
@@ -57,15 +51,15 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
 
                       const teacher = document.createElement('span');
                       teacher.className = 'teacher';
-                      if (i < 1) { teacher.textContent = "" } else { teacher.textContent = json.record[day][id].subjects[i].monogram.toString(); }
+                      if (i < 1) { teacher.textContent = "" } else { teacher.textContent = json[day][id].subjects[i].monogram.toString(); }
 
                       const subject = document.createElement('span');
                       subject.className = 'subject';
-                      if (i < 1) { subject.textContent = ""; q = q + 1 } else { subject.textContent = json.record[day][id].subjects[i].subject.toString(); }
+                      if (i < 1) { subject.textContent = ""; q = q + 1 } else { subject.textContent = json[day][id].subjects[i].subject.toString(); }
 
                       const classroom = document.createElement('span');
                       classroom.className = 'classroom';
-                      if (i < 1) { classroom.textContent = "" } else { classroom.textContent = json.record[day][id].subjects[i].room.toString(); }
+                      if (i < 1) { classroom.textContent = "" } else { classroom.textContent = json[day][id].subjects[i].room.toString(); }
 
                       cell.appendChild(teacher)
                       cell.appendChild(subject)
@@ -73,13 +67,13 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
 
                       if (exam === examDate) {
                         var userType
-                        if (json.record[day][id].subjects.multiple === true) {
-                          var examGroup = "type" + json.record[day][id].subjects.type
+                        if (json[day][id].subjects.multiple === true) {
+                          var examGroup = "type" + json[day][id].subjects.type
                           userType = user[examGroup]
                           if (userType === 0) return
                         } else { userType = 1 }
 
-                        var examRow = examinations.record[exam][y]
+                        var examRow = examinations[exam][y]
 
                         if (examRow) {
 
@@ -157,10 +151,10 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
                           var newDate = `${dayText}, ${monthText} ${dateText} ${yearText}`
 
                           var data = {
-                            subject: json.record[day][id].subjects[userType].subject,
-                            teacher: json.record[day][id].subjects[userType].teacher,
-                            link: examinations.record[exam][y][userType].link,
-                            type: examinations.record[exam][y][userType].type,
+                            subject: json[day][id].subjects[userType].subject,
+                            teacher: json[day][id].subjects[userType].teacher,
+                            link: examinations[exam][y][userType].link,
+                            type: examinations[exam][y][userType].type,
                             date: newDate
                           }
 
@@ -247,8 +241,6 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
               container.appendChild(eventDiv);
               eventDiv.appendChild(message)
             }
-
-            console.log(q)
 
             if (q > 0) {
               const container = document.querySelector(`div.ticket`)

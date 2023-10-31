@@ -1,20 +1,20 @@
-fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
+fetch('https://api.npoint.io/6101e39b776848c51548')
   .then((response) => response.json())
   .then((json) => {
 
-    fetch('https://api.jsonbin.io/v3/b/65313b5454105e766fc45c63')
+    fetch('https://api.npoint.io/1965674b4266bb25a804')
       .then((response) => response.json())
       .then((examinations) => {
 
-        var days = Object.keys(json.record)
-        var exams = Object.keys(examinations.record)
+        var days = Object.keys(json)
+        var exams = Object.keys(examinations)
 
         exams.forEach((exam) => {
           for (var x = 1; x <= 7; x++) {
             for (var y = 1; y <= 4; y++) {
-              if (examinations.record[exam][x]) {
+              if (examinations[exam][x]) {
 
-                if (examinations.record[exam][x][y]) {
+                if (examinations[exam][x][y]) {
 
                   var dateArray = exam.toString().split(" ")
                   var dayText = dateArray[0]
@@ -46,8 +46,8 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
                   }
 
                   days.forEach((day) => {
-                    if (json.record[day][data.a]) {
-                      if (json.record[day][data.a].subjects[data.b]) {
+                    if (json[day][data.a]) {
+                      if (json[day][data.a].subjects[data.b]) {
                         var dateArray = exam.toString().split(" ")
                         var dayText = dateArray[0]
                         var monthText = dateArray[1]
@@ -119,11 +119,11 @@ fetch('https://api.jsonbin.io/v3/b/65313b1f54105e766fc45c50')
 
                         var newDate = `${dayText}, ${monthText} ${dateText} ${yearText}`
                         var examData = {
-                          subject: json.record[day][data.a].subjects[data.b].subject,
-                          teacher: json.record[day][data.a].subjects[data.b].teacher,
+                          subject: json[day][data.a].subjects[data.b].subject,
+                          teacher: json[day][data.a].subjects[data.b].teacher,
                           date: newDate,
-                          type: examinations.record[exam][x][y].type,
-                          link: examinations.record[exam][x][y].link
+                          type: examinations[exam][x][y].type,
+                          link: examinations[exam][x][y].link
                         }
 
                         console.log(examData)

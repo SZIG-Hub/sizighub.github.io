@@ -1,10 +1,10 @@
-fetch('https://api.jsonbin.io/v3/b/65313b8f54105e766fc45c7c')
+fetch('https://api.npoint.io/9541792106198f9a224b')
   .then((response) => response.json())
   .then((json) => {
 
     let divContainer = document.getElementById('div-container');
 
-    var events = Object.keys(json.record)
+    var events = Object.keys(json)
 
     events.forEach(event => {
       const eventDiv = document.createElement('div');
@@ -15,19 +15,19 @@ fetch('https://api.jsonbin.io/v3/b/65313b8f54105e766fc45c7c')
 
       const linkRow = document.createElement('a')
       linkRow.className = 'eventLink'
-      linkRow.href = json.record[event].link
+      linkRow.href = json[event].link
 
       const nameSpan = document.createElement('span');
       nameSpan.className = 'eventName';
-      nameSpan.textContent = json.record[event].name
+      nameSpan.textContent = json[event].name
 
       const dateSpan = document.createElement('span');
       dateSpan.className = 'eventDate';
-      dateSpan.textContent = json.record[event].date
+      dateSpan.textContent = json[event].date
 
       const placeSpan = document.createElement('span');
       placeSpan.className = 'eventPlace';
-      placeSpan.textContent = json.record[event].place
+      placeSpan.textContent = json[event].place
 
       eventDiv.appendChild(linkRow);
       linkRow.appendChild(nameSpan)
@@ -37,7 +37,7 @@ fetch('https://api.jsonbin.io/v3/b/65313b8f54105e766fc45c7c')
       divContainer.appendChild(eventDiv);
       eventDiv.appendChild(spanContainer)
 
-      var details = json.record[event].details
+      var details = json[event].details
       for (let d = 1; d <= 10; d++) {
         if (details[d]) {
           const detailsSpan = document.createElement('span');
