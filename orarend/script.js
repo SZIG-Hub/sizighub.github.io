@@ -14,6 +14,10 @@ fetch('https://api.npoint.io/6101e39b776848c51548')
             var paramUser = urlParam.get('name')
             var user = users[`@${paramUser.toString()}`]
 
+            if (!user) {
+              window.location.replace('./no-user.html')
+            }
+
             document.querySelector(`title`).textContent = user.name + " | " + "Órarend"
             document.querySelector(`span.profileName`).textContent = user.name
 

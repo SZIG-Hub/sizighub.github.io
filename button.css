@@ -33,7 +33,7 @@ button::before, button::after {
   position: absolute;
   left: 0;
   width: 100%;
-  height: calc(50% - 0.4rem);
+  height: 50%;
   border: 1px solid var(--v-outline);
   background-color: transparent;
 }
@@ -57,12 +57,12 @@ button::after {
   height: 100%;
   content: '';
   transition: transform .3s ease-out;
-  transform: translateX(-100%) skew(-10deg);
+  transform: translateX(-100%) skew(0deg);
   background-color: var(--v-color);
 }
 
 button:hover .hover-effect {
-  transform: translateX(0) skew(-10deg);
+  transform: translateX(0) skew(0deg);
 }
 
 .label {
