@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Anton&display=swap');
 
+@font-face {
+  font-family: "DINNextLTPro-Bold";
+  src: url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.eot");
+  src: url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.svg#DINNextLTPro-Bold")format("svg");
+}
+
 :root {
   --v-red: #6C3483;
   --v-white: #ece8e1;
@@ -32,6 +42,8 @@ body {
 }
 
 .event {
+  display: flex;
+  flex-direction: row;
   background-color: var(--v-white);
   color: var(--v-black);
   margin: 20px;
@@ -40,18 +52,33 @@ body {
   padding: 20px;
 }
 
+.blockLeft {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.blockRight {
+  width: 20%;
+  margin-left: 10px;
+}
+
+.blockRight button {
+  float: right;
+}
+
 .block {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-left: 20px;
+  padding-left: 7px;
 }
 
 .subject {
-  text-align: center;
   font-family: 'Anton', sans-serif;
   font-size: 5rem;
   color: var(--v-black);
+  width: min-content;
   border-bottom: var(--v-red) 2px solid;
 }
 
@@ -180,3 +207,43 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
+.downloadButton {
+  border: 0;
+  background-color: var(--v-red);
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+}
+
+.downloadButton:hover {
+  background-color: var(--v-white);
+  border: var(--v-red) solid 3px;
+}
+
+.downloadIcon {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+button:hover .downloadIcon {
+  display: none;
+}
+
+.downloadHover {
+  display: none;
+}
+
+button:hover .downloadHover {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
