@@ -13,10 +13,10 @@ if (24 >= today.getWeek() && today.getWeek() > 4) { currentWeekNumber = (today.g
 if (today.getWeek() <= 4) {currentWeekNumber = (today.getWeek() + 15)}
 
 if (currentWeekNumber <= 16) {
-  document.querySelector(`div#week${currentWeekNumber} .box`).style.backgroundColor = '#6C3483'
-  document.querySelector(`div#week${currentWeekNumber} .box0`).style.backgroundColor = '#6C3483'
+  document.querySelector(`div#week${currentWeekNumber} .box`).style.backgroundColor = '#345E88'
+  document.querySelector(`div#week${currentWeekNumber} .box0`).style.backgroundColor = '#345E88'
 }
 
 if (currentWeekNumber > 16) {
-  document.querySelector(`div#week${currentWeekNumber} .box1`).style.backgroundColor = '#6C3483'
+  document.querySelector(`div#week${currentWeekNumber} .box1`).style.backgroundColor = '#345E88'
 }

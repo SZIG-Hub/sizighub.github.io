@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Anton&display=swap');
 
 :root {
-  --v-red: #6C3483;
+  --v-color: #345E88;
   --v-white: #ece8e1;
   --v-black: #0F0B21;
   --v-outline: rgba(236, 232, 225, .5);
@@ -52,18 +52,18 @@ body {
   font-family: 'Anton', sans-serif;
   font-size: 5rem;
   color: var(--v-black);
-  border-bottom: var(--v-red) 2px solid;
+  border-bottom: var(--v-color) 2px solid;
 }
 
 .eventDate {
-  color: var(--v-red);
+  color: var(--v-color);
   font-family: 'Alatsi', sans-serif;
   font-size: 2rem;
   margin-top: 10px;
 }
 
 .eventPlace {
-  color: var(--v-red);
+  color: var(--v-color);
   font-family: 'Alatsi', sans-serif;
   font-size: 2rem;
   margin-bottom: 10px;
@@ -92,7 +92,7 @@ body {
   font-family: 'Anton', sans-serif;
   font-size: 80px;
   margin: 15px;
-  border-bottom: var(--v-red) solid 2px;
+  border-bottom: var(--v-color) solid 2px;
   color: var(--v-white);
   text-transform: uppercase;
 }
@@ -120,13 +120,13 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--v-red);
+  background: var(--v-color);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--v-red);
+  background: var(--v-color);
 }
 
 /* width */
@@ -142,13 +142,13 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--v-red);
+  background: var(--v-color);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--v-red);
+  background: var(--v-color);
 }
 
 /* Change color of dropdown links on hover */

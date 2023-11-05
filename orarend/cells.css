@@ -15,7 +15,8 @@ button:hover {
   color: var(--v-white);
 }
 
-button::before, button::after {
+button::before,
+button::after {
   content: '';
   position: absolute;
   left: 0;
@@ -154,11 +155,12 @@ button:hover .hover {
   color: var(--v-white);
 }
 
-button:hover .label-text::after{
+button:hover .label-text::after {
   color: var(--v-black);
 }
 
-.outline .label::before, .outline .label::after {
+.outline .label::before,
+.outline .label::after {
   border: 1px solid var(--v-outline);
 }
 
@@ -170,7 +172,8 @@ button:hover .label-text::after{
   color: var(--v-white);
 }
 
-.outline+.red .label::before, .outline+.red .label::after {
+.outline+.red .label::before,
+.outline+.red .label::after {
   border-color: var(--v-color);
 }
 

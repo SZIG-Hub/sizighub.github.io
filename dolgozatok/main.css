@@ -11,7 +11,7 @@
 }
 
 :root {
-  --v-red: #6C3483;
+  --v-color: #345E88;
   --v-white: #ece8e1;
   --v-black: #0F0B21;
   --v-outline: rgba(236, 232, 225, .5);
@@ -79,11 +79,11 @@ body {
   font-size: 5rem;
   color: var(--v-black);
   width: min-content;
-  border-bottom: var(--v-red) 2px solid;
+  border-bottom: var(--v-color) 2px solid;
 }
 
 .date {
-  color: var(--v-red);
+  color: var(--v-color);
   font-family: 'Alatsi', sans-serif;
   font-size: 2rem;
   margin-bottom: 5px;
@@ -93,7 +93,7 @@ body {
 .teacher {
   color: var(--v-black);
   font-family: 'Alatsi', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 1px;
   padding-left: 15px;
 }
@@ -101,7 +101,7 @@ body {
 .time {
   color: var(--v-black);
   font-family: 'Alatsi', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 1px;
   padding-left: 15px;
 }
@@ -109,7 +109,7 @@ body {
 .type {
   color: var(--v-black);
   font-family: 'Alatsi', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 1px;
   padding-left: 15px;
 }
@@ -132,7 +132,7 @@ body {
   font-family: 'Anton', sans-serif;
   font-size: 80px;
   margin: 15px;
-  border-bottom: var(--v-red) solid 2px;
+  border-bottom: var(--v-color) solid 2px;
   color: var(--v-white);
   text-transform: uppercase;
 }
@@ -156,13 +156,13 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--v-red);
+  background: var(--v-color);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--v-red);
+  background: var(--v-color);
 }
 
 /* width */
@@ -178,13 +178,13 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--v-red);
+  background: var(--v-color);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--v-red);
+  background: var(--v-color);
 }
 
 /* Change color of dropdown links on hover */
@@ -210,7 +210,7 @@ body {
 
 .downloadButton {
   border: 0;
-  background-color: var(--v-red);
+  background-color: var(--v-color);
   margin-top: 10px;
   width: 50px;
   height: 50px;
@@ -224,7 +224,7 @@ body {
 
 .downloadButton:hover {
   background-color: var(--v-white);
-  border: var(--v-red) solid 3px;
+  border: var(--v-color) solid 3px;
 }
 
 .downloadIcon {

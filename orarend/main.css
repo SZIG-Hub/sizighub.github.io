@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Anton&display=swap');
 
 :root {
-  --v-color: #6C3483;
+  --v-color: #345E88;
   --v-white: #ece8e1;
   --v-black: #0F0B21;
   --v-outline: rgba(236, 232, 225, .5);
@@ -212,35 +212,44 @@ table {
 }
 
 .event {
+  display: flex;
+  flex-direction: row;
   background-color: var(--v-white);
   color: var(--v-black);
   margin: 20px;
-  max-width: 100%;
-  min-width: 95%;
+  max-width: 91.5vw;
+  min-width: 91.5vw;
   padding: 20px;
-  margin-left: 15px;
-  margin-right: 15px;
 }
 
-.event .message {
+.blockLeft {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding-left: 20px;
+  width: 100%;
+  z-index: 1;
+}
+
+.blockRight {
+  margin-left: 10px;
+  z-index: 2;
+}
+
+.blockRight button {
+  float: right;
+}
+
+.blockSpan {
+  display: flex;
+  flex-direction: column;
+  padding-left: 7px;
 }
 
 .subjectSpan {
-  text-align: center;
   font-family: 'Anton', sans-serif;
   font-size: 5rem;
   color: var(--v-black);
+  width: min-content;
   border-bottom: var(--v-color) 2px solid;
 }
 
@@ -255,7 +264,7 @@ table {
 .teacherSpan {
   color: var(--v-black);
   font-family: 'Alatsi', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 1px;
   padding-left: 15px;
 }
@@ -263,7 +272,7 @@ table {
 .timeSpan {
   color: var(--v-black);
   font-family: 'Alatsi', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 1px;
   padding-left: 15px;
 }
@@ -271,19 +280,20 @@ table {
 .typeSpan {
   color: var(--v-black);
   font-family: 'Alatsi', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 1px;
   padding-left: 15px;
 }
 
-.message {
-  color: var(--v-black);
-  font-family: 'Alatsi', sans-serif;
-  font-size: 2rem;
-}
-
 .linkSpan {
   text-decoration: none;
+}
+
+.event .message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .alertMessage {
@@ -309,5 +319,44 @@ table {
   height: 2.55rem;
   margin-right: 5px;
   float: left;
+}
+
+.downloadButton {
+  border: 0;
+  background-color: var(--v-color);
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+}
+
+.downloadButton:hover {
+  background-color: var(--v-white);
+  border: var(--v-color) solid 3px;
+}
+
+.downloadIcon {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.downloadButton:hover .downloadIcon {
+  display: none;
+}
+
+.downloadHover {
+  display: none;
+}
+
+.downloadButton:hover .downloadHover {
+  width: 30px;
+  height: 30px;
+  display: block;
 }
 
