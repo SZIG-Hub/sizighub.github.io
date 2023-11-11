@@ -294,6 +294,12 @@ table {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  color: var(--v-black);
+  font-family: 'Alatsi', sans-serif;
+  font-size: 2rem;
+  max-width: 100%;
+  min-width: 95%;
 }
 
 .alertMessage {
