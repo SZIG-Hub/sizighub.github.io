@@ -154,6 +154,8 @@ fetch('https://api.npoint.io/6101e39b776848c51548')
 
                           var newDate = `${dayText}, ${monthText} ${dateText} ${yearText}`
 
+                          if (!examinations[exam][y][userType]) return
+
                           var data = {
                             subject: json[day][id].subjects[userType].subject,
                             teacher: json[day][id].subjects[userType].teacher,
