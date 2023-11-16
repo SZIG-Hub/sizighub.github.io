@@ -12,6 +12,7 @@ fetch('https://api.npoint.io/6101e39b776848c51548')
 
             var urlParam = new URLSearchParams(window.location.search)
             var paramUser = urlParam.get('name')
+            var paramWeek = urlParam.get('week')
             var user = users[`@${paramUser.toString()}`]
 
             if (!user) {
@@ -21,11 +22,24 @@ fetch('https://api.npoint.io/6101e39b776848c51548')
             document.querySelector(`title`).textContent = user.name + " | " + "Órarend"
             document.querySelector(`span.profileName`).textContent = user.name
 
+            var w = 0
+
+            if (paramWeek === 'next') {
+              document.querySelector(`a.weekLink`).href = `./?name=${paramUser}`
+              document.querySelector(`span.week`).textContent = "Előző hét"
+              w = 7
+            } else {
+              document.querySelector(`a.weekLink`).href = `./?name=${paramUser}&week=next`
+              document.querySelector(`span.week`).textContent = "Következő hét"
+            }
+
             var days = Object.keys(json)
             var exams = Object.keys(examinations)
 
             var s = 0
             var q = 0
+
+            var table = new Array
 
             days.forEach((day) => {
               for (var x = 1; x <= 5; x++) {
@@ -38,7 +52,7 @@ fetch('https://api.npoint.io/6101e39b776848c51548')
                       function getMonday(d) {
                         d = new Date(d);
                         var value = x,
-                          diff = d.getDate() - d.getDay() + value
+                          diff = d.getDate() - d.getDay() + value + w
                         return new Date(d.setDate(diff));
                       }
 
@@ -161,7 +175,8 @@ fetch('https://api.npoint.io/6101e39b776848c51548')
                             teacher: json[day][id].subjects[userType].teacher,
                             link: examinations[exam][y][userType].link,
                             type: examinations[exam][y][userType].type,
-                            date: newDate
+                            date: newDate,
+                            time: y + ". óra"
                           }
 
                           let cell = document.querySelector(`div#${id}`)
@@ -191,73 +206,8 @@ fetch('https://api.npoint.io/6101e39b776848c51548')
                           cell.appendChild(hover)
 
 
-                          const container = document.querySelector(`div.ticket`)
 
-                          const eventDiv = document.createElement('div');
-                          eventDiv.className = 'event';
-
-                          const leftBlock = document.createElement('div');
-                          leftBlock.className = 'blockLeft';
-
-                          const rightBlock = document.createElement('div')
-                          rightBlock.className = 'blockRight'
-
-                          const block = document.createElement('div')
-                          block.className = 'blockSpan'
-
-                          const dateSpan = document.createElement('span');
-                          dateSpan.className = 'dateSpan';
-                          dateSpan.textContent = data.date;
-
-                          const timeSpan = document.createElement('span');
-                          timeSpan.className = 'timeSpan';
-                          timeSpan.textContent = `${y}. óra`;
-
-                          const typeSpan = document.createElement('span');
-                          typeSpan.className = 'typeSpan';
-                          typeSpan.textContent = data.type
-
-                          const teacherSpan = document.createElement('span');
-                          teacherSpan.className = 'teacherSpan';
-                          teacherSpan.textContent = data.teacher
-
-                          const classSpan = document.createElement('span');
-                          classSpan.className = 'subjectSpan';
-                          classSpan.textContent = data.subject
-
-                          if (data.link !== "./") {
-                            const downloadButton = document.createElement('button');
-                            downloadButton.className = 'downloadButton'
-                            downloadButton.id = 'download'
-                            downloadButton.type = 'button'
-                            downloadButton.style.cursor = 'pointer'
-
-                            const downloadLink = document.createElement('a')
-                            downloadLink.href = data.link
-
-                            const downloadIcon = document.createElement('img')
-                            downloadIcon.src = '../assets/download.png'
-                            downloadIcon.className = 'downloadIcon'
-
-                            const downloadHover = document.createElement('img')
-                            downloadHover.src = '../assets/downloadHover.png'
-                            downloadHover.className = 'downloadHover'
-
-                            rightBlock.appendChild(downloadLink)
-                            downloadLink.appendChild(downloadButton)
-                            downloadButton.appendChild(downloadIcon)
-                            downloadButton.appendChild(downloadHover)
-                          }
-
-                          container.appendChild(eventDiv)
-                          eventDiv.appendChild(leftBlock)
-                          eventDiv.appendChild(rightBlock)
-                          leftBlock.appendChild(classSpan)
-                          leftBlock.appendChild(block)
-                          block.appendChild(dateSpan)
-                          block.appendChild(timeSpan)
-                          block.appendChild(teacherSpan)
-                          block.appendChild(typeSpan)
+                          table.push(data)
                         }
                       }
                     }
@@ -297,6 +247,83 @@ fetch('https://api.npoint.io/6101e39b776848c51548')
               container.appendChild(eventDiv);
               eventDiv.appendChild(image)
               eventDiv.appendChild(message)
+            }
+
+            table.sort(function (a, b) {
+
+              var dateA = new Date(a.date);
+              var dateB = new Date(b.date);
+              return dateA - dateB;
+            });
+
+            for (var t = 0; t <= table.length - 1; t++) {
+              const container = document.querySelector(`div.ticket`)
+
+              const eventDiv = document.createElement('div');
+              eventDiv.className = 'event';
+
+              const leftBlock = document.createElement('div');
+              leftBlock.className = 'blockLeft';
+
+              const rightBlock = document.createElement('div')
+              rightBlock.className = 'blockRight'
+
+              const block = document.createElement('div')
+              block.className = 'blockSpan'
+
+              const dateSpan = document.createElement('span');
+              dateSpan.className = 'dateSpan';
+              dateSpan.textContent = table[t].date;
+
+              const timeSpan = document.createElement('span');
+              timeSpan.className = 'timeSpan';
+              timeSpan.textContent = table[t].time;
+
+              const typeSpan = document.createElement('span');
+              typeSpan.className = 'typeSpan';
+              typeSpan.textContent = table[t].type
+
+              const teacherSpan = document.createElement('span');
+              teacherSpan.className = 'teacherSpan';
+              teacherSpan.textContent = table[t].teacher
+
+              const classSpan = document.createElement('span');
+              classSpan.className = 'subjectSpan';
+              classSpan.textContent = table[t].subject
+
+              if (table[t].link !== "./") {
+                const downloadButton = document.createElement('button');
+                downloadButton.className = 'downloadButton'
+                downloadButton.id = 'download'
+                downloadButton.type = 'button'
+                downloadButton.style.cursor = 'pointer'
+
+                const downloadLink = document.createElement('a')
+                downloadLink.href = table[t].link
+
+                const downloadIcon = document.createElement('img')
+                downloadIcon.src = '../assets/download.png'
+                downloadIcon.className = 'downloadIcon'
+
+                const downloadHover = document.createElement('img')
+                downloadHover.src = '../assets/downloadHover.png'
+                downloadHover.className = 'downloadHover'
+
+                rightBlock.appendChild(downloadLink)
+                downloadLink.appendChild(downloadButton)
+                downloadButton.appendChild(downloadIcon)
+                downloadButton.appendChild(downloadHover)
+              }
+
+              container.appendChild(eventDiv)
+              eventDiv.appendChild(leftBlock)
+              eventDiv.appendChild(rightBlock)
+              leftBlock.appendChild(classSpan)
+              leftBlock.appendChild(block)
+              block.appendChild(dateSpan)
+              block.appendChild(timeSpan)
+              block.appendChild(teacherSpan)
+              block.appendChild(typeSpan)
             }
           })
       })

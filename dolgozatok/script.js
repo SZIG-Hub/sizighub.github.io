@@ -9,6 +9,8 @@ fetch('https://api.npoint.io/6101e39b776848c51548')
         var days = Object.keys(json)
         var exams = Object.keys(examinations)
 
+        var table = new Array
+
         exams.forEach((exam) => {
           for (var x = 1; x <= 7; x++) {
             for (var y = 1; y <= 4; y++) {
@@ -123,76 +125,11 @@ fetch('https://api.npoint.io/6101e39b776848c51548')
                           teacher: json[day][data.a].subjects[data.b].teacher,
                           date: newDate,
                           type: examinations[exam][x][y].type,
-                          link: examinations[exam][x][y].link
+                          link: examinations[exam][x][y].link,
+                          time: x + ". óra"
                         }
 
-                        const container = document.querySelector(`div#div-container`)
-
-                        const eventDiv = document.createElement('div');
-                        eventDiv.className = 'event';
-
-                        const leftBlock = document.createElement('div');
-                        leftBlock.className = 'blockLeft';
-
-                        const rightBlock = document.createElement('div')
-                        rightBlock.className = 'blockRight'
-
-                        const block = document.createElement('div')
-                        block.className = 'block'
-
-                        const dateSpan = document.createElement('span');
-                        dateSpan.className = 'date';
-                        dateSpan.textContent = examData.date;
-
-                        const timeSpan = document.createElement('span');
-                        timeSpan.className = 'time';
-                        timeSpan.textContent = `${x}. óra`;
-
-                        const typeSpan = document.createElement('span');
-                        typeSpan.className = 'type';
-                        typeSpan.textContent = examData.type
-
-                        const teacherSpan = document.createElement('span');
-                        teacherSpan.className = 'teacher';
-                        teacherSpan.textContent = examData.teacher
-
-                        const classSpan = document.createElement('span');
-                        classSpan.className = 'subject';
-                        classSpan.textContent = examData.subject
-
-                        if (examData.link !== "./") {
-                          const downloadButton = document.createElement('button');
-                          downloadButton.className = 'downloadButton'
-                          downloadButton.id = 'download'
-                          downloadButton.type = 'button'
-                          downloadButton.style.cursor = 'pointer'
-
-                          const downloadLink = document.createElement('a')
-                          downloadLink.href = examData.link
-
-                          const downloadIcon = document.createElement('img')
-                          downloadIcon.src = '../assets/download.png'
-                          downloadIcon.className = 'downloadIcon'
-
-                          const downloadHover = document.createElement('img')
-                          downloadHover.src = '../assets/downloadHover.png'
-                          downloadHover.className = 'downloadHover'
-
-                          rightBlock.appendChild(downloadLink)
-                          downloadLink.appendChild(downloadButton)
-                          downloadButton.appendChild(downloadIcon)
-                          downloadButton.appendChild(downloadHover)
-                        }
-
-                        container.appendChild(eventDiv)
-                        eventDiv.appendChild(leftBlock)
-                        eventDiv.appendChild(rightBlock)
-                        leftBlock.appendChild(classSpan)
-                        leftBlock.appendChild(block)
-                        block.appendChild(dateSpan)
-                        block.appendChild(timeSpan)
-                        block.appendChild(teacherSpan)
-                        block.appendChild(typeSpan)
+                        table.push(examData)
                       }
                     }
                   })
@@ -201,5 +138,82 @@ fetch('https://api.npoint.io/6101e39b776848c51548')
             }
           }
         })
+        
+        table.sort(function (a, b) {
+
+          var dateA = new Date(a.date);
+          var dateB = new Date(b.date);
+          return dateA - dateB;
+        });
+
+        for (var t = 0; t <= table.length - 1; t++) {
+          const container = document.querySelector(`div#div-container`)
+
+          const eventDiv = document.createElement('div');
+          eventDiv.className = 'event';
+
+          const leftBlock = document.createElement('div');
+          leftBlock.className = 'blockLeft';
+
+          const rightBlock = document.createElement('div')
+          rightBlock.className = 'blockRight'
+
+          const block = document.createElement('div')
+          block.className = 'block'
+
+          const dateSpan = document.createElement('span');
+          dateSpan.className = 'date';
+          dateSpan.textContent = table[t].date;
+
+          const timeSpan = document.createElement('span');
+          timeSpan.className = 'time';
+          timeSpan.textContent = table[t].time;
+
+          const typeSpan = document.createElement('span');
+          typeSpan.className = 'type';
+          typeSpan.textContent = table[t].type
+
+          const teacherSpan = document.createElement('span');
+          teacherSpan.className = 'teacher';
+          teacherSpan.textContent = table[t].teacher
+
+          const classSpan = document.createElement('span');
+          classSpan.className = 'subject';
+          classSpan.textContent = table[t].subject
+
+          if (table[t].link !== "./") {
+            const downloadButton = document.createElement('button');
+            downloadButton.className = 'downloadButton'
+            downloadButton.id = 'download'
+            downloadButton.type = 'button'
+            downloadButton.style.cursor = 'pointer'
+
+            const downloadLink = document.createElement('a')
+            downloadLink.href = table[t].link
+
+            const downloadIcon = document.createElement('img')
+            downloadIcon.src = '../assets/download.png'
+            downloadIcon.className = 'downloadIcon'
+
+            const downloadHover = document.createElement('img')
+            downloadHover.src = '../assets/downloadHover.png'
+            downloadHover.className = 'downloadHover'
+
+            rightBlock.appendChild(downloadLink)
+            downloadLink.appendChild(downloadButton)
+            downloadButton.appendChild(downloadIcon)
+            downloadButton.appendChild(downloadHover)
+          }
+
+          container.appendChild(eventDiv)
+          eventDiv.appendChild(leftBlock)
+          eventDiv.appendChild(rightBlock)
+          leftBlock.appendChild(classSpan)
+          leftBlock.appendChild(block)
+          block.appendChild(dateSpan)
+          block.appendChild(timeSpan)
+          block.appendChild(teacherSpan)
+          block.appendChild(typeSpan)
+        }
       })
   })
