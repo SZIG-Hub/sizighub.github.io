@@ -13,7 +13,7 @@ fetch('https://api.npoint.io/6101e39b776848c51548')
             var urlParam = new URLSearchParams(window.location.search)
             var paramUser = urlParam.get('name')
             var paramWeek = urlParam.get('week')
-            var user = users[`@${paramUser.toString()}`]
+            var user = users[`@${paramUser}`]
 
             if (!user) {
               window.location.replace('./no-user.html')
@@ -69,11 +69,11 @@ fetch('https://api.npoint.io/6101e39b776848c51548')
 
                       const teacher = document.createElement('span');
                       teacher.className = 'teacher';
-                      if (i < 1) { teacher.textContent = "" } else { teacher.textContent = json[day][id].subjects[i].monogram.toString(); }
+                      if (i < 1) { teacher.textContent = ""; q = q + 1} else { teacher.textContent = json[day][id].subjects[i].monogram.toString(); }
 
                       const subject = document.createElement('span');
                       subject.className = 'subject';
-                      if (i < 1) { subject.textContent = ""; q = q + 1 } else { subject.textContent = json[day][id].subjects[i].subject.toString(); }
+                      if (i < 1) { subject.textContent = "" } else { subject.textContent = json[day][id].subjects[i].subject.toString(); }
 
                       const classroom = document.createElement('span');
                       classroom.className = 'classroom';
@@ -242,7 +242,7 @@ fetch('https://api.npoint.io/6101e39b776848c51548')
 
               const message = document.createElement('span');
               message.className = 'alertMessage';
-              message.textContent = `${q / 7} ismertlen órád van. Ennek oka az, hogy nem tudjuk milyen órákon veszel részt ilyenkor. Jelezz vissza nekünk és mi frissítjük az óráidat`
+              message.textContent = `${Math.round(q / 7)} ismertlen órád van. Ennek oka az, hogy nem tudjuk milyen órákon veszel részt ilyenkor. Jelezz vissza nekünk és mi frissítjük az óráidat`
 
               container.appendChild(eventDiv);
               eventDiv.appendChild(image)
