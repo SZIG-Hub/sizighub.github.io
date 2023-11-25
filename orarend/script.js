@@ -242,7 +242,7 @@ fetch('https://api.npoint.io/6101e39b776848c51548')
 
               const message = document.createElement('span');
               message.className = 'alertMessage';
-              message.textContent = `${Math.round(q / 7)} ismertlen órád van. Ennek oka az, hogy nem tudjuk milyen órákon veszel részt ilyenkor. Jelezz vissza nekünk és mi frissítjük az óráidat`
+              message.textContent = `${Math.round(q / 7) - 1} ismertlen órád van. Ennek oka az, hogy nem tudjuk milyen órákon veszel részt ilyenkor. Jelezz vissza nekünk és mi frissítjük az óráidat`
 
               container.appendChild(eventDiv);
               eventDiv.appendChild(image)
