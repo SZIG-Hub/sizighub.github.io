@@ -1,0 +1,954 @@
+[
+    {
+        "0": [
+            "INFINITIV",
+            "MAGYAR",
+            "PRÄTERITUM",
+            "PERFEKT"
+        ]
+    },
+    {
+        "1": [
+            "backen",
+            "sütni",
+            "backte",
+            "hat gebacken"
+        ]
+    },
+    {
+        "2": [
+            "befehlen",
+            "parancsolni",
+            "befahl",
+            "hat befohlen"
+        ]
+    },
+    {
+        "3": [
+            "beginnen",
+            "kezdődni",
+            "begann",
+            "hat begonnen"
+        ]
+    },
+    {
+        "4": [
+            "beißen",
+            "harapni",
+            "biss",
+            "hat gebissen"
+        ]
+    },
+    {
+        "5": [
+            "biegen",
+            "hajlít, befordul",
+            "bog",
+            "hat bebogen"
+        ]
+    },
+    {
+        "6": [
+            "bieten",
+            "kínálni",
+            "bot",
+            "hat geboten"
+        ]
+    },
+    {
+        "7": [
+            "binden",
+            "kötni",
+            "band",
+            "hat gebunden"
+        ]
+    },
+    {
+        "8": [
+            "bitten",
+            "kérni",
+            "bat",
+            "hat gebeten"
+        ]
+    },
+    {
+        "9": [
+            "bleiben",
+            "maradni",
+            "blieb",
+            "hat geblieben"
+        ]
+    },
+    {
+        "10": [
+            "brechen",
+            "hány/tör",
+            "brach",
+            "hat gebrochen"
+        ]
+    },
+    {
+        "11": [
+            "empfangen",
+            "fogadni",
+            "empfing",
+            "hat empfangen"
+        ]
+    },
+    {
+        "12": [
+            "empfehlen",
+            "ajánlani",
+            "empfahl",
+            "hat empfohlen"
+        ]
+    },
+    {
+        "13": [
+            "empfinden",
+            "érezni",
+            "empfand",
+            "hat empfunden"
+        ]
+    },
+    {
+        "14": [
+            "essen",
+            "enni",
+            "aß",
+            "hat gegessen"
+        ]
+    },
+    {
+        "15": [
+            "fahren",
+            "utazni, vezetni",
+            "fuhr",
+            "hat gefahren"
+        ]
+    },
+    {
+        "16": [
+            "fangen",
+            "fogni",
+            "fing",
+            "hat gefangen"
+        ]
+    },
+    {
+        "17": [
+            "finden",
+            "találni",
+            "fand",
+            "hat gefunden"
+        ]
+    },
+    {
+        "18": [
+            "fliegen",
+            "repülni",
+            "flog",
+            "hat geflogen"
+        ]
+    },
+    {
+        "19": [
+            "fliehen",
+            "menekülni",
+            "floh",
+            "hat geflohen"
+        ]
+    },
+    {
+        "20": [
+            "fließen",
+            "folyni",
+            "floss",
+            "hat geflossen"
+        ]
+    },
+    {
+        "21": [
+            "fressen",
+            "zabálni",
+            "fraß",
+            "hat gefressen"
+        ]
+    },
+    {
+        "22": [
+            "frieren",
+            "fagyni",
+            "fror",
+            "hat gefroren"
+        ]
+    },
+    {
+        "23": [
+            "geben",
+            "adni",
+            "gab",
+            "hat gegeben"
+        ]
+    },
+    {
+        "24": [
+            "gehen",
+            "menni",
+            "ging",
+            "hat gegangen"
+        ]
+    },
+    {
+        "25": [
+            "gelingen",
+            "sikerülni",
+            "gelang",
+            "hat gelungen"
+        ]
+    },
+    {
+        "26": [
+            "gelten",
+            "érvényes",
+            "galt",
+            "hat gegolten"
+        ]
+    },
+    {
+        "27": [
+            "genießen",
+            "élvezni",
+            "genoss",
+            "hat genossen"
+        ]
+    },
+    {
+        "28": [
+            "geraten",
+            "jut, kerül",
+            "geriet",
+            "hat geraten"
+        ]
+    },
+    {
+        "29": [
+            "geschehen",
+            "történni",
+            "geschah",
+            "hat geschehen"
+        ]
+    },
+    {
+        "30": [
+            "gewinnen",
+            "nyerni",
+            "gewann",
+            "hat gewonnen"
+        ]
+    },
+    {
+        "31": [
+            "gießen",
+            "öntözni",
+            "goss",
+            "hat gegossen"
+        ]
+    },
+    {
+        "32": [
+            "gleichen",
+            "hasonlítani",
+            "glich",
+            "hat geglichen"
+        ]
+    },
+    {
+        "33": [
+            "gleiten",
+            "csúszni",
+            "glitt",
+            "hat geglitten"
+        ]
+    },
+    {
+        "34": [
+            "graben",
+            "ásni",
+            "grub",
+            "hat gegraben"
+        ]
+    },
+    {
+        "35": [
+            "greifen",
+            "fogni",
+            "griff",
+            "hat gegriffen"
+        ]
+    },
+    {
+        "36": [
+            "halten",
+            "tartani",
+            "hielt",
+            "hat gehalten"
+        ]
+    },
+    {
+        "37": [
+            "hängen",
+            "lógni",
+            "hing",
+            "hat gehangen"
+        ]
+    },
+    {
+        "38": [
+            "heben",
+            "emelni",
+            "hob",
+            "hat gehoben"
+        ]
+    },
+    {
+        "39": [
+            "heißen",
+            "hívni",
+            "hieß",
+            "hat geheißen"
+        ]
+    },
+    {
+        "40": [
+            "helfen",
+            "segíteni",
+            "half",
+            "hat geholfen"
+        ]
+    },
+    {
+        "41": [
+            "klingen",
+            "csöng, hangzik",
+            "klang",
+            "hat geklungen"
+        ]
+    },
+    {
+        "42": [
+            "kommen",
+            "jönni",
+            "kam",
+            "hat gekommen"
+        ]
+    },
+    {
+        "43": [
+            "laden",
+            "rak, meghív",
+            "lud",
+            "hat geladen"
+        ]
+    },
+    {
+        "44": [
+            "lassen",
+            "hagyni",
+            "ließ",
+            "hat gelassen"
+        ]
+    },
+    {
+        "45": [
+            "laufen",
+            "futni",
+            "lief",
+            "hat gelaufen"
+        ]
+    },
+    {
+        "46": [
+            "leiden",
+            "szenvedni",
+            "litt",
+            "hat gelitten"
+        ]
+    },
+    {
+        "47": [
+            "leihen",
+            "kölcsönadni",
+            "lieh",
+            "hat geliehen"
+        ]
+    },
+    {
+        "48": [
+            "lesen",
+            "olvasni",
+            "las",
+            "hat gelesen"
+        ]
+    },
+    {
+        "49": [
+            "liegen",
+            "feküdni",
+            "lag",
+            "hat gelegen"
+        ]
+    },
+    {
+        "50": [
+            "lügen",
+            "hazudni",
+            "log",
+            "hat gelogen"
+        ]
+    },
+    {
+        "51": [
+            "meiden",
+            "kerülni",
+            "mied",
+            "hat gemieden"
+        ]
+    },
+    {
+        "52": [
+            "messen",
+            "mérni",
+            "maß",
+            "hat gemessen"
+        ]
+    },
+    {
+        "53": [
+            "misslingen",
+            "félresikerül",
+            "misslang",
+            "hat misslungen"
+        ]
+    },
+    {
+        "54": [
+            "nehmen",
+            "venni",
+            "nahm",
+            "hat genommen"
+        ]
+    },
+    {
+        "55": [
+            "pfeifen",
+            "fütyülni",
+            "pfiff",
+            "hat gepfiffen"
+        ]
+    },
+    {
+        "56": [
+            "preisen",
+            "dicsérni",
+            "pries",
+            "hat gepriesen"
+        ]
+    },
+    {
+        "57": [
+            "raten",
+            "tanácsolni",
+            "riet",
+            "hat geraten"
+        ]
+    },
+    {
+        "58": [
+            "reiben",
+            "dörzsölni",
+            "rieb",
+            "hat gerieben"
+        ]
+    },
+    {
+        "59": [
+            "reißen",
+            "szakítani",
+            "riss",
+            "hat gerissen"
+        ]
+    },
+    {
+        "60": [
+            "reiten",
+            "lovagolni",
+            "ritt",
+            "hat geritten"
+        ]
+    },
+    {
+        "61": [
+            "riechen",
+            "szaglani",
+            "roch",
+            "hat gerochen"
+        ]
+    },
+    {
+        "62": [
+            "rufen",
+            "hívni",
+            "rief",
+            "hat gerufen"
+        ]
+    },
+    {
+        "63": [
+            "saufen",
+            "vedelni",
+            "soff",
+            "hat gesoffen"
+        ]
+    },
+    {
+        "64": [
+            "saugen",
+            "szívni",
+            "sog/saugte",
+            "hat gesogen/gesaugt"
+        ]
+    },
+    {
+        "65": [
+            "schaffen",
+            "alkotni",
+            "schuf",
+            "hat geschaffen"
+        ]
+    },
+    {
+        "66": [
+            "schaffen",
+            "csinálni",
+            "schaffte",
+            "hat geschafft"
+        ]
+    },
+    {
+        "67": [
+            "scheiden",
+            "elválasztani",
+            "schied",
+            "hat geschieden"
+        ]
+    },
+    {
+        "68": [
+            "scheinen",
+            "tűnik, süt",
+            "schien",
+            "hat geschienen"
+        ]
+    },
+    {
+        "69": [
+            "scheißen",
+            "kakilni",
+            "schiss",
+            "hat geschissen"
+        ]
+    },
+    {
+        "70": [
+            "schelten",
+            "szidni",
+            "schalt",
+            "hat gescholten"
+        ]
+    },
+    {
+        "71": [
+            "schieben",
+            "tolni",
+            "schob",
+            "hat geschoben"
+        ]
+    },
+    {
+        "72": [
+            "schießen",
+            "lőni",
+            "schoss",
+            "hat geschossen"
+        ]
+    },
+    {
+        "73": [
+            "schlafen",
+            "aludni",
+            "schlief",
+            "hat geschlafen"
+        ]
+    },
+    {
+        "74": [
+            "schlagen",
+            "ütni",
+            "schlug",
+            "hat geschlagen"
+        ]
+    },
+    {
+        "75": [
+            "schließen",
+            "zár, csuk",
+            "schloss",
+            "hat geschlossen"
+        ]
+    },
+    {
+        "76": [
+            "schmeißen",
+            "dobni",
+            "schmiss",
+            "hat geschmissen"
+        ]
+    },
+    {
+        "77": [
+            "schmelzen",
+            "olvad, olvaszt",
+            "schmolz",
+            "hat geschmolzen"
+        ]
+    },
+    {
+        "78": [
+            "schneiden",
+            "vágni",
+            "schnitt",
+            "hat geschnitten"
+        ]
+    },
+    {
+        "79": [
+            "erschrecken",
+            "megijedni",
+            "erschrak",
+            "hat erschrocken"
+        ]
+    },
+    {
+        "80": [
+            "schreiben",
+            "írni",
+            "schrieb",
+            "hat geschrieben"
+        ]
+    },
+    {
+        "81": [
+            "schreien",
+            "üvölteni",
+            "schrie",
+            "hat geschrie(e)n"
+        ]
+    },
+    {
+        "82": [
+            "schwören",
+            "megesküdni",
+            "schwor",
+            "hat geschworen"
+        ]
+    },
+    {
+        "83": [
+            "sehen",
+            "nézni",
+            "sah",
+            "hat gesehen"
+        ]
+    },
+    {
+        "84": [
+            "sein",
+            "lenni",
+            "war",
+            "hat gewesen"
+        ]
+    },
+    {
+        "85": [
+            "singen",
+            "énekelni",
+            "sang",
+            "hat gesungen"
+        ]
+    },
+    {
+        "86": [
+            "sinken",
+            "süllyedni",
+            "sank",
+            "hat gesunken"
+        ]
+    },
+    {
+        "87": [
+            "sitzen",
+            "ülni",
+            "saß",
+            "hat gesessen"
+        ]
+    },
+    {
+        "88": [
+            "spinnen",
+            "fon; bedilizik",
+            "spann",
+            "hat gesponnen"
+        ]
+    },
+    {
+        "89": [
+            "sprechen",
+            "beszélni",
+            "sprach",
+            "hat gesprochen"
+        ]
+    },
+    {
+        "90": [
+            "springen",
+            "ugrani",
+            "sprang",
+            "hat gesprungen"
+        ]
+    },
+    {
+        "91": [
+            "stechen",
+            "szúrni",
+            "stach",
+            "hat gestochen"
+        ]
+    },
+    {
+        "92": [
+            "stehen",
+            "állni",
+            "stand",
+            "hat gestanden"
+        ]
+    },
+    {
+        "93": [
+            "stehlen",
+            "lopni",
+            "stahl",
+            "hat gestohlen"
+        ]
+    },
+    {
+        "94": [
+            "steigen",
+            "mászik, nő",
+            "stieg",
+            "hat gestiegen"
+        ]
+    },
+    {
+        "95": [
+            "sterben",
+            "meghalni",
+            "starb",
+            "hat gestorben"
+        ]
+    },
+    {
+        "96": [
+            "stinken",
+            "bűzleni",
+            "stank",
+            "hat gestunken"
+        ]
+    },
+    {
+        "97": [
+            "stoßen",
+            "lökni",
+            "stieß",
+            "hat gestoßen"
+        ]
+    },
+    {
+        "98": [
+            "streichen",
+            "simogatni",
+            "strich",
+            "hat gestrichen"
+        ]
+    },
+    {
+        "99": [
+            "streiten",
+            "veszekedni",
+            "stritt",
+            "hat gestritten"
+        ]
+    },
+    {
+        "100": [
+            "tragen",
+            "hord, visel",
+            "trug",
+            "hat getragen"
+        ]
+    },
+    {
+        "101": [
+            "treffen",
+            "találkozni",
+            "traf",
+            "hat getroffen"
+        ]
+    },
+    {
+        "102": [
+            "treiben",
+            "űz, folytat",
+            "trieb",
+            "hat getrieben"
+        ]
+    },
+    {
+        "103": [
+            "treten",
+            "lép, tapos",
+            "trat",
+            "hat getreten"
+        ]
+    },
+    {
+        "104": [
+            "trinken",
+            "inni",
+            "trank",
+            "hat getrunken"
+        ]
+    },
+    {
+        "105": [
+            "trügen",
+            "csal, ámit",
+            "trog",
+            "hat getrogen"
+        ]
+    },
+    {
+        "106": [
+            "tun",
+            "tesz, rak",
+            "tat",
+            "hat getan"
+        ]
+    },
+    {
+        "107": [
+            "verderben",
+            "elront, megromlik",
+            "verdarb",
+            "hat verdorben"
+        ]
+    },
+    {
+        "108": [
+            "vergessen",
+            "elfelejteni",
+            "vergaß",
+            "hat vergessen"
+        ]
+    },
+    {
+        "109": [
+            "verlieren",
+            "elveszíteni",
+            "verlor",
+            "hat verloren"
+        ]
+    },
+    {
+        "110": [
+            "wachsen",
+            "nőni",
+            "wuchs",
+            "hat gewachsen"
+        ]
+    },
+    {
+        "111": [
+            "waschen",
+            "mosni",
+            "wusch",
+            "hat gewaschen"
+        ]
+    },
+    {
+        "112": [
+            "weben",
+            "szőni",
+            "webte/wob",
+            "hat gewebt/gewoben"
+        ]
+    },
+    {
+        "113": [
+            "werben",
+            "verseng",
+            "warb",
+            "hat geworben"
+        ]
+    },
+    {
+        "114": [
+            "werden",
+            "lesz, válik",
+            "wurde",
+            "hat geworden"
+        ]
+    },
+    {
+        "115": [
+            "werfen",
+            "dobni",
+            "warf",
+            "hat geworfen"
+        ]
+    },
+    {
+        "116": [
+            "wiegen",
+            "mér, nyom",
+            "wog",
+            "hat gewogen"
+        ]
+    },
+    {
+        "117": [
+            "ziehen",
+            "húz, vonul",
+            "zog",
+            "hat gezogen"
+        ]
+    },
+    {
+        "118": [
+            "zwingen",
+            "kényszeríteni",
+            "zwang",
+            "hat gezwunden"
+        ]
+    }
+]
