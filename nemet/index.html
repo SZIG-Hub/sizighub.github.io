@@ -80,55 +80,46 @@
 
     <h2>Német szavak</h2>
 
-    <p>Kezdj el írni:</p>
+    <p>Kezdj el írni magyarul:</p>
 
     <!--Make sure the form has the autocomplete function switched off:-->
     <form autocomplete="off" action="/action_page.php">
         <div class="autocomplete" style="width:300px;">
-            <input id="myInput" type="text" name="myCountry" placeholder="Magyarul">
+            <input id="hungarian" type="text" name="magyar" placeholder="Magyarul">
+        </div>
+    </form>
+
+    <p>Kezdj el írni németül:</p>
+
+    <form autocomplete="off" action="/action_page.php">
+        <div class="autocomplete" style="width:300px;">
+            <input id="german" type="text" name="nemet" placeholder="Németül">
         </div>
     </form>
 
     <script>
         function autocomplete(inp, arr) {
-            /*the autocomplete function takes two arguments,
-            the text field element and an array of possible autocompleted values:*/
             var currentFocus;
-            /*execute a function when someone writes in the text field:*/
             inp.addEventListener("input", function (e) {
                 var a, b, i, val = this.value;
-                /*close any already open lists of autocompleted values*/
                 closeAllLists();
                 if (!val) { return false; }
                 currentFocus = -1;
-                /*create a DIV element that will contain the items (values):*/
                 a = document.createElement("DIV");
                 a.setAttribute("id", this.id + "autocomplete-list");
                 a.setAttribute("class", "autocomplete-items");
-                /*append the DIV element as a child of the autocomplete container:*/
                 this.parentNode.appendChild(a);
-                /*for each item in the array...*/
                 for (i = 0; i < arr.length; i++) {
-                    /*check if the item starts with the same letters as the text field value:*/
                     if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                        /*create a DIV element for each matching element:*/
                         b = document.createElement("div");
                         l = document.createElement("a")
-
                         var spec = i + 1
-
                         l.setAttribute('href', `./words.html?id=${spec}`)
-                        /*make the matching letters bold:*/
                         b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
                         b.innerHTML += arr[i].substr(val.length);
-                        /*insert a input field that will hold the current array item's value:*/
                         b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                        /*execute a function when someone clicks on the item value (DIV element):*/
                         b.addEventListener("click", function (e) {
-                            /*insert the value for the autocomplete text field:*/
                             inp.value = this.getElementsByTagName("input")[0].value;
-                            /*close the list of autocompleted values,
-                            (or any other open lists of autocompleted values:*/
                             closeAllLists();
                         });
                         a.appendChild(l)
@@ -136,27 +127,18 @@
                     }
                 }
             });
-            /*execute a function presses a key on the keyboard:*/
             inp.addEventListener("keydown", function (e) {
                 var x = document.getElementById(this.id + "autocomplete-list");
                 if (x) x = x.getElementsByTagName("div");
                 if (e.keyCode == 40) {
-                    /*If the arrow DOWN key is pressed,
-                    increase the currentFocus variable:*/
                     currentFocus++;
-                    /*and and make the current item more visible:*/
                     addActive(x);
-                } else if (e.keyCode == 38) { //up
-                    /*If the arrow UP key is pressed,
-                    decrease the currentFocus variable:*/
+                } else if (e.keyCode == 38) {
                     currentFocus--;
-                    /*and and make the current item more visible:*/
                     addActive(x);
                 } else if (e.keyCode == 13) {
-                    /*If the ENTER key is pressed, prevent the form from being submitted,*/
                     e.preventDefault();
                     if (currentFocus > -1) {
-                        /*and simulate a click on the "active" item:*/
                         if (x) x[currentFocus].click();
                     }
                 }
@@ -194,10 +176,12 @@
         }
 
         /*An array containing all the country names in the world:*/
-        var countries = ["sütni", "parancsolni", "kezdődni", "harapni", "hajlít", "kínálni", "kötni", "kérni", "maradni", "hány/tör", "fogadni", "ajánlani", "érezni", "enni", "utazni", "fogni", "találni", "repülni", "menekülni", "folyni", "zabálni", "fagyni", "adni", "menni", "sikerülni", "érvényes", "élvezni", "jut, kerül", "történni", "nyerni", "öntözni", "hasonlítani", "csúszni", "ásni", "fogni", "tartani", "lógni", "emelni", "hívni", "segíteni", "csöng", "jönni", "rak, meghív", "hagyni", "futni", "szenvedni", "kölcsönadni", "olvasni", "feküdni", "hazudni", "kerülni", "mérni", "félresikerül", "venni", "fütyülni", "dicsérni", "tanácsolni", "dörzsölni", "szakítani", "lovagolni", "szaglani", "hívni", "vedelni", "szívni", "alkotni", "csinálni", "elválasztani", "tűnik", "kakilni", "szidni", "tolni", "lőni", "aludni", "ütni", "zár", "dobni", "olvad", "vágni", "megijedni", "írni", "üvölteni", "megesküdni", "nézni", "lenni", "énekelni", "süllyedni", "ülni", "fon", "beszélni", "ugrani", "szúrni", "állni", "lopni", "mászik", "meghalni", "bűzleni", "lökni", "simogatni", "veszekedni", "hord", "találkozni", "űz", "lép", "inni", "csal", "tesz", "elront", "elfelejteni", "elveszíteni", "nőni", "mosni", "szőni", "verseng", "lesz", "dobni", "mér", "húz", "kényszeríteni"];
+        var hungarian = ["sütni", "parancsolni", "kezdődni", "harapni", "hajlít", "kínálni", "kötni", "kérni", "maradni", "hány/tör", "fogadni", "ajánlani", "érezni", "enni", "utazni", "fogni", "találni", "repülni", "menekülni", "folyni", "zabálni", "fagyni", "adni", "menni", "sikerülni", "érvényes", "élvezni", "jut, kerül", "történni", "nyerni", "öntözni", "hasonlítani", "csúszni", "ásni", "fogni", "tartani", "lógni", "emelni", "hívni", "segíteni", "csöng", "jönni", "rak, meghív", "hagyni", "futni", "szenvedni", "kölcsönadni", "olvasni", "feküdni", "hazudni", "kerülni", "mérni", "félresikerül", "venni", "fütyülni", "dicsérni", "tanácsolni", "dörzsölni", "szakítani", "lovagolni", "szaglani", "hívni", "vedelni", "szívni", "alkotni", "csinálni", "elválasztani", "tűnik", "kakilni", "szidni", "tolni", "lőni", "aludni", "ütni", "zár", "dobni", "olvad", "vágni", "megijedni", "írni", "üvölteni", "megesküdni", "nézni", "lenni", "énekelni", "süllyedni", "ülni", "fon", "beszélni", "ugrani", "szúrni", "állni", "lopni", "mászik", "meghalni", "bűzleni", "lökni", "simogatni", "veszekedni", "hord", "találkozni", "űz", "lép", "inni", "csal", "tesz", "elront", "elfelejteni", "elveszíteni", "nőni", "mosni", "szőni", "verseng", "lesz", "dobni", "mér", "húz", "kényszeríteni"];
+        var german = ["backen", "befehlen", "beginnen", "beißen", "biegen", "bieten", "binden", "bitten", "bleiben", "brechen", "empfangen", "empfehlen", "empfinden", "essen", "fahren", "fangen", "finden", "fliegen", "fliehen", "fließen", "fressen", "frieren", "geben", "gehen", "gelingen", "gelten", "genießen", "geraten", "geschehen", "gewinnen", "gießen", "gleichen", "gleiten", "graben", "greifen", "halten", "hängen", "heben", "heißen", "helfen", "klingen", "kommen", "laden", "lassen", "laufen", "leiden", "leihen", "lesen", "liegen", "lügen", "meiden", "messen", "misslingen", "nehmen", "pfeifen", "preisen", "raten", "reiben", "reißen", "reiten", "riechen", "rufen", "saufen", "saugen", "schaffen", "schaffen", "scheiden", "scheinen", "scheißen", "schelten", "schieben", "schießen", "schlafen", "schlagen", "schließen", "schmeißen", "schmelzen", "schneiden", "erschrecken", "schreiben", "schreien", "schwören", "sehen", "sein", "singen", "sinken", "sitzen", "spinnen", "sprechen", "springen", "stechen", "stehen", "stehlen", "steigen", "sterben", "stinken", "stoßen", "streichen", "streiten", "tragen", "treffen", "treiben", "treten", "trinken", "trügen", "tun", "verderben", "vergessen", "verlieren", "wachsen", "waschen", "weben", "werben", "werden", "werfen", "wiegen", "ziehen", "zwingen"]
 
         /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-        autocomplete(document.getElementById("myInput"), countries);
+        autocomplete(document.getElementById("hungarian"), hungarian);
+        autocomplete(document.getElementById("german"), german);
     </script>
 
 </body>
