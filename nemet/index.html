@@ -10,7 +10,7 @@
 
         body {
             font: 16px Arial;
-            background-color: #262626;
+            background-color: #202020;
             color: white;
         }
 
@@ -28,27 +28,37 @@
             color: white
         }
 
+        input::placeholder {
+            color: darkgrey;
+        }
+
         input {
-            border: 1px solid white;
-            background-color: #505050;
+            background-color: #3F3F3F;
             padding: 10px;
             font-size: 16px;
+            border-radius: 10px;
+            border-style: none;
         }
 
         input[type=text] {
-            background-color: #262626;
+            color: white;
+            background-color: #3F3F3F;
             width: 100%;
         }
 
         input[type=submit] {
-            background-color: DodgerBlue;
-            color: #262626;
+            color: white;
             cursor: pointer;
+        }
+
+        input[type=text]:focus {
+            border: none;
+            border-style: none;
         }
 
         .autocomplete-items {
             position: absolute;
-            border: 1px solid #262626;
+            border: 1px solid #202020;
             border-bottom: none;
             border-top: none;
             z-index: 99;
@@ -61,19 +71,18 @@
         .autocomplete-items div {
             padding: 10px;
             cursor: pointer;
-            background-color: #262626;
-            border-bottom: 1px solid #262626;
+            background-color: #3F3F3F;
+            border-bottom: 1px solid #202020;
         }
 
         /*when hovering an item:*/
         .autocomplete-items div:hover {
-            background-color: #262626;
+            background-color: #202020;
         }
 
         /*when navigating through the items using the arrow keys:*/
         .autocomplete-active {
-            background-color: DodgerBlue !important;
-            color: #262626;
+            color: #202020;
         }
     </style>
 </head>

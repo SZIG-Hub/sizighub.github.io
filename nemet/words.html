@@ -6,7 +6,7 @@
     <title>SZÓ</title>
     <style>
         body {
-            background-color: #262626;
+            background-color: #202020;
             color: white;
         }
     </style>
@@ -41,14 +41,14 @@
     // Function to display the result if found
     function displayResult(array) {
         const resultContainer = document.createElement('div');
-        resultContainer.innerHTML = `<h2>${array[1]}</h2><p>${array[0]}</p><p>${array[2]}</p><p>${array[3]}</p>`;
+        resultContainer.innerHTML = `<h2>${array[3]}</h2><p>${array[0]}</p><p>${array[1]}</p><p>${array[2]}</p>`;
         document.body.appendChild(resultContainer);
     }
 
     // Function to display a message when the result is not found
     function displayResultNotFound() {
         const notFoundContainer = document.createElement('div');
-        notFoundContainer.innerHTML = '<h2>Result Not Found</h2>';
+        notFoundContainer.innerHTML = '<h2>Nem talált ilyen szót</h2>';
         document.body.appendChild(notFoundContainer);
     }
 
@@ -58,7 +58,7 @@
         if (query) {
             searchData(query);
         } else {
-            console.error('Query parameter "id" not found in the URL.');
+            console.error('Nincs id az a urlben');
         }
     });
 </script>
