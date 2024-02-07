@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Német Szógenerátor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font: 16px Arial;
+        background-color: #202020;
+        color: white;
+      }
+
+      div {
+        color: white;
+      }
+
+      input::placeholder {
+        color: darkgrey;
+      }
+
+      input {
+        background-color: #3f3f3f;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+        border-style: none;
+      }
+
+      input[type="text"] {
+        color: white;
+        background-color: #3f3f3f;
+        width: 50%;
+      }
+
+      input[type="submit"] {
+        color: white;
+        cursor: pointer;
+      }
+
+      input[type="text"]:focus {
+        border: none;
+        border-style: none;
+      }
+      .sub {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+      }
+      .subtext {
+        color: white;
+      }
+      .back {
+        background-color: #7c1515;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+        border-style: none;
+        color: white;
+        cursor: pointer;
+        margin-top: 30px;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myForm">
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Írd ide a szót! (pl.: lernen)"
+      />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <div id="submissionContainer" class="sub">
+      <h3>Infinitive</h3>
+      <span id="subInf" class="subtext"></span>
+      <h3>Präteritum</h3>
+      <span id="subPra" class="subtext"></span>
+      <h3>Perfekt (nem tudni hogy hat/ist)</h3>
+      <span id="subPer" class="subtext"></span>
+    </div>
+
+    <button class="back">
+      <a href="../index.html">Vissza</a>
+    </button>
+
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          var userInputValue = document.getElementById("userInput").value;
+
+          let str = userInputValue.toString();
+
+          // Perfekt
+
+          let newStr = str;
+          let preStr = "";
+
+          const danger = ["antwort"];
+
+          const preWords = [
+            "ab",
+            "an",
+            "auf",
+            "aus",
+            "ein",
+            "entlang",
+            "gegenüber",
+            "heim",
+            "her",
+            "herab",
+            "heraus",
+            "herein",
+            "herüber",
+            "hin",
+            "hinab",
+            "hinauf",
+            "hinaus",
+            "hinein",
+            "hinüber",
+            "los",
+            "mit",
+            "nach",
+            "umher",
+            "rückwärts",
+            "vor",
+            "vorab",
+            "voran",
+            "vorauf",
+            "voraus",
+            "vorbei",
+            "vorher",
+            "vorwärts",
+            "vorüber",
+            "vorweg",
+            "weg",
+            "zu",
+            "zusammen",
+            "zurück",
+          ];
+
+          const nonPreWords = [
+            "be",
+            "emp",
+            "ent",
+            "er",
+            "ge",
+            "hinter",
+            "miss",
+            "re",
+            "ver",
+            "zer",
+          ];
+
+          danger.forEach((d) => {
+            preWords.forEach((filter) => {
+              if (
+                str.includes(filter) &&
+                str.startsWith(filter) &&
+                !str.startsWith(d)
+              ) {
+                let slicedStr = str.slice(
+                  str.indexOf(filter),
+                  str.indexOf(filter) + filter.length
+                );
+
+                newStr = str.replace(slicedStr, "");
+                preStr = slicedStr;
+              }
+            });
+          });
+
+          let stagePerfekt2 = newStr.slice(0, -2);
+
+          function checkIfIsT() {
+            let lastChar = newStr.charAt(stagePerfekt2.length - 1);
+            if (lastChar === "t") return "e";
+            else return "";
+          }
+
+          geRule = "ge";
+
+          function checkIfNeedGe() {
+            nonPreWords.forEach((n) => {
+              if (newStr.startsWith(n)) {
+                geRule = "";
+              }
+            });
+          }
+
+          checkIfNeedGe();
+
+          let stagePerfekt3 = `? ${preStr}${geRule}${stagePerfekt2}${checkIfIsT()}t`;
+
+          var previousSubmission = document.getElementById("submissionValue");
+          if (previousSubmission) {
+            previousSubmission.remove(); // Remove the previous submission
+          }
+
+          console.log(stagePerfekt3);
+
+          // Präteritum
+
+          let stagePrater1 = str.slice(0, -2);
+
+          function checkIfIsE() {
+            let lastChar = str.charAt(stagePrater1.length - 1);
+            if (lastChar === "t" || lastChar === "d" || lastChar === "n")
+              return "e";
+            else return "";
+          }
+
+          let stagePrater2 = `${stagePrater1}${checkIfIsE()}te`;
+
+          console.log(stagePrater2);
+
+          document.getElementById("subInf").textContent = str;
+          document.getElementById("subPra").textContent = stagePrater2;
+          document.getElementById("subPer").textContent = stagePerfekt3;
+        });
+    </script>
+  </body>
+</html>

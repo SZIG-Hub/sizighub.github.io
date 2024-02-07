@@ -1,230 +1,797 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Német Szókereső</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        * {
-            box-sizing: border-box;
-        }
+      * {
+        box-sizing: border-box;
+      }
 
-        body {
-            font: 16px Arial;
-            background-color: #202020;
-            color: white;
-        }
+      body {
+        font: 16px Arial;
+        background-color: #202020;
+        color: white;
+      }
 
-        /*the container must be positioned relative:*/
-        .autocomplete {
-            position: relative;
-            display: inline-block;
-        }
+      /*the container must be positioned relative:*/
+      .autocomplete {
+        position: relative;
+        display: inline-block;
+      }
 
-        a {
-            text-decoration: none;
-        }
+      a {
+        text-decoration: none;
+        color: white;
+      }
 
-        div {
-            color: white
-        }
+      div {
+        color: white;
+      }
 
-        input::placeholder {
-            color: darkgrey;
-        }
+      input::placeholder {
+        color: darkgrey;
+      }
 
-        input {
-            background-color: #3F3F3F;
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 10px;
-            border-style: none;
-        }
+      input {
+        background-color: #3f3f3f;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+        border-style: none;
+      }
 
-        input[type=text] {
-            color: white;
-            background-color: #3F3F3F;
-            width: 100%;
-        }
+      input[type="text"] {
+        color: white;
+        background-color: #3f3f3f;
+        width: 100%;
+      }
 
-        input[type=submit] {
-            color: white;
-            cursor: pointer;
-        }
+      input[type="submit"] {
+        color: white;
+        cursor: pointer;
+      }
 
-        input[type=text]:focus {
-            border: none;
-            border-style: none;
-        }
+      input[type="text"]:focus {
+        border: none;
+        border-style: none;
+      }
 
-        .autocomplete-items {
-            position: absolute;
-            border: 1px solid #202020;
-            border-bottom: none;
-            border-top: none;
-            z-index: 99;
-            /*position the autocomplete items to be the same width as the container:*/
-            top: 100%;
-            left: 0;
-            right: 0;
-        }
+      .autocomplete-items {
+        position: absolute;
+        border: 1px solid #202020;
+        border-bottom: none;
+        border-top: none;
+        z-index: 99;
+        /*position the autocomplete items to be the same width as the container:*/
+        top: 100%;
+        left: 0;
+        right: 0;
+      }
 
-        .autocomplete-items div {
-            padding: 10px;
-            cursor: pointer;
-            background-color: #3F3F3F;
-            border-bottom: 1px solid #202020;
-        }
+      .autocomplete-items div {
+        padding: 10px;
+        cursor: pointer;
+        background-color: #3f3f3f;
+        border-bottom: 1px solid #202020;
+      }
 
-        /*when hovering an item:*/
-        .autocomplete-items div:hover {
-            background-color: #202020;
-        }
+      /*when hovering an item:*/
+      .autocomplete-items div:hover {
+        background-color: #202020;
+      }
 
-        /*when navigating through the items using the arrow keys:*/
-        .autocomplete-active {
-            color: #202020;
-        }
+      /*when navigating through the items using the arrow keys:*/
+      .autocomplete-active {
+        color: #202020;
+      }
+      .back {
+        background-color: #7c1515;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+        border-style: none;
+        color: white;
+        cursor: pointer;
+        margin-top: 30px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h2>Német szavak</h2>
 
     <p>MAGYAR</p>
 
     <!--Make sure the form has the autocomplete function switched off:-->
     <form autocomplete="off" action="/action_page.php">
-        <div class="autocomplete" style="width:300px;">
-            <input id="hungarian" type="text" name="magyar" placeholder="Magyarul">
-        </div>
+      <div class="autocomplete" style="width: 300px">
+        <input
+          id="hungarian"
+          type="text"
+          name="magyar"
+          placeholder="Magyarul"
+        />
+      </div>
     </form>
 
     <p>INFINITIV</p>
 
     <form autocomplete="off" action="/action_page.php">
-        <div class="autocomplete" style="width:300px;">
-            <input id="german" type="text" name="nemet" placeholder="Normál alakban">
-        </div>
+      <div class="autocomplete" style="width: 300px">
+        <input
+          id="german"
+          type="text"
+          name="nemet"
+          placeholder="Normál alakban"
+        />
+      </div>
     </form>
 
     <p>PRÄTERITUM</p>
 
     <form autocomplete="off" action="/action_page.php">
-        <div class="autocomplete" style="width:300px;">
-            <input id="prateritum" type="text" name="nemet" placeholder="Präteritum alakban">
-        </div>
+      <div class="autocomplete" style="width: 300px">
+        <input
+          id="prateritum"
+          type="text"
+          name="nemet"
+          placeholder="Präteritum alakban"
+        />
+      </div>
     </form>
 
     <p>PERFEKT</p>
 
     <form autocomplete="off" action="/action_page.php">
-        <div class="autocomplete" style="width:300px;">
-            <input id="perfekt" type="text" name="nemet" placeholder="Sima Perfekt alakban">
-        </div>
+      <div class="autocomplete" style="width: 300px">
+        <input
+          id="perfekt"
+          type="text"
+          name="nemet"
+          placeholder="Sima Perfekt alakban"
+        />
+      </div>
     </form>
 
-    <p>PERFEKT LÉTIGE NÉLKÜL</p>
-
-    <form autocomplete="off" action="/action_page.php">
-        <div class="autocomplete" style="width:300px;">
-            <input id="perfektLess" type="text" name="nemet" placeholder="Létige nélküli Perfekt">
-        </div>
-    </form>
+    <button class="back">
+      <a href="./emergency/index.html">Nincs ilyen</a>
+    </button>
 
     <script>
-        function autocomplete(inp, arr) {
-            var currentFocus;
-            inp.addEventListener("input", function (e) {
-                var a, b, i, val = this.value;
+      function autocomplete(inp, arr) {
+        var currentFocus;
+        inp.addEventListener("input", function (e) {
+          var a,
+            b,
+            i,
+            val = this.value;
+          closeAllLists();
+          if (!val) {
+            return false;
+          }
+          currentFocus = -1;
+          a = document.createElement("DIV");
+          a.setAttribute("id", this.id + "autocomplete-list");
+          a.setAttribute("class", "autocomplete-items");
+          this.parentNode.appendChild(a);
+          for (i = 0; i < arr.length; i++) {
+            if (
+              arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()
+            ) {
+              b = document.createElement("div");
+              l = document.createElement("a");
+              var spec = i + 1;
+              l.setAttribute("href", `./words.html?id=${spec}`);
+              b.innerHTML =
+                "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+              b.innerHTML += arr[i].substr(val.length);
+              b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+              b.addEventListener("click", function (e) {
+                inp.value = this.getElementsByTagName("input")[0].value;
                 closeAllLists();
-                if (!val) { return false; }
-                currentFocus = -1;
-                a = document.createElement("DIV");
-                a.setAttribute("id", this.id + "autocomplete-list");
-                a.setAttribute("class", "autocomplete-items");
-                this.parentNode.appendChild(a);
-                for (i = 0; i < arr.length; i++) {
-                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                        b = document.createElement("div");
-                        l = document.createElement("a")
-                        var spec = i + 1
-                        l.setAttribute('href', `./words.html?id=${spec}`)
-                        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                        b.innerHTML += arr[i].substr(val.length);
-                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                        b.addEventListener("click", function (e) {
-                            inp.value = this.getElementsByTagName("input")[0].value;
-                            closeAllLists();
-                        });
-                        a.appendChild(l)
-                        l.appendChild(b);
-                    }
-                }
-            });
-            inp.addEventListener("keydown", function (e) {
-                var x = document.getElementById(this.id + "autocomplete-list");
-                if (x) x = x.getElementsByTagName("div");
-                if (e.keyCode == 40) {
-                    currentFocus++;
-                    addActive(x);
-                } else if (e.keyCode == 38) {
-                    currentFocus--;
-                    addActive(x);
-                } else if (e.keyCode == 13) {
-                    e.preventDefault();
-                    if (currentFocus > -1) {
-                        if (x) x[currentFocus].click();
-                    }
-                }
-            });
-            function addActive(x) {
-                /*a function to classify an item as "active":*/
-                if (!x) return false;
-                /*start by removing the "active" class on all items:*/
-                removeActive(x);
-                if (currentFocus >= x.length) currentFocus = 0;
-                if (currentFocus < 0) currentFocus = (x.length - 1);
-                /*add class "autocomplete-active":*/
-                x[currentFocus].classList.add("autocomplete-active");
+              });
+              a.appendChild(l);
+              l.appendChild(b);
             }
-            function removeActive(x) {
-                /*a function to remove the "active" class from all autocomplete items:*/
-                for (var i = 0; i < x.length; i++) {
-                    x[i].classList.remove("autocomplete-active");
-                }
+          }
+        });
+        inp.addEventListener("keydown", function (e) {
+          var x = document.getElementById(this.id + "autocomplete-list");
+          if (x) x = x.getElementsByTagName("div");
+          if (e.keyCode == 40) {
+            currentFocus++;
+            addActive(x);
+          } else if (e.keyCode == 38) {
+            currentFocus--;
+            addActive(x);
+          } else if (e.keyCode == 13) {
+            e.preventDefault();
+            if (currentFocus > -1) {
+              if (x) x[currentFocus].click();
             }
-            function closeAllLists(elmnt) {
-                /*close all autocomplete lists in the document,
-                except the one passed as an argument:*/
-                var x = document.getElementsByClassName("autocomplete-items");
-                for (var i = 0; i < x.length; i++) {
-                    if (elmnt != x[i] && elmnt != inp) {
-                        x[i].parentNode.removeChild(x[i]);
-                    }
-                }
-            }
-            /*execute a function when someone clicks in the document:*/
-            document.addEventListener("click", function (e) {
-                closeAllLists(e.target);
-            });
+          }
+        });
+        function addActive(x) {
+          /*a function to classify an item as "active":*/
+          if (!x) return false;
+          /*start by removing the "active" class on all items:*/
+          removeActive(x);
+          if (currentFocus >= x.length) currentFocus = 0;
+          if (currentFocus < 0) currentFocus = x.length - 1;
+          /*add class "autocomplete-active":*/
+          x[currentFocus].classList.add("autocomplete-active");
         }
+        function removeActive(x) {
+          /*a function to remove the "active" class from all autocomplete items:*/
+          for (var i = 0; i < x.length; i++) {
+            x[i].classList.remove("autocomplete-active");
+          }
+        }
+        function closeAllLists(elmnt) {
+          /*close all autocomplete lists in the document,
+                except the one passed as an argument:*/
+          var x = document.getElementsByClassName("autocomplete-items");
+          for (var i = 0; i < x.length; i++) {
+            if (elmnt != x[i] && elmnt != inp) {
+              x[i].parentNode.removeChild(x[i]);
+            }
+          }
+        }
+        /*execute a function when someone clicks in the document:*/
+        document.addEventListener("click", function (e) {
+          closeAllLists(e.target);
+        });
+      }
 
-        /*An array containing all the country names in the world:*/
-        var hungarian = ["sütni", "parancsolni", "kezdődni", "harapni", "hajlít", "kínálni", "kötni", "kérni", "maradni", "hány/tör", "fogadni", "ajánlani", "érezni", "enni", "utazni", "fogni", "találni", "repülni", "menekülni", "folyni", "zabálni", "fagyni", "adni", "menni", "sikerülni", "érvényes", "élvezni", "jut, kerül", "történni", "nyerni", "öntözni", "hasonlítani", "csúszni", "ásni", "fogni", "tartani", "lógni", "emelni", "hívni", "segíteni", "csöng", "jönni", "rak, meghív", "hagyni", "futni", "szenvedni", "kölcsönadni", "olvasni", "feküdni", "hazudni", "kerülni", "mérni", "félresikerül", "venni", "fütyülni", "dicsérni", "tanácsolni", "dörzsölni", "szakítani", "lovagolni", "szaglani", "hívni", "vedelni", "szívni", "alkotni", "csinálni", "elválasztani", "tűnik", "kakilni", "szidni", "tolni", "lőni", "aludni", "ütni", "zár", "dobni", "olvad", "vágni", "megijedni", "írni", "üvölteni", "megesküdni", "nézni", "lenni", "énekelni", "süllyedni", "ülni", "fon", "beszélni", "ugrani", "szúrni", "állni", "lopni", "mászik", "meghalni", "bűzleni", "lökni", "simogatni", "veszekedni", "hord", "találkozni", "űz", "lép", "inni", "csal", "tesz", "elront", "elfelejteni", "elveszíteni", "nőni", "mosni", "szőni", "verseng", "lesz", "dobni", "mér", "húz", "kényszeríteni"];
-        var german = ["backen", "befehlen", "beginnen", "beißen", "biegen", "bieten", "binden", "bitten", "bleiben", "brechen", "empfangen", "empfehlen", "empfinden", "essen", "fahren", "fangen", "finden", "fliegen", "fliehen", "fließen", "fressen", "frieren", "geben", "gehen", "gelingen", "gelten", "genießen", "geraten", "geschehen", "gewinnen", "gießen", "gleichen", "gleiten", "graben", "greifen", "halten", "hängen", "heben", "heißen", "helfen", "klingen", "kommen", "laden", "lassen", "laufen", "leiden", "leihen", "lesen", "liegen", "lügen", "meiden", "messen", "misslingen", "nehmen", "pfeifen", "preisen", "raten", "reiben", "reißen", "reiten", "riechen", "rufen", "saufen", "saugen", "schaffen", "schaffen", "scheiden", "scheinen", "scheißen", "schelten", "schieben", "schießen", "schlafen", "schlagen", "schließen", "schmeißen", "schmelzen", "schneiden", "erschrecken", "schreiben", "schreien", "schwören", "sehen", "sein", "singen", "sinken", "sitzen", "spinnen", "sprechen", "springen", "stechen", "stehen", "stehlen", "steigen", "sterben", "stinken", "stoßen", "streichen", "streiten", "tragen", "treffen", "treiben", "treten", "trinken", "trügen", "tun", "verderben", "vergessen", "verlieren", "wachsen", "waschen", "weben", "werben", "werden", "werfen", "wiegen", "ziehen", "zwingen"]
-        var prateritum = ["backte", "befahl", "begann", "biss", "bog", "bot", "band", "bat", "blieb", "brach", "empfing", "empfahl", "empfand", "aß", "fuhr", "fing", "fand", "flog", "floh", "floss", "fraß", "fror", "gab", "ging", "gelang", "galt", "genoss", "geriet", "geschah", "gewann", "goss", "glich", "glitt", "grub", "griff", "hielt", "hing", "hob", "hieß", "half", "klang", "kam", "lud", "ließ", "lief", "litt", "lieh", "las", "lag", "log", "mied", "maß", "misslang", "nahm", "pfiff", "pries", "riet", "rieb", "riss", "ritt", "roch", "rief", "soff", "sog/saugte", "schuf", "schaffte", "schied", "schien", "schiss", "schalt", "schob", "schoss", "schlief", "schlug", "schloss", "schmiss", "schmolz", "schnitt", "erschrak", "schrieb", "schrie", "schwor", "sah", "war", "sang", "sank", "saß", "spann", "sprach", "sprang", "stach", "stand", "stahl", "stieg", "starb", "stank", "stieß", "strich", "stritt", "trug", "traf", "trieb", "trat", "trank", "trog", "tat", "verdarb", "vergaß", "verlor", "wuchs", "wusch", "webte/wob", "warb", "wurde", "warf", "wog", "zog", "zwang"]
-        var perfekt = ["hat gebacken", "hat befohlen", "hat begonnen", "hat gebissen", "hat bebogen", "hat geboten", "hat gebunden", "hat gebeten", "ist geblieben", "hat gebrochen", "hat empfangen", "hat empfohlen", "hat empfunden", "hat gegessen", "hat gefahren", "hat gefangen", "hat gefunden", "hat geflogen", "hat geflohen", "ist geflossen", "hat gefressen", "hat gefroren", "hat gegeben", "ist gegangen", "ist gelungen", "hat gegolten", "hat genossen", "ist geraten", "ist geschehen", "hat gewonnen", "hat gegossen", "ist geglichen", "hat geglitten", "hat gegraben", "hat gegriffen", "hat gehalten", "hat gehangen", "hat gehoben", "hat geheißen", "hat geholfen", "hat geklungen", "ist gekommen", "hat geladen", "hat gelassen", "hat gelaufen", "hat gelitten", "hat geliehen", "hat gelesen", "hat gelegen", "hat gelogen", "hat gemieden", "hat gemessen", "ist misslungen", "hat genommen", "hat gepfiffen", "hat gepriesen", "hat geraten", "hat gerieben", "hat gerissen", "hat geritten", "hat gerochen", "hat gerufen", "hat gesoffen", "hat gesogen/gesaugt", "hat geschaffen", "hat geschafft", "hat geschieden", "hat geschienen", "hat geschissen", "hat gescholten", "hat geschoben", "hat geschossen", "hat geschlafen", "hat geschlagen", "hat geschlossen", "hat geschmissen", "hat geschmolzen", "hat geschnitten", "ist erschrocken", "hat geschrieben", "hat geschrie(e)n", "hat geschworen", "hat gesehen", "ist gewesen", "hat gesungen", "ist gesunken", "hat gesessen", "hat gesponnen", "hat gesprochen", "ist gesprungen", "hat gestochen", "hat gestanden", "hat gestohlen", "ist gestiegen", "ist gestorben", "hat gestunken", "hat gestoßen", "hat gestrichen", "hat gestritten", "hat getragen", "hat getroffen", "hat getrieben", "hat getreten", "hat getrunken", "hat getrogen", "hat getan", "hat verdorben", "hat vergessen", "hat verloren", "ist gewachsen", "hat gewaschen", "hat gewebt/gewoben", "hat geworben", "ist geworden", "hat geworfen", "hat gewogen", "hat gezogen", "hat gezwunden"]
-        var perfektLess = ["gebacken", "befohlen", "begonnen", "gebissen", "bebogen", "geboten", "gebunden", "gebeten", "geblieben", "gebrochen", "empfangen", "empfohlen", "empfunden", "gegessen", "gefahren", "gefangen", "gefunden", "geflogen", "geflohen", "geflossen", "gefressen", "gefroren", "gegeben", "gegangen", "gelungen", "gegolten", "genossen", "geraten", "geschehen", "gewonnen", "gegossen", "geglichen", "geglitten", "gegraben", "gegriffen", "gehalten", "gehangen", "gehoben", "geheißen", "geholfen", "geklungen", "gekommen", "geladen", "gelassen", "gelaufen", "gelitten", "geliehen", "gelesen", "gelegen", "gelogen", "gemieden", "gemessen", "misslungen", "genommen", "gepfiffen", "gepriesen", "geraten", "gerieben", "gerissen", "geritten", "gerochen", "gerufen", "gesoffen", "gesogen/gesaugt", "geschaffen", "geschafft", "geschieden", "geschienen", "geschissen", "gescholten", "geschoben", "geschossen", "geschlafen", "geschlagen", "geschlossen", "geschmissen", "geschmolzen", "geschnitten", "erschrocken", "geschrieben", "geschrie(e)n", "geschworen", "gesehen", "gewesen", "gesungen", "gesunken", "gesessen", "gesponnen", "gesprochen", "gesprungen", "gestochen", "gestanden", "gestohlen", "gestiegen", "gestorben", "gestunken", "gestoßen", "gestrichen", "gestritten", "getragen", "getroffen", "getrieben", "getreten", "getrunken", "getrogen", "getan", "verdorben", "vergessen", "verloren", "gewachsen", "gewaschen", "gewebt/gewoben", "geworben", "geworden", "geworfen", "gewogen", "gezogen", "gezwunden"]
+      /*An array containing all the country names in the world:*/
+      var hungarian = [
+        "sütni",
+        "parancsolni",
+        "kezdődni",
+        "harapni",
+        "hajlítani",
+        "kínálni",
+        "kötni",
+        "kérni",
+        "maradni",
+        "hányni",
+        "égni",
+        "hozni",
+        "gondolni",
+        "szabad",
+        "fogadni",
+        "ajánlani",
+        "érezni",
+        "enni",
+        "utazni",
+        "fogni",
+        "találni",
+        "repülni",
+        "menekülni",
+        "folyni",
+        "zabálni",
+        "fagyni",
+        "adni",
+        "menni",
+        "sikerülni",
+        "érvényesíteni",
+        "élvezni",
+        "jut",
+        "történni",
+        "nyerni",
+        "öntözni",
+        "hasonlítani",
+        "csúszni",
+        "ásni",
+        "fogni",
+        "tartani",
+        "lógni",
+        "emelni",
+        "hívni",
+        "segíteni",
+        "ismemi",
+        "csöngeni",
+        "jönni",
+        "tud",
+        "rakni",
+        "hagyni",
+        "futni",
+        "szenvedni",
+        "kölcsönadni",
+        "olvasni",
+        "feküdni",
+        "hazudni",
+        "kerülni",
+        "mérni",
+        "félresikerül",
+        "szeret",
+        "kell",
+        "venni",
+        "nevezni",
+        "fütyülni",
+        "dicsérni",
+        "tanácsolni",
+        "dörzsölni",
+        "szakítani",
+        "lovagolni",
+        "rohanni",
+        "szaglani",
+        "hívni",
+        "vedelni",
+        "szívni",
+        "alkotni",
+        "tűnni",
+        "kakilni",
+        "szidni",
+        "tolni",
+        "lőni",
+        "aludni",
+        "ütni",
+        "zárni",
+        "dobni",
+        "olvadni",
+        "vágni",
+        "megijedni",
+        "írni",
+        "üvölteni",
+        "hallgatni",
+        "úszni",
+        "megesküdni",
+        "lenni",
+        "nézni",
+        "elválasztani",
+        "énekelni",
+        "süllyedni",
+        "ülni",
+        "fonni",
+        "beszélni",
+        "ugrani",
+        "szúrni",
+        "állni",
+        "lopni",
+        "mászini",
+        "meghalni",
+        "bűzleni",
+        "lökni",
+        "simogatni",
+        "veszekedni",
+        "hordani",
+        "találkozni",
+        "űzni",
+        "lépni",
+        "inni",
+        "csalni",
+        "tenni",
+        "eltölteni",
+        "elrontani",
+        "elfelejteni",
+        "elveszíteni",
+        "nőni",
+        "mosni",
+        "szőni",
+        "versengeni",
+        "válni",
+        "dobni",
+        "mérni",
+        "tudni",
+        "megbocsátani",
+        "húzni",
+        "kényszeríteni",
+        "birtokolni",
+      ];
+      var german = [
+        "backen",
+        "befehlen",
+        "beginnen",
+        "beißen",
+        "biegen",
+        "bieten",
+        "binden",
+        "bitten",
+        "bleiben",
+        "brechen",
+        "brennen",
+        "bringen",
+        "denken",
+        "dürfen",
+        "empfangen",
+        "empfehlen",
+        "empfinden",
+        "essen",
+        "fahren",
+        "fangen",
+        "finden",
+        "fliegen",
+        "fliehen",
+        "fließen",
+        "fressen",
+        "frieren",
+        "geben",
+        "gehen",
+        "gelingen",
+        "gelten",
+        "genießen",
+        "geraten",
+        "geschehen",
+        "gewinnen",
+        "gießen",
+        "gleichen",
+        "gleiten",
+        "graben",
+        "greifen",
+        "halten",
+        "hängen",
+        "heben",
+        "heißen",
+        "helfen",
+        "kennen",
+        "klingen",
+        "kommen",
+        "können",
+        "laden",
+        "lassen",
+        "laufen",
+        "leiden",
+        "leihen",
+        "lesen",
+        "liegen",
+        "lügen",
+        "meiden",
+        "messen",
+        "misslingen",
+        "mögen",
+        "müssen",
+        "nehmen",
+        "nennen",
+        "pfeifen",
+        "preisen",
+        "raten",
+        "reiben",
+        "reißen",
+        "reiten",
+        "rennen",
+        "riechen",
+        "rufen",
+        "saufen",
+        "saugen",
+        "schaffen",
+        "scheinen",
+        "scheißen",
+        "schelten",
+        "schieben",
+        "schießen",
+        "schlafen",
+        "schlagen",
+        "schließen",
+        "schmeißen",
+        "schmelzen",
+        "schneiden",
+        "schrecken",
+        "schreiben",
+        "schreien",
+        "schweigen",
+        "schwimmen",
+        "schwören",
+        "sein",
+        "selien",
+        "sfcheiden",
+        "singen",
+        "sinken",
+        "sitzen",
+        "spinnen",
+        "sprechen",
+        "springen",
+        "stechen",
+        "stehen",
+        "stehlen",
+        "steigen",
+        "sterben",
+        "stinken",
+        "stoßen",
+        "streichen",
+        "streiten",
+        "tragen",
+        "treffen",
+        "treiben",
+        "treten",
+        "trinken",
+        "trügen",
+        "tun",
+        "verbringen",
+        "verderben",
+        "vergessen",
+        "verlieren",
+        "wachsen",
+        "waschen",
+        "weben",
+        "werben",
+        "werden",
+        "werfen",
+        "wiegen",
+        "wissen",
+        "zeihen",
+        "ziehen",
+        "zwingen",
+        "haben",
+      ];
+      var prateritum = [
+        "backte",
+        "befahl",
+        "begann",
+        "biss",
+        "bog",
+        "bot",
+        "band",
+        "bat",
+        "blieb",
+        "brach",
+        "brannte",
+        "brachte",
+        "dachte",
+        "durfte",
+        "empfing",
+        "empfahl",
+        "empfand",
+        "aß",
+        "fuhr",
+        "fing",
+        "fand",
+        "flog",
+        "floh",
+        "floss",
+        "fraß",
+        "fror",
+        "gab",
+        "ging",
+        "gelang",
+        "galt",
+        "genoss",
+        "geriet",
+        "geschah",
+        "gewann",
+        "goss",
+        "glich",
+        "glitt",
+        "grub",
+        "griff",
+        "hielt",
+        "hing",
+        "hob",
+        "hieß",
+        "half",
+        "kannte",
+        "klang",
+        "kam",
+        "konnte",
+        "lud",
+        "ließ",
+        "lief",
+        "litt",
+        "lieh",
+        "las",
+        "lag",
+        "log",
+        "mied",
+        "maß",
+        "misslang",
+        "mochte",
+        "musste",
+        "nahm",
+        "nannte",
+        "pfiff",
+        "pries",
+        "riet",
+        "rieb",
+        "riss",
+        "ritt",
+        "rannte",
+        "roch",
+        "rief",
+        "soff",
+        "sog",
+        "schuf",
+        "schien",
+        "schiss",
+        "schalt",
+        "schob",
+        "schoss",
+        "schlief",
+        "schlug",
+        "schloss",
+        "schmiss",
+        "schmolz",
+        "schnitt",
+        "schrak",
+        "schrieb",
+        "schrie",
+        "schwieg",
+        "schwamm",
+        "schwor",
+        "war",
+        "sah",
+        "schied",
+        "sang",
+        "sank",
+        "saß",
+        "spann",
+        "sprach",
+        "sprang",
+        "stach",
+        "stand",
+        "stahl",
+        "stieg",
+        "starb",
+        "stank",
+        "stieß",
+        "strich",
+        "stritt",
+        "trug",
+        "traf",
+        "trieb",
+        "trat",
+        "trank",
+        "trog",
+        "tat",
+        "verbrachte",
+        "verdarb",
+        "vergaß",
+        "verlor",
+        "wuchs",
+        "wusch",
+        "webte/wob",
+        "warb",
+        "wurde",
+        "warf",
+        "wog",
+        "wusste",
+        "zieh",
+        "zog",
+        "zwang",
+        "hatte",
+      ];
+      var perfekt = [
+        "hat gebacken",
+        "hat befohlen",
+        "hat begonnen",
+        "hat gebissen",
+        "hat/ist bebogen",
+        "hat geboten",
+        "hat gebunden",
+        "hat gebeten",
+        "ist geblieben",
+        "hat/ist gebrochen",
+        "hat gebrannt",
+        "hat gebracht",
+        "hat gedacht",
+        "hat gedurft",
+        "hat empfangen",
+        "hat empfohlen",
+        "hat empfunden",
+        "hat gegessen",
+        "hat/ist gefahren",
+        "hat gefangen",
+        "hat gefunden",
+        "hat/ist geflogen",
+        "hat/ist geflohen",
+        "ist geflossen",
+        "hat gefressen",
+        "hat/ist gefroren",
+        "hat gegeben",
+        "ist gegangen",
+        "ist gelungen",
+        "hat gegolten",
+        "hat genossen",
+        "ist geraten",
+        "ist geschehen",
+        "hat gewonnen",
+        "hat gegossen",
+        "hat geglichen",
+        "ist geglitten",
+        "hat gegraben",
+        "hat gegriffen",
+        "hat gehalten",
+        "hat gehangen",
+        "hat gehoben",
+        "hat geheißen",
+        "hat geholfen",
+        "hat gekannt",
+        "hat geklungen",
+        "ist gekommen",
+        "hat gekonnt",
+        "hat geladen",
+        "hat gelassen",
+        "ist /hat gelaufen",
+        "hat gelitten",
+        "hat geliehen",
+        "hat gelesen",
+        "hat gelegen",
+        "hat gelogen",
+        "hat gemieden",
+        "hat gemessen",
+        "ist misslungen",
+        "hat gemocht",
+        "hat gemusst",
+        "hat genommen",
+        "hat genannt",
+        "hat gepfiffen",
+        "hat gepriesen",
+        "hat geraten",
+        "hat gerieben",
+        "hat/ist gerissen",
+        "ist /hat geritten",
+        "ist gerannt",
+        "hat gerochen",
+        "hat gerufen",
+        "hat gesoffen",
+        "hat gesogen",
+        "hat geschaffen",
+        "hat geschienen",
+        "hat geschissen",
+        "hat gescholten",
+        "hat geschoben",
+        "hat/ist geschossen",
+        "hat geschlafen",
+        "hat geschlagen",
+        "hat geschlossen",
+        "hat geschmissen",
+        "ist /hat geschmolzen",
+        "hat geschnitten",
+        "ist schrocken",
+        "hat geschrieben",
+        "hat geschrien",
+        "hat geschwiegen",
+        "ist /hat geschwommen",
+        "hat geschworen",
+        "ist gewesen",
+        "hat gesehen",
+        "hat/ist geschieden",
+        "hat gesungen",
+        "ist gesunken",
+        "hat gesessen",
+        "hat gesponnen",
+        "hat gesprochen",
+        "ist gesprungen",
+        "hat gestochen",
+        "hat gestanden",
+        "hat gestohlen",
+        "ist gestiegen",
+        "ist gestorben",
+        "hat gestunken",
+        "hat/ist gestoßen",
+        "hat/ist gestrichen",
+        "hat gestritten",
+        "hat getragen",
+        "hat getroffen",
+        "hat/ist getrieben",
+        "ist /hat getreten",
+        "hat getrunken",
+        "hat getrogen",
+        "hat getan",
+        "hat verbracht",
+        "hat/ist verdorben",
+        "hat vergessen",
+        "hat verloren",
+        "ist gewachsen",
+        "hat gewaschen",
+        "hat gewebt/gewoben",
+        "hat geworben",
+        "ist geworden",
+        "hat geworfen",
+        "hat gewogen",
+        "hat gewusst",
+        "hat ziehen",
+        "hat/ist gezogen",
+        "hat gezwunden",
+        "hat gehabt",
+      ];
 
-        /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-        autocomplete(document.getElementById("hungarian"), hungarian);
-        autocomplete(document.getElementById("german"), german);
-        autocomplete(document.getElementById("prateritum"), prateritum);
-        autocomplete(document.getElementById("perfekt"), perfekt);
-        autocomplete(document.getElementById("perfektLess"), perfektLess);
+      /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+      autocomplete(document.getElementById("hungarian"), hungarian);
+      autocomplete(document.getElementById("german"), german);
+      autocomplete(document.getElementById("prateritum"), prateritum);
+      autocomplete(document.getElementById("perfekt"), perfekt);
     </script>
-
-</body>
-
+  </body>
 </html>
